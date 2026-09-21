@@ -1,0 +1,16 @@
+id,name,lat,lon,utm_e_11N,utm_n_11N,elev_m,bearing_deg_from_TGT,dist_m,check_notes
+WP1,TGT,29.903605,-115.383656,656054,3309202,332,90,0,"Target point. Map elev 326 m: gentle slope, brown soil, sparse scrub; arroyo ~60-100 m NE."
+WP2,ANOM-1,29.906097,-115.390962,655344,3309468,332,291,874,"Pale-tone cluster (S2 2020), ~0.2 km2. Expect pale grey/whitish soil or exposed weathered rock, less scrub."
+WP3,ANOM-2,29.897790,-115.381181,656302,3308561,331,160,796,"Pale-tone cluster (S2 2020), ~0.2 km2. Expect pale grey/whitish soil or exposed weathered rock, less scrub."
+WP4,ANOM-3,29.904306,-115.379883,656417,3309284,387,78,430,"Pale-tone cluster (S2 2020), ~0.2 km2. Expect pale grey/whitish soil or exposed weathered rock, less scrub."
+WP5,ANOM-4,29.899867,-115.369899,657388,3308806,458,107,1605,"Pale-tone cluster (S2 2020), ~0.1 km2. Expect pale grey/whitish soil or exposed weathered rock, less scrub."
+WP6,RIDGE,29.902686,-115.366678,657694,3309123,484,94,1894,"Local high 484 m (E of target). Expect highest ground in 4 km, rocky outcrops likely."
+WP7,D-1,29.895802,-115.385399,655897,3308334,275,191,1021,Arroyo San Isidro trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP8,D-2,29.898917,-115.385471,655886,3308680,287,199,635,Arroyo San Isidro trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP9,D-3,29.902032,-115.385183,655909,3309025,296,220,264,Arroyo San Isidro trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP10,D-4,29.905147,-115.384249,655994,3309372,307,342,209,Arroyo San Isidro trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP11,D-5,29.908262,-115.383458,656065,3309718,323,2,598,Arroyo San Isidro trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP12,D-6,29.911376,-115.386333,655783,3310059,318,343,1042,Arroyo San Isidro trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP13,STEEP-1,29.889852,-115.400383,654460,3307655,246,227,2566,"Slope 41 deg - steepest rocky ground, best outcrop candidate in window."
+WP14,STEEP-2,29.888512,-115.365708,657810,3307553,267,134,2783,"Slope 41 deg - steepest rocky ground, best outcrop candidate in window."
+WP15,STEEP-3,29.891690,-115.367504,657632,3307903,311,130,2361,"Slope 36 deg - steepest rocky ground, best outcrop candidate in window."

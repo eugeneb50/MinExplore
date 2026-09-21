@@ -1,0 +1,1248 @@
+===== CAT PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CARTAS GEOLÓGICO - MINERAS INTERACTIVAS
+ESCALA PRESENTACIÓN FORMATO PRECIO/UNIDAD MXN TIEMPO DE ENTREGA POR
+EJEMPLAR DÍAS HÁBILES
+1:50,000 Carta Geológico-Minera Interactiva ArcGis  (Shapefile) 16,384 5 a 10*
+Paquete Interactivo con Geología y Geoquímica (31
+elementos)
+ArcGis  (Shapefile) 27,316 5 a 10*
+Carta Geológico-Minera Geodatabase de ArcGis 15,316 2
+Carta Geoquímica Geodatabase de ArcGis 15,316 2
+Paquete Digital Interactivo Geodatabase de ArcGis 28,197 18
+1:100,000 Carta Geológico-Minera Interactiva ArcGis  (Shapefile) 16,384 5 a 10*
+Paquete Interactivo con Geología y Geoquímica (31
+elementos)
+ArcGis  (Shapefile) 27,316 5 a 10*
+1:250,000 Carta Geológico-Minera Interactiva ArcGis  (Shapefile) 16,384 5 a 10*
+Paquete Interactivo con Geología y Geoquímica (31
+elementos)
+ArcGis  (Shapefile) 27,316 5 a 10*
+Paquete Digital Interactivo Geodatabase de ArcGis 28,197 18
+DISPONIBLES SOLO EN FORMATO GEODATABASE DE ARCGIS
+ESCALA CLAVE DE CARTA NOMBRE
+1:50,000 D15-A11 Santiago Astata, Oaxaca
+D15-B13 Doctor Rodulfo Figueroa  (antes Tierra Blanca), Chiapas
+D15-B33 Motozintla, Chiapas
+E13-A19 Tomatlan, Jalisco
+E13-A39 Apazulco (antes Miguel Hidalgo)
+E13-B16 Mazamitla, Jalisco, Michoacán
+E13-B31 Apazulco (antes Miguel Hidalgo)
+E13-B41 San Patricio, Jalisco
+E13-B42 Cihuatlán, Colima, Jalisco
+E14-A24 Tzitzio, Michoacán
+E14-B11 Tizayuca, Hidalgo, Estado de México
+E14-B21 Texcoco  (antes Texcoco de Mora), Estado de México
+E14-B22 Apan, Hidalgo, Tlaxcala, Estado de México
+E14-B23 Tlaxco,Tlaxcala, Puebla, Hidalgo
+E14-B66 Acultzingo, Veracruz, Puebla
+E14-B67 Zongolica, Oaxaca, Puebla, Veracruz
+E14-B74 Ixcaquixtla, Puebla, Oaxaca
+E14-B75 Tehuacán, Puebla, Oaxaca
+E14-B76 Zinacantepec, Puebla,Veracruz
+E14-B77 Coyomeapan, Puebla, Oaxaca
+E14-B82 Tulcingo, Puebla
+E14-B86 Teotitlán de Flores Magón  (antes Teotitlan), Puebla, Oaxaca
+E14-D13 Santa Cruz Tacache de Mina, Oaxaca, Puebla
+E14-D15 Tepelmeme Villa de Morelos (antes Tepelmeme), Oaxaca, Puebla
+E14-D17 Cuicatlan, Oaxaca
+E14-D18 San Felipe Usila, Oaxaca
+E14-D19 Valle Nacional, Oaxaca
+E14-D25 Villa de  Tamazulápam del Progreso (antes Tamazulápam), Oaxaca
+E14-D26 San Juan Bautista Coixtlahuaca (antesCoixtlahuaca), Oaxaca
+E14-D54 Santa María Zacatepec, Oaxaca
+E14-D55 Santiago Yosondua, Oaxaca
+E14-D66 San Vicente Lachixio, Oaxaca
+E14-D78 Miahuatlán de Porfirio Díaz, Oaxaca
+E14-D85 Rio Grande, Oaxaca
+E14-D86 Santa Catarina Juquila, Oaxaca
+E14-D87 San Baltazar Loxicha, Oaxaca
+E14-D88 San Agustín Loxicha, Oaxaca
+E15-A73 San Andrés Tuxtla, Veracruz
+E15-A83 Juan Diaz Covarrubias, Veracruz
+E15-C13 San Juan Evangelista, Veracruz
+E15-C22 Nuevo Ixcatlan, Oaxaca, Veracruz
+E15-C23 El Paraíso, Veracruz, Oaxaca
+E15-C32 San Felipe Zihualtepec
+E15-C43 Donaji, Oaxaca
+Página 1 de
+17 
+===== CAT PAGE 2 =====
+E15-C49 Tecpatán, Chiapas
+E15-C52 Guevea de Humboldt, Oaxaca
+E15-C53 Matías Romero Avendaño (antes Matías Romero), Oaxaca
+E15-C57 Francisco I. Madero, Chiapas, Oaxaca
+E15-C68 Jiquipilas, Chiapas
+E15-C76 San Pedro Tapanatepec, Chiapas, Oaxaca
+E15-C77 Tierra y Libertad, Chiapas
+E15-C79 El Parral, Chiapas
+E15-C81 Santa María  Zapotitlán, Oaxaca
+E15-C88 Monterrey, Chiapas
+E15-D42 Petalcingo, Chiapas
+E15-D53 Ocosingo, Chiapas
+E15-D54 Pojcol, Chiapas
+E15-D61 Acala, Chiapas
+E15-D62 San Cristóbal de las Casas, Chiapas
+E15-D71 Presa Belisario Domínguez, Chiapas
+E15-D81 La Concordia, Chiapas
+E15-D83 La Trinitaria, Chiapas
+F12-B22 Melitón Albañez, Baja California Sur
+F12-B33 Todos Santos, Baja California Sur
+F12-B35 Cabo Pulmo, Baja California Sur
+F12-B43 La Candelaria, Baja California Sur
+F12-B44 San José del Cabo, Baja California Sur
+F12-B53 Boca de San Cristóbal, Baja California Sur
+F13-A13 La Cruz
+F13-A14 La Cruz, Sinaloa
+F13-A16 San Juan, Sinaloa
+F13-A24 Estación Dimas, Sinaloa
+F13-A45 Mazatlán, Sinaloa
+F13-A67 Teacapan, Sinaloa, Nayarit
+F13-A77 Playas Novillero, Sinaloa, Nayarit
+F13-A78 Acaponeta, Nayarit
+F13-A79 San Miguel, Nayarit
+F13-B11 Presa Presidente Guadalupe Victoria
+F13-B12 Santiago Bayacora, Durango
+F13-B16 Rio Grande, Zacatecas
+F13-B17 Oran, Zacatecas
+F13-B21 La Flor (antes Aserradero la Flor), Durango
+F13-B26 Saín Alto, Zacatecas
+F13-B31 La Guacamayita, Durango
+F13-B39 El Rucio, Zacatecas, San Luis Potosí
+F13-B41 Santa María Magdalena de Taxicaringa (antesTaxicaringa), Durango
+F13-B48 Chichimequillas, Zacatecas
+F13-B51 San Francisco Ocotan, Durango, Nayarit
+F13-B55 Valparaíso, Zacatecas
+F13-B56 Presa Santa Rosa, Zacatecas
+F13-B66 Ermita de Guadalupe, Zacatecas
+F13-B67 Garcia Salinas, Zacatecas (Jerez)
+F13-B71 Dolores, Nayarit
+F13-B72 San Juan Peyotan, Durango, Nayarit
+F13-B74 Mezquitic, Zacatecas, Jalisco
+F13-B77 Villanueva, Zacatecas
+F13-B81 San Pedro Ixcatan, Nayarit
+F13-B82 Mesa del Nayar, Nayarit
+F13-B84 Bajío de los Amoles, Jalisco, Zacatecas
+F13-B85 San Luis, Jalisco, Zacatecas
+F13-B86 Colotlan, Jalisco, Zacatecas
+F13-B87 Presa el Chique, Zacatecas,  Aguascalientes
+F13-C28 Villa Juárez, Nayarit
+F13-C58 Punta Sayulita, Nayarit
+F13-C59 San Juan de Abajo, Nayarit, Jalisco
+F13-C88 La Cruz de Loreto, Jalisco
+F13-D12 Huaynamota, Nayarit
+F13-D16 Tlaltenango de Sánchez Román, Jalisco, Zacatecas
+F13-D17 Calvillo,  Aguascalientes, Zacatecas
+F13-D18 Jesús María,  Aguascalientes
+F13-D19 Aguascalientes, Aguascalientes, Jalisco
+F13-D22 Sierra de Alica, Nayarit
+F13-D23 Puente de Camotlán, Nayarit
+F13-D25 Santa María de la Paz (antes Ignacio Allende), Jalisco, Zacatecas
+F13-D28 Villa Hidalgo, Jalisco, Zacatecas, Ags.
+F13-D32 Santa María del Oro, Nayarit
+F13-D35 Teúl de González Ortega, Jalisco, Zacatecas
+Página 2 de
+17 
+===== CAT PAGE 3 =====
+F13-D36 Juchipila, Zacatecas
+F13-D38 Teocaltiche, Jalisco, Zacatecas
+F13-D46 Las Cruces, Jalisco, Zacatecas
+F14-A11 Primero de Mayo, Zacatecas
+F14-A12 Pozo de San Juan, Zacatecas, San Luis Potosí
+F14-A17 Zaragoza, Nuevo León, Tamaulipas
+F14-A21 Puerto Madero, Zacatecas, San Luis Potosí
+F14-A25 Matehuala, San Luis Potosí, Nuevo León.
+F14-A27 Miquihuana, Tamaulipas, Nuevo León
+F14-A35 Sierra el Azul, San Luis Potosí, Nuevo León
+F14-A36 Mier y Noriega, Nuevo León, Tamaulipas
+F14-A37 Villa de Bustamante, Nuevo León, Tamaulipas
+F14-A39 Llera de Canales, Tamaulipas
+F14-A45 El Milagro de Guadalupe, San Luis Potosí
+F14-A47 San Rafael, San Luis Potosí, Tamaulipas
+F14-A54 Llanos del Carmen, San Luis Potosí
+F14-A56 Lázaro Cárdenas, San Luis Potosí, Tamps.
+F14-A57 Ciudad Tula, San Luis Potosí, Tamaulipas
+F14-A58 Ocampo, Tamaulipas
+F14-A66 Buenavista, San Luis Potosí
+F14-A67 San Rafael Matriz, San Luis Potosí, Tamps.
+F14-A68 Salto del Agua, San Luis Potosí, Tamaulipas
+F14-A78 Ciudad del Maíz, San Luis Potosí
+F14-A79 Sierra la Colmena, San Luis Potosí, Tamps.
+F14-A81 Villa Garcia,  Aguascalientes, Zacatecas
+F14-A87 San Francisco, San Luis Potosí
+F14-A88 Alaquines, San Luis Potosí
+F14-A89 Damián Carmona, San Luis Potosí
+F14-C18 Tamasopo, San Luis Potosí
+F14-C19 Rascón, San Luis Potosí
+F14-C21 Licenciado Primo Verdad, Jalisco
+F14-C22 Sierra de Jacales, Jalisco, Guanajuato
+F14-C28 Lagunillas, Queretaro, San Luis Potosí
+F14-C29 Aquismon, San Luis Potosí, Querétaro
+F14-C38 Conca,Queretaro, San Luis Potosí
+F14-C51 San Diego de Alejandría, Jalisco, Guanajuato
+F14-C61 Manuel Doblado, Guanajuato, Jalisco
+F14-C86 Amealco, Estado de México, Guanajuato, Querétaro
+F14-D11 Álvaro Obregón, San Luis Potosí
+F14-D21 Coxcatlan, San Luis Potosí
+F14-D62 Zacualtipán, Hidalgo, Veracruz
+F14-D72 Carbonero Jacales, Hidalgo, Veracruz
+F14-D74 Xicotepec, Puebla, Veracruz
+F14-D75 Coatzintla, Veracruz, Puebla
+G11-B38 Puerto Nuevo, Baja California Sur
+G12-A13 Prosperidad,  Baja California Sur
+G12-A14 San Juan de Las Palmas (antes La Trinidad), Baja California Sur
+G12-A35 Santa Agueda, Baja California Sur
+G12-A45 Santa Rosa, Baja California Sur
+G12-A46 San José de Magdalena, Baja California Sur
+G12-A56 Año Nuevo, Baja California Sur
+G12-A68 San Nicolás,  Baja California Sur
+G12-A78 Santa Rosa,  Baja California Sur
+G12-A86 San Isidro, Baja California Sur
+G12-A87 Comondú, Baja California Sur
+G12-B14 Buenavista, Sonora
+G12-B15 Rosario, Sonora
+G12-B35 Gabriel Leyva, Sonora
+G12-B36 Tepahui, Sonora
+G12-B46 Mocuzari, Sonora
+G12-B56 Masiaca, Sonora
+G12-B57 Cerro Colorado, Sonora
+G12-B77 Las Estacas, Sinaloa, Sonora
+G12-B86 Chihuahuita, Sinaloa
+G12-B87 San Blas, Sinaloa
+G12-B89 El Platanito, Sinaloa
+G12-C18 San Javier, Baja California Sur
+G12-D17 Los Mochis, Sinaloa
+G12-D18 Estación Naranjo, Sinaloa
+G12-D19 Sinaloa de Leyva, Sinaloa
+G12-D71 San Juan de la Costa,  Baja California Sur
+G13-A24 Rio Grande, Chihuahua
+G13-A31 San Rafael, Chihuahua
+Página 3 de
+17 
+===== CAT PAGE 4 =====
+G13-A32 Samachique, Chihuahua
+G13-A33 Norogachi, Chihuahua
+G13-A34 Nonoava, Chihuahua
+G13-A42 La Bufa, Chihuahua
+G13-A45 San Javier, Chihuahua
+G13-A61 Las Palomas, Chihuahua, Sinaloa
+G13-A62 Matachique, Chihuahua
+G13-A63 Cieneguita, Chihuahua
+G13-A74 Ranchería Guasachique, Chihuahua
+G13-A78 Villa Ocampo, Durango, Chihuahua
+G13-A79 Torreón de Cañas, Chihuahua, Durango
+G13-A86 La Medalla, Durango
+G13-B23 Maravillas (antes San Juan de las Maravillas), Chihuahua
+G13-B24 San Isidro de las Norias, Coahuila, Chihuahua
+G13-B32 Maravillas, Chihuahua
+G13-B33 La Gloria, Chihuahua
+G13-B41 José Mariano Jiménez (antes Cd. Jiménez), Chihuahua
+G13-B42 Leyes de Reforma, Chihuahua
+G13-B43 Vallecillos, Chihuahua
+G13-B44 Guimbalete, Coahuila, Chihuahua
+G13-B45 Laguna del Rey, Coahuila
+G13-B47 San José de la Zacatosa (antes Arocha), Coahuila
+G13-B48 Cerro de la Madera, Coahuila
+G13-B49 La Victoria, Coahuila
+G13-B53 Mercurio, Chihuahua, Durango
+G13-B59 Cuatro Ciénegas, Coahuila
+G13-B63 Ceballos, Durango, Chihuahua
+G13-B71 San Fermín, Chihuahua, Durango
+G13-B76 Sierra Tlahualilo, Coahuila, Durango
+G13-B77 Valle el Sobaco, Coahuila
+G13-B85 Tlahualilo de Zaragoza, Durango, Coahuila
+G13-B86 Charcos de Risa, Coahuila, Durango
+G13-C22 Santa Cruz, Sinaloa
+G13-C29 General Escobedo, Durango
+G13-C31 Mocorito, Sinaloa
+G13-C33 Quebrada de Copalquin, Sinaloa, Durango
+G13-C34 El Pueblo (antes El Pueblo Nuevo)
+G13-C35 Metatitos (antesMetates), Durango
+G13-C38 San Nicolás de Presidio, Durango
+G13-C39 Emiliano Martínez, Durango
+G13-C41 Pericos, Sinaloa
+G13-C47 San Miguel de Lobos, Durango
+G13-C57 San Francisco, Durango
+G13-C58 Llano Prieto, Durango
+G13-C63 El Salado, Sinaloa
+G13-C67 Santa María de Otaez, Durango
+G13-C68 Unión Modelo, Durango
+G13-C69 La Campana, Durango
+G13-C73 Quila, Sinaloa
+G13-C78 Veracruz de la Sierra, Durango
+G13-D23 San Pedro del Gallo, Durango
+G13-D33 San Luis del Cordero, Durango
+G13-D56 Oriente Aguanaval, Coahuila, Durango
+G13-D61 Canatlan, Durango
+G13-D66 General Simón Bolívar, Durango
+G13-D67 San Juan de Guadalupe, Durango, Coahuila
+G13-D68 Estación Symon, Durango, Zacatecas
+G13-D71 José Guadalupe Aguilera, Durango
+G13-D77 San José de Morteros, Durango, Zacatecas
+G13-D83 Tuitan, Durango
+G13-D85 Ramón Corona, Durango, Zacatecas
+G13-D87 Sierra de Guadalupe, Zacatecas
+G13-D88 Estación Pacheco, Zacatecas
+G14-A24 Juárez, Coahuila
+G14-A34 Progreso, Coahuila, Nuevo León
+G14-A41 Lamadrid, Coahuila
+G14-A42 San Buenaventura, Coahuila
+G14-A56 San Miguel, Nuevo León
+G14-A83 Reata, Coahuila, Nuevo León
+G14-A85 Mina, Nuevo León
+G14-A86 Mamulique, Nuevo León
+G14-C31 San José de Patagalana, Coahuila
+G14-C36 Allende, Coahuila, Nuevo León
+Página 4 de
+17 
+===== CAT PAGE 5 =====
+G14-C54 La Hediondilla, Coahuila, Nuevo León
+G14-C55 La Paz, Nuevo León
+G14-C65 El Carmen, Nuevo León
+G14-C66 San José de Raíces, Nuevo León
+G14-C68 Garza Valdez, Nuevo León, Tamaulipas
+G14-C76 San Francisco de Berlanga, Nuevo León
+G14-C78 Villagrán, Nuevo León, Tamaulipas
+G14-C85 Santa Ana, San Luis Potosí, Nuevo León
+H11-B13 Real del Castillo Nuevo, Baja California
+H11-B15 José Saldaña, Baja California
+H11-B33 San Vicente, Baja California
+H11-B44 El Potrero, Baja California
+H11-B54 Santo Domingo (antes Misión Santo Domingo), Baja California
+H11-B65 El Morro, Baja California
+H11-B75 El Agua Escondida, Baja California
+H12-A15 Santa Rosa, Sonora
+H12-A33 Sierra Pinta, Sonora
+H12-A48 Saric, Sonora
+H12-A57 Los Olivos, Sonora
+H12-A59 El Carrizo, Sonora
+H12-A74 Puerto Lobos, Sonora
+H12-A75 Santa Mónica, Sonora
+H12-A84 Bahía San Lorenzo, Sonora
+H12-B31 Nogales, Sonora
+H12-B39 El Monumento, Chihuahua
+H12-B41 Cíbuta, Sonora
+H12-B43 José Ma. Morelos, Sonora
+H12-B45 El Progreso, Sonora
+H12-B46 Dieciocho de Agosto, Sonora
+H12-B56 Morelos, Sonora
+H12-B66 Colonia Oaxaca, Sonora
+H12-B81 Tuape, Sonora
+H12-C16 Los Mochos, Sonora
+H12-C18 Félix Gómez, Sonora
+H12-C37 El Gavilán, Sonora
+H12-C47 Santa Rosita, Sonora
+H12-C48 Suaqui de la Candelaria (antes Santa Martha), Sonora
+H12-D15 Tonibabi, Sonora
+H12-D16 Huasabas, Sonora
+H12-D26 Basuchi, Sonora
+H12-D29 El Maderal, Chihuahua
+H12-D31 San Miguel de Horcasitas, Sonora
+H12-D33 Puerta del Sol, Sonora
+H12-D34 San Pedro de la Cueva, Sonora
+H12-D42 Santa Rosalía, Sonora
+H12-D43 Mazatán, Sonora
+H12-D44 San José de Batuc, Sonora
+H12-D53 Cobachi, Sonora
+H12-D83 Agua Caliente, Sonora
+H12-D84 Cumuripa, Sonora
+H12-D85 Movas, Sonora
+H12-D87 Sierra Obscura, Chihuahua, Sonora
+H13-A11 Guadalupe Victoria
+H13-A21 Guadalupe Victoria, Chihuahua
+H13-A41 Ascención, Chihuahua
+H13-A67 Los Lamentos, Chihuahua
+H13-C18 El Castillo, Chihuahua
+H13-C21 Ignacio Zaragoza, Chihuahua
+H13-C22 Montes de Oca, Chihuahua
+H13-C23 Agua Zarca, Chihuahua
+H13-C28 Las Playas, Chihuahua
+H13-C32 Cruces, Chihuahua
+H13-C35 Los Sauces, Chihuahua
+H13-C36 Ojo Laguna, Chihuahua
+H13-C46 El Sauz, Chihuahua
+H13-D22 Manuel Ojinaga, Chihuahua
+H13-D23 Barrio de los Montoya
+H13-D39 Mariano Escobedo, Coahuila
+H13-D58 Torrecillas, Coahuila
+H13-D64 Sierra el Pando, Chihuahua
+H13-D65 La Selva, Chihuahua, Coahuila
+H13-D67 San Miguel, Coahuila
+H13-D73 San Miguel, Chihuahua
+Página 5 de
+17 
+===== CAT PAGE 6 =====
+ 
+ 
+ 
+ 
+ 
+ 
+H13-D74 El Pozo de Villa, Chihuahua, Coahuila
+H13-D75 Santa Anita, Chihuahua, Coahuila
+H14-C41 Las Pilas Cuatas, Coahuila
+I11-D73 Neji, Baja California
+I11-D74 La Ponderosa, Baja California
+I11-D75 Sierra Cucapáh (antes Sierra Cucapa), Baja California
+I11-D82 Francisco Zarco, Baja California
+I11-D83 San Juan de Dios, Baja California
+I11-D85 Ejido Guardianes de la Patria (antes Guardianes de la Patria), Baja California
+I11-D89 El Sahuaro, Sonora
+I12-C81 Mina del Desierto, Sonora
+I12-C82 Los Vidrios, Sonora
+DISPONIBLES SOLO EN FORMATO ARCGIS (SHAPEFILE)
+ESCALA CLAVE DE CARTA NOMBRE
+1:50,000 D14-B18 San José Chacalapa, Oaxaca
+D15-A18 Tres Picos (Los Cocos), Chiapas
+D15-B12 Rizo de Oro, Chiapas
+D15-B22 San Luis, Chiapas
+D15-B23 Chicomuselo, Chiapas
+D15-B32 Escuintla, Chiapas
+E13-A18 La Gloria, Jalisco
+E13-A29 Bahía Chamela, Jalisco
+E13-B11 Zapotán, Jalisco
+E13-B12 Autlán de Navarro, Jalisco
+E13-B13 El Grullo, Jalisco
+E13-B14 Tapalpa, Jalisco
+E13-B21 San Miguel, Jalisco
+E13-B22 La Resolana (antes Casimiro Castillo), Jalisco
+E13-B23 El Chante, Jalisco
+E13-B26 Tamazula de Gordiano (antes Tamazula), Jalisco
+E13-B27 Santa María del Oro (antes Manuel M. Diéguez), Jalisco, Michoacán
+E13-B32 La Huerta, Colima, Jalisco
+E13-B33 Minatitlán, Jalisco, Colima
+E13-B34 Cómala, Jal, Colima
+E13-B36 Tecalitlán, Jalisco
+E13-B37 Rancho Nuevo, Jalisco, Michoacán
+E13-B43 Manzanillo, Colima
+E13-B44 Colima, Colima
+E13-B45 Los Tepames, Jalisco, Colima
+E13-B46 Ahuijullo, Jalisco, Michoacán
+E13-B47 Tepalcatepec, Michoacán
+E13-B49 Nueva Italia, Michoacán
+E13-B53 Cuyutlan, Colima
+E13-B55 Villa Victoria, Michoacán, Colima, Jalisco
+E13-B56 Coalcomán, Michoacán, Jalisco
+E13-B57 Dos Aguas, Michoacán
+E13-B58 San José de Chila, Michoacán
+E13-B59 Gambara, Michoacán
+E13-B65 El Ranchito, Michoacán
+E13-B66 Tehuantepec, Michoacán
+E13-B67 Aguililla, Michoacán
+E13-B68 Tumbiscatio, Michoacán
+E13-B69 General Francisco Villa (Las Cruces)
+E13-B77 El Parotal, Michoacán
+E13-B78 Playitas, Michoacán
+E13-B79 Arteaga, Michoacán
+E13-B88 Playa Azul, Michoacán
+E14-A16 El Oro de Hidalgo, Estado de México
+E14-A26 Angangueo, Estado de México, Michoacán
+E14-A33 Villa Madero, Michoacán
+E14-A41 Ario de Rosales, Michoacán
+E14-A43 Carácuaro, Michoacán
+E14-A44 Papatzingan, Michoacán
+E14-A45 Tuzantla, Estado de México, Michoacán
+E14-A46 Valle de Bravo, Estado de México
+E14-A51 La Huacana, Michoacán
+E14-A52 Zarate, Michoacán
+E14-A53 Acuyo, Michoacán
+Página 6 de
+17 
+===== CAT PAGE 7 =====
+E14-A54 Tiquicheo, Michoacán
+E14-A55 Bejucos,Estado de México, Michoacán
+E14-A56 Tejupilco de Hidalgo, Estado de México
+E14-A57 Ixtapan de la Sal, Estado de México
+E14-A58 Tenancingo, Estado de México, Morelos, Guerrero
+E14-A61 Las Cañas, Michoacán, Guerrero
+E14-A62 Churumuco, Michoacán, Guerrero
+E14-A63 San Jerónimo, Michoacán, Guerrero
+E14-A64 Huetamo, Michoacán, Guerrero
+E14-A65 Palmar Chico, Mich., Guerrero, Estado de México
+E14-A66 Amatepec, Estado de México, Guerrero
+E14-A67 Pilcaya, Estado de México, Guerrero
+E14-A68 Taxco, Guerrero, Estado de México.
+E14-A73 Guayameo, Guerrero, Michoacán
+E14-A74 Coyuca de Catalán, Guerrero, Michoacán
+E14-A75 Cd. Altamirano, Guerrero, Mich., Estado de México
+E14-A76 Arcelia, Guerrero, Estado de México.
+E14-A77 Teloloapan, Guerrero
+E14-A78 Iguala, Guerrero, Morelos
+E14-A79 Tilzapoatla, Guerrero, Morelos, Puebla
+E14-A84 Placeres del Oro, Guerrero
+E14-A85 Ajuchitlán, Guerrero
+E14-A86 Villa Hidalgo, Guerrero
+E14-A87 Apaxtla de Castrejón, Guerrero
+E14-B12 Cd. Sahagún, Hidalgo, Estado de México.
+E14-B13 Chignahuapan, Puebla, Hidalgo
+E14-B14 Zacatlán, Puebla
+E14-B15 Teziutlán, Puebla
+E14-B16 Altotonga, Puebla, Veracruz
+E14-B17 Misantla, Veracruz
+E14-B24 Mexcaltepec, Puebla, Tlaxcala
+E14-B25 Xonacatlán, Puebla, Veracruz
+E14-B26 Perote, Puebla, Veracruz
+E14-B27 Xalapa Enríquez (antes Xalapa), Veracruz
+E14-B28 Actopan, Veracruz
+E14-B35 Guadalupe Victoria, Tlaxcala, Puebla
+E14-B37 Coatepec, Veracruz
+E14-B38 Cd. Cardel, Veracruz
+E14-B52 Atlixco, Puebla, Morelos
+E14-B53 San Francisco Totimehuacán, Puebla
+E14-B61 Tepalcingo de Hidalgo, Puebla, Morelos
+E14-B62 Izucar de Matamoros, Puebla
+E14-B63 Coatzingo, Puebla
+E14-B64 Molcaxac, Puebla
+E14-B65 Santiago Miahuatlán, Puebla
+E14-B71 Huehuetlan, Morelos, Guerrero, Puebla
+E14-B72 Chiautla, Puebla
+E14-B73 Tehuetzingo, Puebla
+E14-B81 Temalac, Puebla, Guerrero
+E14-B83 Acatlán de Osorio, Puebla
+E14-B84 Petlalcingo, Puebla, Oaxaca
+E14-B85 Atzumba, Puebla, Oaxaca
+E14-C12 La Laja, Guerrero
+E14-C16 Tétela del Rio, Guerrero
+E14-C17 Tlacotepec, Guerrero
+E14-C18 Xochipala, Guerrero
+E14-C27 Chichihualco, Guerrero
+E14-C28 Chilpancingo, Guerrero
+E14-C37 Jaleaca, Guerrero
+E14-C38 Mazatlán, Guerrero
+E14-C39 Quechultenango, Guerrero
+E14-C47 Xaltianguis, Guerrero
+E14-D14 Heroica Ciudad de Huajuapan de León (antes Huajuapan de León), Oaxaca, Puebla
+E14-D23 Santiago Tamazola, Oaxaca
+E14-D24 Tezoatlan de Seg. y Luna, Oaxaca
+E14-D27 Santiago Nacaltepec, Oaxaca
+E14-D28 San Juan Quiotepec, Oaxaca
+E14-D29 Ayotzintepec, Oaxaca
+E14-D33 Santiago Juxtlahuca, Oaxaca, Guerrero
+E14-D34 Tlaxiaco, Oaxaca
+E14-D36 Asunción Nochixtlan, Oaxaca
+E14-D37 San Francisco Telixtlahuaca, Oaxaca
+E14-D38 Santa Catarina Ixtepeji, Oaxaca
+Página 7 de
+17 
+===== CAT PAGE 8 =====
+E14-D39 San Miguel Talea de Castro, Oaxaca
+E14-D46 San Mateo Tepantepec, Oaxaca
+E14-D47 Oaxaca de Juárez, Oaxaca
+E14-D48 Tlalixtac de Cabrera, Oaxaca
+E14-D49 Santa María Tlahuitoltepec, Oaxaca
+E14-D56 San Miguel Peras, Oaxaca
+E14-D57 Villa de Zaachila, Oaxaca
+E14-D58 Tlacolula de Matamoros, Oaxaca
+E14-D59 San Pedro Quiantoni, Oaxaca
+E14-D67 Ejutla de Crespo, Oaxaca
+E14-D68 Santa María Zoquitlán, Oaxaca
+E14-D69 Totolapan (antes San Pedro Totolapa), Oaxaca
+E15-C14 Acayucan, Veracruz
+E15-C21 Xochiapa, Oaxaca, Veracruz
+E15-C33 Jesús Carranza, Oaxaca, Veracruz
+E15-C39 Ixhuatán, Chiapas
+E15-C61 Santa Ana Tavela, Oaxaca
+E15-C62 Santiago Lachiguiri, Oaxaca
+E15-C63 Cd. Ixtepec, Oaxaca
+E15-C64 Santo Domingo, Oaxaca
+E15-C67 Cintalapa, Chiapas
+E15-C71 Asunción Tlacolulita, Oaxaca
+E15-C72 Jalapa del Marqués, Oaxaca
+E15-C87 Tonalá, Chiapas
+E15-D41 Jitotol de Zaragoza, Chiapas
+F12-B13 San Antonio, Baja California Sur
+F12-B14 San Juan de los Planes, Baja California Sur
+F12-B23 El Rosario, Baja California Sur
+F12-B54 Cabo San Lucas, Baja California Sur
+F13-A15 San Ignacio, Sinaloa
+F13-A17 Borbollones, Sinaloa, Durango
+F13-A18 El Salto, Durango
+F13-A25 El Quelite, Sinaloa
+F13-A26 La Noria, Sinaloa
+F13-A27 La Ciudad, Durango, Sinaloa
+F13-A35 Mármol, Sinaloa
+F13-A36 Concordia, Sinaloa
+F13-A37 Cópala, Sinaloa
+F13-A38 Pueblo Nuevo, Sinaloa Durango
+F13-A39 San Bernardino de M. Chico, Durango
+F13-A46 Villa Unión, Sinaloa
+F13-A47 Cacalotán, Sinaloa
+F13-A48 La Rastra, Durango, Sinaloa, Nayarit
+F13-A49 San Francisco de  Lajas, Durango, Nay.
+F13-A56 Laguna del Caimanero, Sinaloa
+F13-A57 Escuinapa, Sinaloa
+F13-A58 Corral de Piedras, Sinaloa, Nayarit
+F13-A59 Mineral de Cucharas, Durango, Nayarit
+F13-A68 La Concepción, Sinaloa, Nayarit
+F13-A69 Huajicori, Durango, Nayarit
+F13-A89 Rosamorada, Nayarit
+F13-B13 Nombre de Dios, Durango
+F13-B14 La Joya, Durango, Zacatecas
+F13-B15 Colonia González Ortega (antes Gonzalez Ortega)
+F13-B18 Estación la Colorada, Zacatecas
+F13-B19 Felipe Carrillo Puerto, Zacatecas
+F13-B22 Agua Zarca, Durango
+F13-B23 San José de la Parrilla, Durango, Zacatecas
+F13-B24 Vicente Guerrero, Durango, Zacatecas
+F13-B25 Sombrerete, Zacatecas
+F13-B27 Cañitas de Felipe Pescador, Zacatecas
+F13-B28 Presa del Cedro, Zacatecas
+F13-B29 La Abundancia, Zacatecas
+F13-B32 San Francisco del Mezquital
+F13-B33 San Juan de Michis, Durango, Zacatecas
+F13-B34 Chalchihuites, Zacatecas
+F13-B35 Mesillas, Zacatecas
+F13-B36 El Baluarte, Zacatecas
+F13-B37 Lázaro Cárdenas (Rancho Grande), Zacatecas
+F13-B38 Villa de Cos, Zacatecas
+F13-B44 Milpillas de la Sierra, Zacatecas
+F13-B45 Corrales, Zacatecas
+F13-B46 Presa Gobernador Leobardo Reynoso
+Página 8 de
+17 
+===== CAT PAGE 9 =====
+F13-B47 Fresnillo, Zacatecas
+F13-B49 Hernández, Zacatecas, San Luis Potosí.
+F13-B57 Victor Rosales, Zacatecas
+F13-B58 Zacatecas, Zacatecas
+F13-B59 Zacatón, Zacatecas, San Luis Potosí
+F13-B68 Guadalupe, Zacatecas
+F13-B69 Ojo Caliente, Zacatecas, San Luis Potosí
+F13-B78 San Pedro Piedra Gorda (antesCiudad Cuauhtémoc), Zacatecas, Aguascalientes
+F13-B79 Luis Moya, Zacatecas, Aguascalientes
+F13-B88 Presa Presidente Calles, Ags., Zacatecas
+F13-B89 Rincón de Romos,  Aguascalientes, Zacatecas
+F13-C19 Santiago Ixcuintla, Nayarit
+F13-C29 San Blas, Nayarit
+F13-C39 Jalcocotan, Nayarit
+F13-C49 Las Varas, Nayarit
+F13-C68 Chacala
+F13-C77 Chacala
+F13-C78 Chacala, Jalisco
+F13-C79 El Tuito, Jalisco
+F13-C89 El Tule, Jalisco
+F13-D11 El Venado, Nayarit
+F13-D14 Chimaltitán, Jalisco, Nayarit
+F13-D15 Villa Guerrero, Jalisco, Zacatecas
+F13-D21 Tepic, Nayarit
+F13-D24 San Martin de Bolaños, Jalisco, Nayarit
+F13-D26 Tepechitlan, Zacatecas
+F13-D27 Jalpa, Zacatecas, Jalisco, Aguascalientes
+F13-D31 Xalisco, Nayarit
+F13-D33 La Yesca, Nayarit, Jalisco
+F13-D34 Apozolco, Nayarit, Jalisco, Zacatecas
+F13-D37 Nochistlán de Mejía, Zacatecas, Jalisco
+F13-D41 Compostela, Nayarit, Jalisco
+F13-D42 Ixtlán, Nayarit
+F13-D43 Hostotipaquillo, Nayarit, Jalisco
+F13-D44 El Salvador, Jalisco, Zacatecas
+F13-D45 Garcia de la Cadena, Jalisco, Zacatecas
+F13-D51 San Felipe de Hijar, Jalisco, Nayarit
+F13-D52 Amatlan de Cañas, Jalisco, Nayarit
+F13-D53 Etzatlan, Jalisco, Nayarit
+F13-D61 Mascota, Jalisco
+F13-D62 Guachinango, Jalisco, Nayarit
+F13-D63 Ameca, Jalisco, Nayarit
+F13-D71 Talpa de Allende, Jalisco
+F13-D72 Atenguillo, Jalisco
+F13-D73 Atengo, Jalisco
+F13-D81 Llano Grande, Jalisco
+F13-D82 Ayutla, Jalisco
+F13-D83 Tecolotlan, Jalisco
+F13-D84 Atemajac de Brizuela, Jalisco
+F14-A13 Charco Largo, Zacatecas, San Luis Potosí
+F14-A14 Cedral, San Luis Potosí
+F14-A15 Cruz  de Elorza, San Luis Potosí, Nuevo León
+F14-A16 San Ramón de Martínez, Nuevo León
+F14-A22 La Victoria, Zacatecas, San Luis Potosí
+F14-A23 Tanque de Dolores, San Luis Potosí
+F14-A24 Real de Catorce, San Luis Potosí
+F14-A26 Doctor Arroyo, Nuevo León
+F14-A29 Cd. Victoria, Tamaulipas
+F14-A31 Santo Domingo (antes Villa de Santo Domingo), Zacatecas, San Luis Potosí
+F14-A32 Cerritos de Bernal, San Luis Potosí
+F14-A33 Presa de Santa Gertrudis, San Luis Potosí
+F14-A34 Villa de Guadalupe, San Luis Potosí
+F14-A38 Jaumave, Tamaulipas
+F14-A41 La Herradura, San Luis Potosí
+F14-A42 Estribo, San Luis Potosí
+F14-A43 Charcas, San Luis Potosí
+F14-A44 Santa Isabel, San Luis Potosí
+F14-A46 La Ventana, Tamaulipas, San Luis Potosí., Nuevo León
+F14-A49 Gómez Farías, Tamaulipas
+F14-A51 Villa de Ramos, San Luis Potosí
+F14-A52 El Toro, San Luis Potosí
+F14-A53 Venado, San Luis Potosí
+F14-A55 Pozas de Santa Ana, San Luis Potosí
+Página 9 de
+17 
+===== CAT PAGE 10 =====
+F14-A61 Salinas de Hidalgo, San Luis Potosí, Zacatecas
+F14-A62 Espíritu Santo, Zacatecas, San Luis Potosí
+F14-A63 Moctezuma, San Luis Potosí, Zacatecas
+F14-A64 Villa de Arista (antes Arista)
+F14-A65 Guadalcazar, San Luis Potosí
+F14-A71 Loreto, Zacatecas, San Luis Potosí
+F14-A72 Pinos, Zacatecas, San Luis Potosí
+F14-A73 Ahualulco del Sonido Trece (antes Ahualulo) , Zacatecas, San Luis Potosí
+F14-A74 Villa Hidalgo, San Luis Potosí
+F14-A75 Peotillos, San Luis Potosí
+F14-A76 Cerritos, San Luis Potosí
+F14-A77 Colonia La Libertad
+F14-A82 El Obraje, Zacatecas, San Luis Potosí
+F14-A83 Tepetate, Zacatecas, San Luis Potosí
+F14-A84 San Luis Potosí, San Luis Potosí
+F14-A85 Santa Catarina, San Luis Potosí
+F14-A86 Angostura, San Luis Potosí
+F14-B81 Las Palmas, San Luis Potosí
+F14-C11 Palo Alto, Zacatecas,  Aguascalientes, Jal.
+F14-C12 Ojuelos, Jalisco, Guanajuato, Zacacatecas, San Luis Potosí
+F14-C13 San Francisco, San Luis Potosí, Guanajuato
+F14-C14 Santa María del Rio, San Luis Potosí, Guanajuato
+F14-C15 La Salitrera, San Luis Potosí
+F14-C16 El Refugio, San Luis Potosí
+F14-C17 Rioverde, San Luis Potosí
+F14-C23 Presa San Bartolo (antes San Bartolo de Berrios).
+F14-C24 Melchor, San Luis Potosí, Guanajuato
+F14-C25 Tierra Nueva, San Luis Potosí, Guanajuato
+F14-C26 Mineral el Realito, San Luis Potosí, Guanajuato
+F14-C27 San Ciro, Querétaro, San Luis Potosí, Guanajuato
+F14-C31 Lagos de Moreno, Jalisco, Guanajuato
+F14-C32 Ibarra, Jalisco, Guanajuato
+F14-C33 San Felipe, Guanajuato
+F14-C34 San Diego de la Unión, Guanajuato
+F14-C35 San Luis de la Paz, Guanajuato
+F14-C36 Xichu, Guanajuato
+F14-C37 El Carricillo, Guanajuato, Querétaro, San Luis Potosí
+F14-C39 Ahuacatlan, Queretaro, San Luis Potosí
+F14-C42 Nuevo Valle de Moreno, Guanajuato
+F14-C43 Guanajuato, Guanajuato
+F14-C44 Dolores Hidalgo, Guanajuato
+F14-C45 Mineral de Pozos, Guanajuato
+F14-C46 Doctor Mora, Guanajuato, Querétaro
+F14-C47 Peña Miller, Guanajuato, Querétaro
+F14-C48 Jalpan, Queretaro, Hidalgo
+F14-C49 Jacala, Hidalgo, Querétaro
+F14-C53 Aldama, Guanajuato
+F14-C54 San Miguel de Allende, Guanajuato, Querétaro
+F14-C55 Buenavista
+F14-C56 Colón, Guanajuato, Querétaro
+F14-C57 San Pablo Toliman, Querétaro
+F14-C58 San Joaquín, Qro, Hidalgo
+F14-C59 San Nicolás, Hidalgo
+F14-C64 Celaya, Guanajuato
+F14-C67 Tequisquiapan, Queretaro, Hidalgo
+F14-C68 Tecozautla, Querétaro, Hidalgo
+F14-C69 Tasquillo, Hidalgo
+F14-C77 San Juan del Rio, Querétaro, Hidalgo, Estado de México
+F14-C78 Huichapan, Hidalgo
+F14-C79 Ixmiquilpan, Hidalgo
+F14-C84 Acámbaro, Guanajuato, Michoacán
+F14-C88 Tula de Allende,Estado de México, Hidalgo
+F14-C89 Mixquiahuala, Estado de México, Hidalgo
+F14-D41 Chapulhuacan, Hidalgo, San Luis Potosí, Querétaro
+F14-D42 Huejutla, San Luis Potosí, Hidalgo, Veracruz
+F14-D51 Molango, Hidalgo
+F14-D52 Calnali, Hidalgo, Veracruz
+F14-D61 Metztitlan, Hidalgo
+F14-D63 San Lorenzo Axatepec, Veracruz, Hidalgo
+F14-D71 Actopan, Hidalgo
+F14-D73 Pahuatlan, Hidalgo, Veracruz, Puebla
+F14-D81 Pachuca, Hidalgo, Estado de México
+F14-D82 Tulancingo, Hidalgo
+Página 10 de
+17 
+===== CAT PAGE 11 =====
+F14-D83 Huauchinango, Hidalgo, Puebla
+F14-D84 Filomeno Mata, Puebla, Veracruz
+G12-A55 La Presa, Baja California Sur
+G12-A77 El Duguajal, Baja California Sur
+G12-A88 Loreto, Baja California Sur
+G12-B17 El Zapote, Chihuahua, Sonora
+G12-B18 Arechuyvo, Chihuahua
+G12-B19 Uruachic, Chihuahua
+G12-B25 Batacosa, Sonora
+G12-B26 Quiriego, Sonora
+G12-B28 Guadalupe Victoria, Sonora, Chihuahua
+G12-B29 Bachamuchic, Chihuahua
+G12-B37 San Bernardo, Sonora
+G12-B38 Chinipas de Almada, Chihuahua, Sonora
+G12-B39 Témoris, Chihuahua
+G12-B47 Álamos, Sonora
+G12-B48 Milpillas, Sonora, Chihuahua, Sinaloa
+G12-B49 Cieneguita Lluvia de Oro, Chihuahua, Sinaloa
+G12-B58 Baca, Sonora, Sinaloa, Chihuahua
+G12-B59 Tasajeras, Sinaloa, Chihuahua
+G12-B67 El Maquipo, Sinaloa, Sonora
+G12-B68 Agua Caliente Grande, Sinaloa, Sonora
+G12-B69 Choix, Sinaloa
+G12-B78 El Fuerte, Sinaloa
+G12-B79 Yecorato, Sinaloa
+G12-B88 Los Ojitos, Sinaloa
+G12-C79 Las Pocitas, Baja California Sur
+G12-D29 Estación Bamoa, Sinaloa
+G12-D73 El Coyote,  Baja California Sur
+G12-D83 La Paz, Baja California Sur
+G13-A11 Maguarichic, Chihuahua
+G13-A35 El Durazno, Chihuahua
+G13-A41 Batopilas, Chihuahua
+G13-A46 Huejotitán, Chihuahua
+G13-A47 San Antonio del Potrero, Chihuahua
+G13-A48 Estación Dorado, Chihuahua
+G13-A49 Octaviano López, Chihuahua
+G13-A51 Rio Batopilas, Chihuahua, Sinaloa
+G13-A52 Mineral Polanco, Chihuahua
+G13-A56 San Juan, Chihuahua, Durango
+G13-A57 Santa Bárbara, Chihuahua, Durango
+G13-A58 Valle de Allende, Chihuahua
+G13-A65 Las Coloradas, Chihuahua
+G13-A66 Metate, Chihuahua, Durango
+G13-A67 La Providencia, Chih, Durango
+G13-A68 Villa Orestes Pereyra (antes Orestes Pereyra), Chihuahua, Durango
+G13-A71 Agua Caliente, Chihuahua, Sinaloa
+G13-A72 Basonopa, Chihuahua
+G13-A73 Baborigame, Chihuahua
+G13-A75 El Vergel, Chihuahua, Durango
+G13-A81 San José de Gracia, Chihuahua, Sinaloa
+G13-A82 El Naranjo, Chihuahua, Sinaloa
+G13-A83 Santa Rosalía de Arriba, Chihuahua, Sinaloa
+G13-A84 Guadalupe y Calvo, Chihuahua
+G13-A85 Talayotes, Chihuahua, Durango
+G13-A87 El Colorado, Durango
+G13-A88 Cinco de Julio, Durango
+G13-B15 Llano el Guaje, Coahuila
+G13-B19 El Carrizalejo, Coahuila
+G13-B29 El Socorro, Coahuila
+G13-B34 Sierra Mojada, Chihuahua, Coahuila
+G13-B35 El Carmen, Coahuila
+G13-B37 Palmira, Coahuila
+G13-B38 Ocampo, Coahuila
+G13-B39 Nuevo Reforma, Coahuila
+G13-B69 Tanque Nuevo, Coahuila
+G13-B79 Sierra los Alamitos, Coahuila
+G13-B82 Atotonilco, Durango
+G13-B87 Sierra las Delicias, Coahuila
+G13-B88 Sierra el Negro, Coahuila
+G13-C11 Tamuchina, Sinaloa
+G13-C12 Surutato, Sinaloa
+G13-C13 Mohinora, Chihuahua, Sinaloa
+Página 11 de
+17 
+===== CAT PAGE 12 =====
+G13-C16 El Salitre, Durango
+G13-C17 Guanaceví, Durango
+G13-C18 Santa María del Oro, Durango
+G13-C19 Indé, Durango
+G13-C21 Palmar de Sepulveda, Sinaloa
+G13-C23 Bacacoragua, Chihuahua, Durango, Sinaloa
+G13-C24 Chicorimpa, Chihuahua, Durango
+G13-C27 Ciénega de Escobar, Durango
+G13-C28 Ignacio Manuel Altamirano, Durango
+G13-C32 Badiraguato, Sinaloa
+G13-C36 La Graniza (antes Cebollín), Durango
+G13-C37 Tepehuanes, Durango
+G13-C42 Presa Adolfo López Mateos, Sinaloa
+G13-C43 Sierra del Chanteco, Durango, Sinaloa
+G13-C44 Sianori, Durango
+G13-C45 Topia, Durango
+G13-C46 Arroyo del Oso, Durango
+G13-C48 Santiago Papasquiaro, Durango
+G13-C49 José María Morelos, Durango
+G13-C52 Culiacán, Sinaloa
+G13-C53 Presa Sanalona, Durango, Sinaloa
+G13-C54 Chacala, Durango, Sinaloa
+G13-C55 San Juan de Camarones, Durango
+G13-C56 San Gregorio, Durango
+G13-C59 Nuevo Ideal, Durango
+G13-C64 Presa José López Portillo (antes Comedero)
+G13-C65 Coacoyole, Durango, Sinaloa
+G13-C66 San Pedro de Azafranes, Durango
+G13-C74 Cosala, Sinaloa
+G13-C75 Guadalupe de los Reyes, Sinaloa, Durango
+G13-C77 San Miguel de Cruces, Durango
+G13-C83 Tanques, Sinaloa
+G13-C84 San Jose de Conitaca, Sinaloa
+G13-C85 Ajoya, Sinaloa
+G13-C86 Pueblo Viejo, Durango, Sinaloa
+G13-C87 Tayoltita, Durango, Sinaloa
+G13-D12 Santo Domingo, Durango
+G13-D13 La Cadena, Durango
+G13-D14 Mapimí, Durango
+G13-D15 Bermejillo, Durango, Coahuila
+G13-D22 La Cieneguilla, Durango
+G13-D24 Vicente Suárez, Durango
+G13-D25 Torreón, Coahuila, Durango
+G13-D26 Matamoros, Coahuila
+G13-D31 San Francisco de Asís, Durango
+G13-D32 Abasolo, Durango
+G13-D34 La Loma, Durango
+G13-D41 Miguel Negrete, Durango
+G13-D42 Rodeo, Durango
+G13-D43 Nazas, Durango
+G13-D44 Velardeña, Durango
+G13-D45 Jimulco, Durango, Coahuila
+G13-D46 La Flor de Jimulco, Coahuila, Durango
+G13-D48 Bajío de Ahuichila, Coahuila, Zacatecas
+G13-D51 Guatimape, Durango
+G13-D52 San Juan del Rio, Durango
+G13-D53 Peñón Blanco, Durango
+G13-D54 Cuencamé, Durango
+G13-D55 La Lagunilla, Durango
+G13-D57 Estación la Mancha, Coahuila, Durango
+G13-D58 Pendencia, Durango, Zacatecas
+G13-D59 Caopas, Zacatecas
+G13-D62 Donato Guerra, Durango
+G13-D63 Ignacio Ramírez, Durango
+G13-D64 General Jesús Agustín Castro (antes Colonia Jesús Agustín Castro, Durango
+G13-D65 Doce de Diciembre, Durango
+G13-D69 Pico de Teyra, Zacatecas
+G13-D72 General Carlos Real, Durango
+G13-D73 Guadalupe Victoria, Durango
+G13-D74 Cuauhtémoc, Durango
+G13-D75 Juan Aldama, Zacatecas, Durango
+G13-D76 San José de  Reyes, Durango, Zacatecas
+G13-D78 Estación Camacho, Durango, Zacatecas
+Página 12 de
+17 
+===== CAT PAGE 13 =====
+G13-D79 San Felipe de Teyra, Zacatecas
+G13-D81 Durango Oeste, Durango
+G13-D82 Durango Este, Durango
+G13-D84 Ignacio López Rayón, Durango, Zacatecas
+G13-D86 La Laguna, Zacatecas
+G13-D89 San Felipe Nuevo Mercurio, Zacatecas
+G14-A12 Melchor Múzquiz, Coahuila
+G14-A13 Nueva Rosita, Coahuila
+G14-A22 Las Esperanzas, Coahuila
+G14-A23 Minas de Barroterán, Coahuila
+G14-A43 Primero de Mayo, Coahuila
+G14-A51 El Venado, Coahuila
+G14-A52 Monclova, Coahuila
+G14-A53 El Oro, Coahuila
+G14-A54 Candela, Coahuila
+G14-A55 Valladares, Nuevo León, Coahuila
+G14-A61 Reforma, Coahuila
+G14-A62 La Gloria, Coahuila
+G14-A63 Estación Baján, Coahuila, Nuevo León
+G14-A72 Santa Teresa, Coahuila
+G14-A76 Larraldeña, Nuevo León
+G14-A82 Las Coloradas, Coahuila
+G14-C15 Hidalgo, Nuevo León
+G14-C17 Doctor Gonzalez, Nuevo León
+G14-C25 Garza Garcia, Coahuila, Nuevo León
+G14-C32 General Cepeda, Coahuila
+G14-C41 Sabanilla, Coahuila, Zacatecas
+G14-C42 Sierra El Laurel, Coahuila
+G14-C43 Agua Nueva, Coahuila
+G14-C44 Huachichil, Coahuila, Nuevo León
+G14-C51 Sierra Zuloaga, Coahuila, Zacatecas
+G14-C52 Melchor Ocampo, Coahuila, Zacatecas
+G14-C53 Gómez Farías, Coahuila, Zacatecas
+G14-C56 Galeana, Nuevo León
+G14-C57 Hualahuises, Nuevo León
+G14-C61 Cedros, Zacatecas
+G14-C62 Concepción del Oro, Coahuila, Zacatecas
+G14-C63 Presa San Pedro, Coahuila, Zacatecas
+G14-C64 El Salvador, Coahuila, Nuevo León, San Luis Potosí
+G14-C67 Iturbide, Tamaulipas, Nuevo León
+G14-C69 San Lázaro, Tamaulipas
+G14-C71 El Cardito, Zacatecas
+G14-C72 Tanquecillos, Zacatecas
+G14-C73 El Durazno, San Luis Potosí, Zacatecas
+G14-C74 El Salado, San Luis Potosí, Zacatecas, Nuevo León
+G14-C75 El Canelo, Nuevo León, San Luis Potosí
+G14-C77 La Ascensión, Nuevo León, Tamaulipas
+G14-C81 Noria del Junco (antes El Junco), Zacatecas
+G14-C82 San Tiburcio, Zacatecas
+G14-C83 Los Encinos, Zacatecas, San Luis Potosí
+G14-C84 San Vicente, San Luis Potosí
+G14-C86 La Soledad, Nuevo León
+G14-C87 Aramberri, Nuevo León
+G14-D11 El Brasil, Nuevo León, Tamaulipas
+G14-D12 Congregación Garza, Tamaulipas, Nuevo León
+G14-D61 San Carlos, Tamaulipas
+H11-B23 El Zacatón, Baja California
+H11-B85 El Aguajito, Baja California
+H11-B87 Cerro el Huerfanito, Baja California
+H11-D15 Emiliano Zapata, Baja California
+H11-D16 Guayaquil, Baja California
+H12-A13 El Papalote, Sonora
+H12-A23 Los Norteños, Sonora
+H12-A24 Quitovac, Sonora
+H12-A34 El Tullido, Sonora
+H12-A35 Costa Rica, Sonora
+H12-A36 Santa Rita, Sonora
+H12-A43 Estación Almejas, Sonora
+H12-A44 El Sahuaro, Sonora
+H12-A45 San Luisito, Sonora
+H12-A49 La Arizona (antes El Correo), Sonora
+H12-A54 Coahuila, Sonora
+H12-A55 El Diamante, Sonora
+Página 13 de
+17 
+===== CAT PAGE 14 =====
+H12-A56 El Sahuaro, Sonora
+H12-A64 La Alameda (El Chamizal), Sonora
+H12-A65 Jesús Garcia, Sonora
+H12-A67 Altar, Sonora
+H12-A69 Santa Ana, Sonora
+H12-A77 El Prieto, Sonora
+H12-A78 Trincheras, Sonora
+H12-A79 Estación Llano, Sonora
+H12-A85 El Caracol, Sonora
+H12-A87 La Ciénega, Sonora
+H12-A88 Sierrita Prieta, Sonora
+H12-A89 Benjamín Hill, Sonora
+H12-B42 Santa Cruz, Sonora
+H12-B44 Cuauhtémoc, Sonora
+H12-B51 Imuris, Sonora
+H12-B52 Dieciséis de Septiembre, Sonora
+H12-B53 Cananea, Sonora
+H12-B54 Cuquiárichi, Sonora
+H12-B55 Fronteras, Sonora
+H12-B59 Janos, Chihuahua
+H12-B61 Magdalena de Kino, Sonora
+H12-B62 Santa Teresa, Sonora
+H12-B63 Bacanuchi, Sonora
+H12-B64 Bacoachi, Sonora
+H12-B65 Esqueda, Sonora
+H12-B69 Graciano Sanchez, Chihuahua
+H12-B71 Cucurpe, Sonora
+H12-B72 Saracachi, Sonora
+H12-B73 Arizpe, Sonora
+H12-B74 Nacozari de García, Sonora
+H12-B75 El Abanico, Sonora
+H12-B76 La Valenzuela, Sonora
+H12-B82 Santa Ana, Sonora
+H12-B83 Banamichi, Sonora
+H12-B84 Agua Caliente, Sonora
+H12-B85 El Poche , Sonora
+H12-B86 Villa Hidalgo, Sonora
+H12-C17 La Inmaculada, Sonora
+H12-C19 Los Chinos, Sonora
+H12-C29 El Oasis, Sonora
+H12-C39 El Batamote, Sonora
+H12-C82 El Arco, Baja California
+H12-D11 La Poza, Sonora
+H12-D12 Opodepe, Sonora
+H12-D13 Aconchi, Sonora
+H12-D14 Cumpas, Sonora
+H12-D21 Carbo, Sonora
+H12-D22 Rayón, Sonora
+H12-D23 Baviacora, Sonora
+H12-D24 El Rodeo, Sonora
+H12-D25 Divisaderos, Sonora
+H12-D32 Ures, Sonora
+H12-D35 Lampazos, Sonora
+H12-D36 Badesi, Sonora
+H12-D38 El Yerbanis, Chihuahua, Sonora
+H12-D45 Santa Teresa, Sonora
+H12-D46 Sahuaripa, Sonora
+H12-D48 El Refugio, Chihuahua
+H12-D51 Estación Torres, Sonora
+H12-D52 La Colorada, Sonora
+H12-D54 Rebeico, Sonora
+H12-D55 Bacanora, Sonora
+H12-D56 Arivechi, Sonora
+H12-D57 Tarachi, Sonora
+H12-D63 Buenavista, Sonora
+H12-D64 Tecoripa, Sonora
+H12-D65 Tonichi, Sonora
+H12-D66 Guisamopa, Sonora
+H12-D67 Mulatos, Sonora
+H12-D73 Agua Fría, Sonora
+H12-D74 Suaqui Grande, Sonora
+H12-D75 La Dura, Sonora
+H12-D76 Santa Rosa, Sonora, Chihuahua
+Página 14 de
+17 
+===== CAT PAGE 15 =====
+H12-D77 Yécora, Sonora, Chihuahua
+H12-D78 Yepachic, Sonora, Chihuahua
+H12-D79 Tutuaca, Chihuahua
+H12-D88 Moris, Chihuahua
+H12-D89 San Isidro Huajumar, Chihuahua
+H13-A42 Guzmán, Chihuahua
+H13-A52 Niños Héroes de Chapultepec, Chihuahua
+H13-A56 El Cuarenta, Chihuahua
+H13-A57 El Consuelo, Chihuahua
+H13-A62 San Pedro Corralitos, Chihuahua
+H13-A66 El Palmar, Chihuahua
+H13-C27 El Refugio, Chihuahua
+H13-C29 San Eduardo, Chihuahua
+H13-C38 El Consuelo, Chihuahua
+H13-C39 Coyame, Chihuahua
+H13-C48 Placer de Guadalupe, Chihuahua
+H13-C49 Plomosa, Chihuahua
+H13-C56 Sacramento, Chihuahua
+H13-C59 Chorreras, Chihuahua
+H13-C66 Chihuahua, Chihuahua
+H13-C67 Aquiles Serdán, Chihuahua
+H13-C68 San Diego de Alcalá, Chihuahua
+H13-C69 El Jateado, Chihuahua
+H13-C84 Cusihuiriachic, Chihuahua
+H13-C85 Tutuaca, Chihuahua
+H13-D11 Las Conchas, Chihuahua
+H13-D21 El Mezquite, Chihuahua
+H13-D31 Cuchillo Parado, Chihuahua
+H13-D32 Álamo Chapo, Chihuahua
+H13-D38 Cuatro Palmas, Coahuila
+H13-D43 La Madera, Chihuahua
+H13-D48 Venustiano Carranza, Coahuila
+H13-D53 Pozos, Chihuahua
+H13-D54 Álamos de San Antonio, Chihuahua
+H13-D57 Jaboncillos, Coahuila
+H13-D61 Charco de Peña, Chihuahua
+H13-D62 La Morita, Chihuahua
+H13-D63 Los Álamos, Chihuahua
+H13-D68 Sierra la Encantada, Coahuila
+H13-D71 La Coyota, Chihuahua
+H13-D72 La Perla, Chihuahua
+H13-D77 Las Eutimias, Coahuila
+H13-D78 La Encantada, Coahuila
+H13-D84 Hércules, Chihuahua, Coahuila
+H13-D85 Adolfo López Mateos, Coahuila
+H14-C31 Chupadero del Caballo, Coahuila
+I11-D79 Aquiles Serdán
+I12-C83 El Papalote, Sonora
+1:250,000 D14-3 Puerto Escondido
+D15-2 Huixtla
+D15-5 Tapachula
+E13-2-5 Manzanillo
+E13-3 Colima
+E13-6-9 Lázaro Cárdenas
+E14-1 Morelia
+E14-11 Acapulco
+E14-12 Zaachila
+E14-2 Ciudad de México
+E14-3 Veracruz
+E14-4 Ciudad Altamirano
+E14-5 Cuernavaca
+E14-6 Orizaba
+E14-7-10 Zihuatanejo
+E14-8 Chilpancingo
+E14-9 Oaxaca
+E15-10-D15-1 Juchitán
+E15-11 Tuxtla Gutierrez
+E15-12-D15-3 Las Margaritas
+E15-1-4 Coatzacoalcos
+E15-3 Campeche
+E15-5 Frontera
+E15-6 Ciudad del Carmen
+E15-7 Minatitlán
+Página 15 de
+17 
+===== CAT PAGE 16 =====
+E15-8 Villahermosa
+E15-9 Tenosique
+E16-1 Felipe Carrillo Puerto
+E16-2-5 Bahía Ascensión
+E16-4-7 Chetumal
+F12-2-3-5-6 San José del Cabo
+F13-1 Mazatlán
+F13-11 Puerto Vallarta
+F13-12 Guadalajara
+F13-2 El Salto
+F13-3 Fresnillo
+F13-5 Escuinapa
+F13-6 Zacatecas
+F13-8 Tepic
+F13-9 Aguascalientes
+F14-1 Matehuala
+F14-10 Querétaro
+F14-11 Pachuca
+F14-12 Poza Rica
+F14-2 Ciudad Victoria
+F14-3-6 Tampico
+F14-4 San Luis Potosí
+F14-5 Ciudad Mante
+F14-7 Guanajuato
+F14-8 Ciudad Valles
+F14-9 Tamiahua
+F15-9-12 Calkini
+F16-10 Mérida
+F16-11 Cozumel
+F16-7 Tizimin
+F16-8 Cancún
+G11-3 Guerrero Negro
+G12-1 Santa Rosalía
+G12-10-11 La Paz
+G12-2 Guaymas
+G12-3 Ciudad Obregón
+G12-4 San Isidro
+G12-5 Loreto
+G12-6 Huatabampo
+G12-7-8 Villa Constitución
+G12-9 Los Mochis
+G13-1 San Juanito
+G13-10 Culiacán
+G13-11 Durango
+G13-12 Juan Aldama
+G13-2 Ciudad Camargo
+G13-3 Ocampo
+G13-4 Guachochi
+G13-5 Hidalgo del Parral
+G13-6 Tlahualilo de Zaragoza
+G13-7 Pericos
+G13-8 Santiago Papasquiaro
+G13-9 Torreón
+G14-1 Nueva Rosita
+G14-10 Concepción del Oro
+G14-11 Linares
+G14-2 Nuevo Laredo
+G14-4 Monclova
+G14-5 Reynosa
+G14-6-9-12 Matamoros
+G14-7 Monterrey
+G14-8 Rio Bravo
+H11-12 Isla Cedros
+H11-2 Ensenada
+H11-3 San Felipe
+H11-5-6 Lázaro Cárdenas
+H11-9 Punta San Antonio
+H12-1 Puerto Peñasco
+H12-10 Isla  San Esteban
+H12-11 Sierra Libre
+H12-12 Tecoripa
+H12-2 Nogales
+H12-3 Agua Prieta
+Página 16 de
+17 
+===== CAT PAGE 17 =====
+ 
+NOTA: Para todos los casos considerar tiempo de envío
+Al precio de la lista deberá adicionarse 16% de I.V.A. y en su caso, el costo de envío.
+*En caso de ser un producto que no haya sido procesado tardará 18 días hábiles. Ver actualización en página del SGM
+ 
+ 
+ 
+H12-4 Caborca
+H12-5 Cananea
+H12-6 Nacozari
+H12-7 Isla Angel de la Guarda
+H12-8 Hermosillo
+H12-9 Madera
+H13-1 Ciudad Juárez
+H13-10 Chihuahua
+H13-11 Ciudad  Delicias
+H13-12 San Miguel
+H13-2 El Porvenir
+H13-4 N. Casas Grandes
+H13-5 San Antonio el Bravo
+H13-7 Buenaventura
+H13-8 Ojinaga
+H13-9 Manuel Benavides
+H14-10 Piedras Negras
+H14-7 Ciudad Acuña
+I11-11 Tijuana
+I11-12 Mexicali
+I12-10 Los Vidrios
+ 
+Página 17 de
+17 

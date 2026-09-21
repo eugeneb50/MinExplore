@@ -1,0 +1,37 @@
+id,area,lat,lon,type,label,field_note
+T1-1,T1 PIN MAP,29.906097,-115.390962,pale,P1 WNW pale cluster,outcrop check + rock chips; look for alteration colour zoning
+T1-2,T1 PIN MAP,29.897790,-115.381181,pale,P2 S pale patch,map extent; chips; gully walls
+T1-3,T1 PIN MAP,29.904306,-115.379883,pale,P3 E pale patch,map extent; chips
+T1-5,T1 PIN MAP,29.905147,-115.384249,sed,P4 arroyo N,sediment pair (2 bags) — N relay
+T1-6,T1 PIN MAP,29.902032,-115.385183,sed,P5 arroyo S,sediment pair — S relay
+TGT,T1 PIN MAP,29.903605,-115.383656,target,TARGET,reference point
+T2-1,T2 PIN MAP,30.050200,-115.246600,pale,P1 pale mass CENTER,map the mass; identify rock; 100m chip grid; hunt blue-green
+T2-2,T2 PIN MAP,30.049000,-115.242800,pale,P2 mass E edge,alteration front — sample both sides of contact
+T2-4,T2 PIN MAP,30.044500,-115.236000,struct,P3 band @ arroyo,"ROAD or FAULT SCARP? measure, sample gouge"
+T2-5,T2 PIN MAP,30.040500,-115.226500,struct,P4 band 1.5km E,trace lineament; look for 2nd scarp
+T2-6,T2 PIN MAP,30.044000,-115.247000,sed,P5 arroyo below mass,sediment pair — mass catchment
+T2-7,T2 PIN MAP,30.044000,-115.233000,out,P6 summit 740m,Cerro la Turquesa: lithology + structural grain
+TGT,T2 PIN MAP,30.048522,-115.236173,target,TARGET,reference point
+T2-1,T2 DETAIL,30.050200,-115.246600,pale,P1 mass center,outcrop + chips
+T2-2,T2 DETAIL,30.049000,-115.242800,pale,P2 E edge,alteration front
+T2-6,T2 DETAIL,30.045500,-115.248500,sed,P5 gully mouth,sediment — fresh wall sample
+TGT,T2 DETAIL,30.048522,-115.236173,target,TARGET,reference point
+T3-2,T3 PIN MAP,30.017216,-115.271919,out,P2 ridge high 808m,Cerro la Palmita: outcrop map + grain
+T3-3,T3 PIN MAP,30.022132,-115.293371,out,P3 steepest 36°,"857m W — first bedrock, sample + structure"
+T3-4,T3 PIN MAP,30.017932,-115.285430,sed,P4 arroyo S,sediment pair
+T3-5,T3 PIN MAP,30.024154,-115.289239,sed,P5 arroyo W,sediment pair
+T3-6,T3 PIN MAP,30.030500,-115.274500,out,P6 MEX 2 cut-bank,road cut NE — free outcrops + any old works
+TGT,T3 PIN MAP,30.025725,-115.286885,target,TARGET,reference point
+A-1,ZONE A,30.067000,-115.376000,mine,A1 El Cardonal,TURQUOISE doc. — walk N82°E fault scarp; sample all blue-green
+A-2,ZONE A,30.070000,-115.392000,mine,A2 La Prieta pit,walk pit walls — fresh oxidized Cu surfaces
+A-3,ZONE A,30.067500,-115.380000,mine,A3 Esperanza,N65-75°E vein convergence — trace trenches
+A-4,ZONE A,30.076500,-115.380500,struct,A4 fault trace N,map N82°E scarp 1 km north
+A-5,ZONE A,30.060500,-115.379500,struct,A5 fault trace S,map scarp 1 km S toward corridor
+A-6,ZONE A,30.068500,-115.386500,sed,A6 arroyo,sediment pair
+B-1,ZONE B,30.146000,-115.375000,mine,B1 San Martín,old drift/catas: sample wall chrysocolla/azurite
+B-2,ZONE B,30.141000,-115.378000,pale,B2 S argillic slope,survey for blue-green on eroded slopes
+B-3,ZONE B,30.149000,-115.370000,sed,B3 arroyo,sediment pair
+C-1,ZONE C,30.071000,-115.446000,mine,C1 La Turquesa core,zone type locality: survey for turquoise
+C-2,ZONE C,30.071000,-115.391000,pale,C2 El Hormiguero,massive argillic + Fe-oxide: gully walls
+C-3,ZONE C,30.062000,-115.420000,pale,C3 argillic slope,fresh gully walls; chips
+C-4,ZONE C,30.075000,-115.410000,sed,C4 arroyo,sediment pair

@@ -1,0 +1,12 @@
+id,name,lat,lon,utm_e_11N,utm_n_11N,elev_m,bearing_deg_from_TGT,dist_m,check_notes
+WP1,TGT,30.025725,-115.286885,665196,3322872,756,90,0,Target point (756 m on 10 m DEM). Verify the mapped surface/terrain match on site.
+WP2,RIDGE,30.017216,-115.271919,666653,3321951,807,123,1993,"Local high 807 m (E of target). Expect highest ground in 4 km, rocky outcrops likely."
+WP3,D-1,30.017932,-115.285430,665349,3322010,746,171,1015,Drainage trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP4,D-2,30.021043,-115.289418,664959,3322349,656,205,665,Drainage trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP5,D-3,30.024154,-115.289239,664971,3322694,731,232,331,Drainage trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP6,D-4,30.027265,-115.289490,664942,3323039,717,304,351,Drainage trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP7,D-5,30.030376,-115.288125,665068,3323386,645,347,614,Drainage trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP8,D-6,30.033487,-115.284963,665368,3323735,592,12,1021,Drainage trace (DEM valley min). Expect dry gravel/cobble channel; sample stream sediment here.
+WP9,STEEP-1,30.034980,-115.301851,663737,3323876,694,306,2047,"Slope 39 deg - steepest rocky ground, best outcrop candidate in window."
+WP10,STEEP-2,30.022132,-115.293371,664576,3322464,649,237,857,"Slope 35 deg - steepest rocky ground, best outcrop candidate in window."
+WP11,STEEP-3,30.012642,-115.274039,666457,3321440,698,140,2208,"Slope 32 deg - steepest rocky ground, best outcrop candidate in window."
