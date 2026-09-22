@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analyze a coordinate — Baja Mineral Explorer</title>
+<meta name="description" content="Enter a coordinate, get all public desk-study data and maps, optionally order a deeper analysis for a fixed fee.">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<style>
+:root{--bg:#0e1116;--panel:#161b23;--line:#2a3342;--text:#e8edf4;--muted:#9aa7b8;--acc:#e8b84b;--acc2:#5bc8e8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:26px 18px 60px}
+a{color:var(--acc2)}
+h1{font-size:clamp(24px,4vw,36px)}
+.muted{color:var(--muted)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+form.run{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+input{padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:16px;font-family:ui-monospace,monospace}
+button{padding:11px 20px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;border:1px solid var(--acc);background:var(--acc);color:#14100a}
+button.ghost{background:var(--panel);color:var(--text);border-color:var(--line)}
+#map{height:420px;border-radius:14px;border:1px solid var(--line);margin:16px 0}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0}
+.tabs button{background:var(--panel);color:var(--muted);border:1px solid var(--line);font-weight:400}
+.tabs button.active{color:#0e1116;background:var(--acc);border-color:var(--acc);font-weight:700}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;display:none}
+.panel.active{display:block}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--acc);font-size:13px;text-transform:uppercase}
+pre{background:#0b0e13;border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;font-size:12.5px}
+.fee{margin-top:26px;border:1px solid var(--acc);border-radius:14px;padding:18px}
+.err{color:#e85b5b}
+</style>
+</head>
+<body>
+<main>
+<p><a href="index.html">← Baja Mineral Explorer</a></p>
+<h1>Analyze a coordinate</h1>
+<p class="muted">Public desk-study data for any WGS84 coordinate in the corridor — prospectivity and feasibility shown <b>separately, never blended</b>. Relative evidence scores, not investment advice. Free tier: 30 analyses/hour per IP.</p>
+<form class="run" id="f">
+<input id="lat" inputmode="decimal" placeholder="30.048522" value="30.048522" required>
+<input id="lon" inputmode="decimal" placeholder="-115.236173" value="-115.236173" required>
+<button type="submit">Analyze</button>
+<button type="button" class="ghost" id="ex">Load T2 example</button>
+</form>
+<p class="err" id="err" role="alert"></p>
+<div id="map" role="application" aria-label="Result map"></div>
+<div class="tabs" id="tabs" hidden>
+<button type="button" data-tab="geo" class="active">1 · Prospectivity</button>
+<button type="button" data-tab="spec">2 · Spectroscopy</button>
+<button type="button" data-tab="struct">3 · Structure</button>
+<button type="button" data-tab="docs">4 · Documents</button>
+<button type="button" data-tab="feas">5 · Constraints + feasibility</button>
+<button type="button" data-tab="unc">6 · Uncertainty</button>
+<button type="button" data-tab="prov">Provenance</button>
+</div>
+<div id="out"></div>
+<div class="fee" id="fee" hidden>
+<h2>Deeper analysis — fixed fee</h2>
+<p class="muted">Tier-1 Evidence Pack: full six-system report + VOI field plan + GPS package. Tier-2 Frontier Review: + Monte Carlo distributions + frozen-prompt model review + analyst notes. Built from <b>commercially-clean inputs only</b>. <a href="../docs/FEE_FLOW.md">How fulfillment works</a>. By ordering you confirm you understand these are uncalibrated desk rankings, not investment advice (<a href="../docs/TERMS.md">terms</a>).</p>
+<p><label><input type="checkbox" id="consent"> I understand: relative evidence scores, field validation still required, not investment/drilling advice.</label></p>
+<p><button type="button" id="order1" class="ghost">Order Tier-1 pack</button> <button type="button" id="order2" class="ghost">Order Tier-2 review</button></p>
+<p class="muted mono" id="jobStatus"></p>
+</div>
+</main>
+<script src="vendor/leaflet.js"></script>
+<script>
+"use strict";
+let map=null, pack=null, cur=null;
+function initMap(){
+ map=L.map("map").setView([30.02,-115.35],10);
+ L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{maxZoom:19,attribution:"Imagery © Esri, Maxar"}).addTo(map);
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function factRows(ev){
+ return Object.entries(ev).map(([f,m])=>`<tr><td>${esc(f)}</td><td>${m.score}</td><td>${esc(m.confidence)} · ${esc(m.tag)}</td><td>${esc(m.note)}</td></tr>`).join("");
+}
+function render(){
+ if(!pack) return;
+ document.getElementById("tabs").hidden=false;
+ document.getElementById("fee").hidden=false;
+ const T=pack.targets, nt=pack.nearest_target, np=pack.nearest_pin;
+ const tabs={
+  geo:`<h3>1 · Regional geological prospectivity</h3>
+   <table><thead><tr><th>Target</th><th>Prospectivity</th><th>Feasibility</th><th>Frontier priority</th></tr></thead><tbody>
+   ${Object.entries(T).map(([t,s])=>`<tr><td><b>${t}</b></td><td>${s.prospectivity}</td><td>${s.feasibility}</td><td>${s.frontier.frontier_priority}</td></tr>`).join("")}</tbody></table>
+   <p class="muted">Nearest target to your point: <b>${nt?esc(nt.id):"—"}</b>${nt?` (${nt.dist_km} km, bearing ${nt.bearing_deg}°)`:""}. Known-workings factor deliberately downweighted so the model does not just rediscover districts.</p>
+   <details><summary>Per-factor evidence (all targets)</summary>${Object.entries(T).map(([t,s])=>`<h4>${t}</h4><table><thead><tr><th>Factor</th><th>Score</th><th>Conf · tag</th><th>Evidence</th></tr></thead><tbody>${factRows(s.evidence)}</tbody></table>`).join("")}</details>`,
+  spec:`<h3>2 · Mineral/alteration spectroscopy</h3>
+   <p class="muted">Desk tier uses rendered viewing composites only — an <b>unvalidated RGB visual-screening heuristic</b>, never a mineral ID. Diagnostic work needs surface reflectance + SWIR (Sentinel-2 B11/B12, Landsat B6/B7, ASTER, EnMAP/EMIT coverage check, then WorldView-3 SWIR only for shortlisted areas — see <span class="mono">docs/COMMERCIAL_IMAGERY.md</span>).</p>
+   <table><thead><tr><th>Target</th><th>Spectral factor</th><th>Conf</th><th>Note</th></tr></thead><tbody>
+   ${Object.entries(T).map(([t,s])=>{const m=s.evidence.spectral_indication;return `<tr><td><b>${t}</b></td><td>${m.score}</td><td>${esc(m.confidence)}</td><td>${esc(m.note)}</td></tr>`;}).join("")}</tbody></table>`,
+  struct:`<h3>3 · Detailed structural mapping</h3>
+   <table><thead><tr><th>Target</th><th>Structural factor</th><th>Note</th></tr></thead><tbody>
+   ${Object.entries(T).map(([t,s])=>{const m=s.evidence.structural_context;return `<tr><td><b>${t}</b></td><td>${m.score} · ${esc(m.confidence)}</td><td>${esc(m.note)}</td></tr>`;}).join("")}</tbody></table>
+   <p class="muted">Next structural inputs: INEGI faults/fractures, SGM fault-intersection density, VHR lineament tracing (structural/logistical evidence, not mineral ID).</p>`,
+  docs:`<h3>4 · Historical-document evidence</h3>
+   <p class="muted">SGM technical reports outrank general web pages. Internet Archive pipeline: <span class="mono">docs/IA_PIPELINE.md</span> (metadata + page citations + minimal excerpts, rights per item). Mindat: reference/discovery only under written agreement — <span class="mono">docs/MINDAT_REQUEST_TEMPLATE.md</span>; no scraping, no embeddings without permission.</p>
+   <table><thead><tr><th>Target</th><th>Documentary anchor</th></tr></thead><tbody>
+   ${Object.entries(T).map(([t,s])=>`<tr><td><b>${t}</b></td><td>${esc(s.evidence.known_workings.note)} ${esc(s.evidence.geological_setting.note)}</td></tr>`).join("")}</tbody></table>`,
+  feas:`<h3>5 · Land, environmental, legal constraints + feasibility</h3>
+   <p class="muted"><b>Kept separate from prospectivity.</b> A geologically interesting site can still be unsuitable. SIAM titles / RAN ejidos / CONANP zoning / CONAGUA aquifers: <b>not yet screened</b> (placeholder 5/10, not-yet-assessed).</p>
+   <table><thead><tr><th>Target</th><th>Feasibility</th><th>Access</th><th>Water/regulatory</th><th>Land constraints</th></tr></thead><tbody>
+   ${Object.entries(T).map(([t,s])=>{const e=s.evidence;return `<tr><td><b>${t}</b></td><td>${s.feasibility}</td><td>${e.access.score} — ${esc(e.access.note)}</td><td>${e.water_regulatory.score} — ${esc(e.water_regulatory.note)}</td><td>${e.land_constraints.score} — ${esc(e.land_constraints.note)}</td></tr>`;}).join("")}</tbody></table>`,
+  unc:`<h3>6 · Uncertainty, coverage + field validation</h3>
+   <table><thead><tr><th>Target</th><th>Uncertainty index</th><th>Low-confidence factors</th><th>Unassessed</th></tr></thead><tbody>
+   ${Object.entries(T).map(([t,s])=>`<tr><td><b>${t}</b></td><td>${s.uncertainty.uncertainty_index}</td><td>${s.uncertainty.low_confidence_factors.join(", ")}</td><td>${s.uncertainty.unassessed.join(", ")||"—"}</td></tr>`).join("")}</tbody></table>
+   <p class="muted">Only field work writes "validated" status. Nearest pin to your point: <b>${np?esc(np.id):"—"}</b>${np?` (${np.dist_km} km, bearing ${np.bearing_deg}°)`:""}.</p>`,
+  prov:`<h3>Provenance trail</h3><p class="muted">${esc(pack.provenance_trail)}</p><p class="muted">${esc(pack.disclaimer)} Pipeline ${esc(pack.pipeline_version)}. Registry: <span class="mono">sources/registry.json</span>.</p><details><summary>Raw evidence pack (JSON)</summary><pre>${esc(JSON.stringify(pack,null,1))}</pre></details>`
+ };
+ document.getElementById("out").innerHTML=`<div class="panel active" id="p"></div>`;
+ const show=k=>{document.getElementById("p").innerHTML=tabs[k];
+  document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("active",b.dataset.tab===k));};
+ document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>show(b.dataset.tab));
+ show("geo");
+ if(cur){ if(map._pt)map.removeLayer(map._pt);
+  map._pt=L.marker([cur.lat,cur.lon]).addTo(map).bindPopup(`<b>${cur.lat}, ${cur.lon}</b>`).openPopup();
+  map.setView([cur.lat,cur.lon],12); }
+}
+async function analyze(lat,lon){
+ const e=document.getElementById("err"); e.textContent="";
+ try{
+  const r=await fetch("/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lat,lon})});
+  const j=await r.json();
+  if(!r.ok) throw new Error(j.error||("HTTP "+r.status));
+  pack=j; cur={lat,lon}; render();
+ }catch(err){ e.textContent="Analysis failed: "+err.message+" (is api/server.py running?)"; }
+}
+document.getElementById("f").addEventListener("submit",e=>{
+ e.preventDefault();
+ const lat=parseFloat(document.getElementById("lat").value), lon=parseFloat(document.getElementById("lon").value);
+ if(!(lat>=-90&&lat<=90&&lon>=-180&&lon<=180)){document.getElementById("err").textContent="Invalid coordinate.";return;}
+ analyze(lat,lon);
+});
+document.getElementById("ex").addEventListener("click",()=>{
+ document.getElementById("lat").value="30.048522"; document.getElementById("lon").value="-115.236173";
+ analyze(30.048522,-115.236173);
+});
+async function order(sku){
+ const c=document.getElementById("consent"), st=document.getElementById("jobStatus");
+ if(!c.checked){st.textContent="Please check the consent box first (terms).";return;}
+ if(!cur){st.textContent="Analyze a coordinate first.";return;}
+ st.textContent="Creating job…";
+ try{
+  const r=await fetch("/api/jobs",{method:"POST",headers:{"Content-Type":"application/json"},
+   body:JSON.stringify({lat:cur.lat,lon:cur.lon,sku,consent:true})});
+  const j=await r.json();
+  st.textContent=r.ok?`Job ${j.id} queued (${j.sku}). Payment + manual fulfillment per docs/FEE_FLOW.md.`:`Error: ${j.error}`;
+ }catch(err){st.textContent="Order failed: "+err.message;}
+}
+document.getElementById("order1").addEventListener("click",()=>order("tier1-pack"));
+document.getElementById("order2").addEventListener("click",()=>order("tier2-frontier"));
+initMap();
+</script>
+</body>
+</html>

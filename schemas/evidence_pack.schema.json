@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/minxplore/schemas/evidence_pack.schema.json",
+  "title": "Coordinate evidence pack (web API payload)",
+  "description": "Output of `mineral_pipeline.py evidence-pack` and GET /api/analyze. Split prospectivity/feasibility plus uncertainty, frontier priority, and provenance trail.",
+  "type": "object",
+  "required": ["coordinate", "pipeline_version", "nearest_target", "nearest_pin",
+               "targets", "provenance_trail", "disclaimer"],
+  "properties": {
+    "coordinate": {"type": "object",
+      "required": ["lat", "lon", "crs"],
+      "properties": {"lat": {"type": "number", "minimum": -90, "maximum": 90},
+                     "lon": {"type": "number", "minimum": -180, "maximum": 180},
+                     "crs": {"const": "EPSG:4326"}}},
+    "pipeline_version": {"type": "string"},
+    "nearest_target": {"type": ["object", "null"]},
+    "nearest_pin": {"type": ["object", "null"]},
+    "targets": {"type": "object", "minProperties": 1,
+      "additionalProperties": {"type": "object",
+        "required": ["prospectivity", "feasibility", "uncertainty", "frontier", "evidence"]}},
+    "provenance_trail": {"type": "string"},
+    "disclaimer": {"type": "string"}
+  },
+  "additionalProperties": false
+}

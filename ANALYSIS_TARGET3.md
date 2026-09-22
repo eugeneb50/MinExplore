@@ -1,4 +1,6 @@
 # Satellite-Based Mineral Asset Analysis — TARGET 3
+
+> **Score migration (v3.0.0):** ranks cited in this report use the frozen v2 blended mean (T1 5.4 / T2 6.3 / T3 5.5). Current model splits prospectivity vs feasibility (T1 5.3/6.0, T2 7.2/4.3, T3 5.7/5.7) — see `src/scores.py`.
 ## 30.025725, -115.286885 — N/W slope of **Cerro la Palmita** (800 m), Municipio de San Quintín, Baja California, MX
 
 **Prepared:** 2026-08-25 · **Desk-study v1** (remote data + SGM context; no field data)

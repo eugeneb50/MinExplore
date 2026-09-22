@@ -1,35 +1,34 @@
 # Baja Mineral Explorer
 
-> Satellite-based mineral prospecting atlas for the San Quintín Municipio,
-> Baja California, Mexico. Three surveyed targets, 36 GPS field pins,
-> 14 documented Cu–Fe epithermal workings, sub-meter imagery (0.37–1.03 m/px).
+> A reproducible geospatial data pipeline for mineral-exploration field planning.
+> Ingests public geological, satellite, elevation, and mine-inventory data;
+> validates and normalizes coordinates; ranks candidate targets; produces
+> GPS-ready field packages. Public demo, no login.
+> This desk study organizes incomplete public evidence into explicit,
+> field-testable hypotheses — not a discovery claim.
 
 ## What this site is
 An independent desk-study atlas combining:
-- Sentinel-2 2020 cloudless composite (10 m, 13 bands, open, CC BY-NC-SA 4.0)
-- Esri World Imagery (0.37–1.03 m/px sub-meter tiles, research use)
-- SRTM-derived 10 m DEM (USGS, public domain) for slope/aspect/hillshade
-- SGM Carta Geológico-Minera El Aguajito H11-B85, 1:50,000 (2009) geology
+- Sentinel-2 2020 cloudless *viewing* composite (rendered RGB; visual consistency, not analysis-ready reflectance; S2 bands natively 4×10 m / 6×20 m / 3×60 m; CC BY-NC-SA 4.0)
+- Esri World Imagery viewing tiles (rendered Web-Mercator display scale: z17 ≈1.03, z18 ≈0.52 m/px at sheet latitude — not sensor GSD; research use)
+- SRTM elevation (~30 m native, resampled to a 10 m working grid — resampling adds no terrain detail; public domain) for slope/aspect/hillshade
+- SGM Carta Geológico-Minera El Aguajito H11-B85, 1:50,000 (2009) geology + 14-workings inventory
 
 ## Key coordinates
-- T1 Arroyo San Isidro: 29.903605, -115.383656 (score 5.4/10) — pale alteration patches on an N–S relay drainage, ~332 m
-- T2 Cerro la Turquesa: 30.048522, -115.236173 (score 6.3/10) — km-scale pale argillic mass ~1 km W, NE–SW lineament ~1 km E, turquoise-mining toponym, 740 m hill
-- T3 Cerro la Palmita: 30.025725, -115.286885 (score 5.5/10) — ridge between T1/T2, steepest terrain (30% area >15° slope), 800 m
+- T1 Arroyo San Isidro: 29.903605, -115.383656 (prospectivity 5.3/10, feasibility 6.0/10 — shown separately, not a probability) — pale patches on an N–S relay drainage, ~332 m
+- T2 Cerro la Turquesa: 30.048522, -115.236173 (prospectivity 7.2/10, feasibility 4.3/10, highest prospectivity under the current model) — km-scale pale surface ~1 km W, NE–SW lineament ~1 km E, turquoise-mining toponym, 740 m hill
+- T3 Cerro la Palmita: 30.025725, -115.286885 (prospectivity 5.7/10, feasibility 5.7/10) — ridge between T1/T2, steepest terrain (30% area >15° slope), 800 m
 - Documented Cu–Fe belt (La Turquesa zona mineralizada, SGM 2009): 14 abandoned workings between 30.05–30.15° N, 115.34–115.52° W (El Cardonal — documented turquoise; San Martín — chrysocolla/azurite/malachite; La Turquesa core; El Hormiguero; La Bonita; 5 Minas; El Sacrificio; Josefina; Santa Martha; Santa Lucía; La Víbora; El Moro)
+- No field survey, geochemistry, spectroscopy, or drilling has validated the three candidate targets.
 
 ## Method
-Per coordinate the pipeline computes a B/R blue-shift proxy (Fe-oxide depletion /
-clay-calcite indicator), HSV surface classes (vegetation / soil / pale-tone /
-bright crust / shadow), and DEM-derived slope, aspect, hillshade and drainage
-transects, then cross-references the SGM 1:50,000 sheet. Full-band mode (free
-Earthdata login) adds NDVI, ferric-iron, clay and carbonate indices at 30 m.
-Google/Bing data is used only via official APIs (Earth Engine, Bing Maps Imagery
-API); no tile-server scraping.
+Per coordinate the pipeline computes an unvalidated RGB visual-screening heuristic (B/R ratio — prioritization aid, not a mineral identifier), HSV surface classes, and DEM-working-grid slope, aspect, hillshade and drainage transects, then cross-references the SGM 1:50,000 sheet. Full-band mode (free Earthdata login) adds NDVI, ferric-iron, clay and carbonate indices at 30 m. Anything spectral needs validation with analysis-ready data and field observation. Google/Bing data is used only via official APIs (Earth Engine, Bing Maps Imagery API); no tile-server scraping. Scoring: published weights (geology 20, workings 15, spectral 15, structure 15, exposure 10, access 10, water/regulatory 15) in src/scores.py; deterministic and CI-enforced.
 
 ## Data downloads
-- /maps/PIN_POINTS.csv — all 36 field pins (lat/lon, type, field action)
-- /maps/mine_inventory_elaguajito.csv — 14 documented SGM workings
-- /maps/*.jpg — pin sheets (1.03 m/px), 0.52 m/px pale-mass detail, 4×4 km field sheets, corridor overview
+- /maps/PIN_POINTS.csv + /maps/PIN_POINTS.geojson — all 36 field pins (unique v2 IDs, EPSG:4326, provenance; schema: schemas/pins.schema.json)
+- /maps/mine_inventory_elaguajito.csv + .geojson — 14 documented SGM workings
+- /maps/*.jpg — pin sheets, 0.52 m/px rendered pale-mass detail, 4×4 km field sheets, corridor overview (each with a ~5%-weight *-preview.webp)
+- Public demo (#demo): any coordinate → distances/bearings + JSON/GeoJSON + field-package download, 5 analyses/visitor (browser-local)
 
 ## Disclaimers
 Desk study only — not investment, drilling, or legal advice. Mexican mining is
@@ -38,4 +37,4 @@ prohibited in ANPs and water-stressed zones, prior consultation required.
 Not affiliated with SGM, CONAGUA, or the Government of Mexico.
 
 ## Languages
-English (default), Spanish (?lang=es), Chinese (?lang=zh), Russian (?lang=ru)
+English (default), Spanish (?lang=es), Chinese (?lang=zh), Russian (?lang=ru). EN reflects the 2026-09 review pass; other locales may lag (translations pending).

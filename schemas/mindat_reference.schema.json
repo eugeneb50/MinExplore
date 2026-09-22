@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/minxplore/schemas/mindat_reference.schema.json",
+  "title": "Mindat locality reference (authorized use only)",
+  "description": "Reference/discovery layer only. Requires authorized API access plus separate written permission for embeddings, RAG, ML training or evaluation. No photo ingestion (photographer rights). Link every record back to the Mindat locality page. See docs/MINDAT_REQUEST_TEMPLATE.md.",
+  "type": "object",
+  "required": ["mindat_locality_id", "locality_name", "original_references",
+               "mindat_page_reference", "last_retrieved_at", "license",
+               "coordinate_precision", "verification_status"],
+  "properties": {
+    "mindat_locality_id": {"type": ["integer", "string"]},
+    "locality_name": {"type": "string", "minLength": 1},
+    "authorized_coordinates": {"type": ["object", "null"],
+      "description": "Only where permitted; else null with coordinate_precision 'withheld'"},
+    "reported_minerals": {"type": "array", "items": {"type": "string"}},
+    "original_references": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "mindat_page_reference": {"type": "string", "minLength": 1},
+    "last_retrieved_at": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1},
+    "coordinate_precision": {"type": "string", "minLength": 1},
+    "verification_status": {"type": "string",
+      "enum": ["unverified", "references-checked", "field-verified"]}
+  },
+  "additionalProperties": false
+}

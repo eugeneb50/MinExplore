@@ -1,4 +1,6 @@
 # Satellite-Based Mineral Asset Analysis
+
+> **Score migration (v3.0.0):** ranks cited in this report use the frozen v2 blended mean (T1 5.4 / T2 6.3 / T3 5.5). Current model splits prospectivity vs feasibility (T1 5.3/6.0, T2 7.2/4.3, T3 5.7/5.7) — see `src/scores.py`.
 ## Target: 29.903605, -115.383656 — Municipio de San Quintín, Baja California, México
 
 **Prepared:** 2026-08-25 · **Desk-study v2** (remote data + SGM El Aguajito 1:50,000 sheet integrated; no field data yet)

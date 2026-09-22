@@ -1,0 +1,81 @@
+{
+ "weights": {
+  "geological_setting": 20,
+  "known_workings": 15,
+  "spectral_indication": 15,
+  "structural_context": 15,
+  "bedrock_exposure": 10,
+  "access": 10,
+  "water_regulatory": 15
+ },
+ "scores_v2_blended_legacy": {
+  "T1": 5.4,
+  "T2": 6.3,
+  "T3": 5.5
+ },
+ "split_v3": {
+  "T1": {
+   "prospectivity": 5.3,
+   "feasibility": 6.0
+  },
+  "T2": {
+   "prospectivity": 7.2,
+   "feasibility": 4.3
+  },
+  "T3": {
+   "prospectivity": 5.7,
+   "feasibility": 5.7
+  }
+ },
+ "evidence_T2": {
+  "geological_setting": {
+   "score": 8,
+   "confidence": "Medium",
+   "tag": "observed",
+   "note": "SGM Alisitos andesite + granodiorite contact zone (H11-B85)."
+  },
+  "known_workings": {
+   "score": 7,
+   "confidence": "Medium",
+   "tag": "observed",
+   "note": "On eastern projection of documented Cu-Fe belt; turquoise-mining toponym at site."
+  },
+  "spectral_indication": {
+   "score": 6,
+   "confidence": "Low",
+   "tag": "derived",
+   "note": "Unvalidated RGB visual-screening heuristic on km-scale pale mass ~1 km W. Requires field validation."
+  },
+  "structural_context": {
+   "score": 7,
+   "confidence": "Low",
+   "tag": "inferred",
+   "note": "Straight NE-SW lineament ~1 km E (road vs fault scarp - field check). Requires field validation."
+  },
+  "bedrock_exposure": {
+   "score": 8,
+   "confidence": "Medium",
+   "tag": "derived",
+   "note": "Pale mass + hillslopes; good outcrop potential per terrain + visual classification."
+  },
+  "access": {
+   "score": 6,
+   "confidence": "Medium",
+   "tag": "derived",
+   "note": "MEX 2 ~2 km away; approximate road distance."
+  },
+  "water_regulatory": {
+   "score": 2,
+   "confidence": "Low",
+   "tag": "not-yet-assessed",
+   "note": "Preliminary desk screen only; water availability is the principal regulatory risk."
+  },
+  "land_constraints": {
+   "score": 5,
+   "confidence": "Low",
+   "tag": "not-yet-assessed",
+   "note": "SIAM titles / RAN ejidos / CONANP zoning / CONAGUA aquifers not yet screened."
+  }
+ },
+ "disclaimer": "Desk-screening ranks, NOT probabilities of mineralization. v3 shows prospectivity vs feasibility separately, never blended."
+}

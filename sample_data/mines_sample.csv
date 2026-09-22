@@ -1,0 +1,3 @@
+record_id,name,latitude,longitude,crs,type,notes,source,source_date,coordinate_accuracy_m,license,pipeline_version
+SGM-JOSEFINA,Josefina,30.122,-115.36,EPSG:4326,abandoned mine,Cu-Fe epithermal in brecciated white granodiorite; E-W adit 5 m + catas,"SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",2009,"500 (digitized from 1:50,000)",SGM public sheet; coordinates as transcribed,3.0.0
+SGM-SANTA-MARTHA,Santa Martha,30.147,-115.357,EPSG:4326,abandoned mine,epithermal fissure-fills; NW-SE + NE-SW lineament system,"SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",2009,"500 (digitized from 1:50,000)",SGM public sheet; coordinates as transcribed,3.0.0

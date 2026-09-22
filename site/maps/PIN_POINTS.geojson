@@ -1,0 +1,941 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.390962,
+     29.906097
+    ]
+   },
+   "properties": {
+    "record_id": "T1-1",
+    "target_id": "T1",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t1_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "outcrop check + rock chips; look for alteration colour zoning",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.381181,
+     29.89779
+    ]
+   },
+   "properties": {
+    "record_id": "T1-2",
+    "target_id": "T1",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t1_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "map extent; chips; gully walls",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.379883,
+     29.904306
+    ]
+   },
+   "properties": {
+    "record_id": "T1-3",
+    "target_id": "T1",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t1_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "map extent; chips",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.384249,
+     29.905147
+    ]
+   },
+   "properties": {
+    "record_id": "T1-5",
+    "target_id": "T1",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t1_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair (2 bags) - N relay",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.385183,
+     29.902032
+    ]
+   },
+   "properties": {
+    "record_id": "T1-6",
+    "target_id": "T1",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t1_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair - S relay",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.383656,
+     29.903605
+    ]
+   },
+   "properties": {
+    "record_id": "T1-TGT",
+    "target_id": "T1",
+    "crs": "EPSG:4326",
+    "feature_type": "target",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "T1 target",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk target pick cross-referenced to SGM sheet",
+    "confidence": "Medium",
+    "field_action": "reference point; verify mapped surface/terrain match on site",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2466,
+     30.0502
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-01",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "map the mass; identify rock; 100 m chip grid; hunt blue-green",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2428,
+     30.049
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-02",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "alteration front - sample both sides of contact",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.236,
+     30.0445
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-03",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "struct",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "lineament traced on sub-meter base layer; road vs scarp unresolved",
+    "confidence": "Low",
+    "field_action": "ROAD or FAULT SCARP? measure, sample gouge",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2265,
+     30.0405
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-04",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "struct",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "lineament traced on sub-meter base layer; requires field validation",
+    "confidence": "Low",
+    "field_action": "trace lineament; look for 2nd scarp",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.247,
+     30.044
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-05",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair - mass catchment",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.233,
+     30.044
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-06",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "out",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "Cerro la Turquesa: lithology + structural grain",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.236173,
+     30.048522
+    ]
+   },
+   "properties": {
+    "record_id": "T2-TGT",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "target",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "T2 target",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk target pick cross-referenced to SGM sheet",
+    "confidence": "Medium",
+    "field_action": "reference point; turquoise-mining toponym at site",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2466,
+     30.0502
+    ]
+   },
+   "properties": {
+    "record_id": "T2-DETAIL-01",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_mass_inset_z18",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "detail-sheet re-plot of T2-OVERVIEW-01 at z18",
+    "confidence": "Low",
+    "field_action": "outcrop + chips",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2428,
+     30.049
+    ]
+   },
+   "properties": {
+    "record_id": "T2-DETAIL-02",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_mass_inset_z18",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "detail-sheet re-plot of T2-OVERVIEW-02 at z18",
+    "confidence": "Low",
+    "field_action": "alteration front",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2485,
+     30.0455
+    ]
+   },
+   "properties": {
+    "record_id": "T2-DETAIL-03",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_mass_inset_z18",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment - fresh wall sample",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.236173,
+     30.048522
+    ]
+   },
+   "properties": {
+    "record_id": "T2i-TGT",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "target",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "T2 target",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk target pick cross-referenced to SGM sheet",
+    "confidence": "Medium",
+    "field_action": "reference point (off-sheet north of inset)",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.271919,
+     30.017216
+    ]
+   },
+   "properties": {
+    "record_id": "T3-2",
+    "target_id": "T3",
+    "crs": "EPSG:4326",
+    "feature_type": "out",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t3_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "Cerro la Palmita: outcrop map + grain",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.293371,
+     30.022132
+    ]
+   },
+   "properties": {
+    "record_id": "T3-3",
+    "target_id": "T3",
+    "crs": "EPSG:4326",
+    "feature_type": "out",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t3_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "steepest-slope pick from 10 m working grid (SRTM ~30 m native)",
+    "confidence": "Medium",
+    "field_action": "857 m W - first bedrock, sample + structure",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.28543,
+     30.017932
+    ]
+   },
+   "properties": {
+    "record_id": "T3-4",
+    "target_id": "T3",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t3_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.289239,
+     30.024154
+    ]
+   },
+   "properties": {
+    "record_id": "T3-5",
+    "target_id": "T3",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t3_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2745,
+     30.0305
+    ]
+   },
+   "properties": {
+    "record_id": "T3-6",
+    "target_id": "T3",
+    "crs": "EPSG:4326",
+    "feature_type": "out",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t3_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "road cut NE - free outcrops + any old works",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.286885,
+     30.025725
+    ]
+   },
+   "properties": {
+    "record_id": "T3-TGT",
+    "target_id": "T3",
+    "crs": "EPSG:4326",
+    "feature_type": "target",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "T3 target",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk target pick cross-referenced to SGM sheet",
+    "confidence": "Medium",
+    "field_action": "reference point; corridor ridge high ground",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.376,
+     30.067
+    ]
+   },
+   "properties": {
+    "record_id": "A-1",
+    "target_id": "ZA",
+    "crs": "EPSG:4326",
+    "feature_type": "mine",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "El Cardonal sheet record",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "SGM inventory digitization; ~500 m accuracy from 1:50,000",
+    "confidence": "Medium",
+    "field_action": "TURQUOISE documented - walk N82E fault scarp; sample all blue-green",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.392,
+     30.07
+    ]
+   },
+   "properties": {
+    "record_id": "A-2",
+    "target_id": "ZA",
+    "crs": "EPSG:4326",
+    "feature_type": "mine",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "La Prieta sheet record",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "SGM inventory digitization; ~500 m accuracy from 1:50,000",
+    "confidence": "Medium",
+    "field_action": "walk pit walls - fresh oxidized Cu surfaces",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.38,
+     30.0675
+    ]
+   },
+   "properties": {
+    "record_id": "A-3",
+    "target_id": "ZA",
+    "crs": "EPSG:4326",
+    "feature_type": "mine",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "Esperanza sheet record",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "SGM inventory digitization; ~500 m accuracy from 1:50,000",
+    "confidence": "Medium",
+    "field_action": "N65-75E vein convergence - trace trenches",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.3805,
+     30.0765
+    ]
+   },
+   "properties": {
+    "record_id": "A-4",
+    "target_id": "ZA",
+    "crs": "EPSG:4326",
+    "feature_type": "struct",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009) + Esri World Imagery tile service (research use)",
+    "source_page": "zoneA_pins",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "fault trace from SGM sheet redrawn on base layer",
+    "confidence": "Low",
+    "field_action": "map N82E scarp 1 km north",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.3795,
+     30.0605
+    ]
+   },
+   "properties": {
+    "record_id": "A-5",
+    "target_id": "ZA",
+    "crs": "EPSG:4326",
+    "feature_type": "struct",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009) + Esri World Imagery tile service (research use)",
+    "source_page": "zoneA_pins",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "fault trace from SGM sheet redrawn on base layer",
+    "confidence": "Low",
+    "field_action": "map scarp 1 km S toward corridor",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.3865,
+     30.0685
+    ]
+   },
+   "properties": {
+    "record_id": "A-6",
+    "target_id": "ZA",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "zoneA_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.375,
+     30.146
+    ]
+   },
+   "properties": {
+    "record_id": "B-1",
+    "target_id": "ZB",
+    "crs": "EPSG:4326",
+    "feature_type": "mine",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "San Martin sheet record",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "SGM inventory digitization; ~500 m accuracy from 1:50,000",
+    "confidence": "Medium",
+    "field_action": "old drift/catas: sample wall chrysocolla/azurite",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.378,
+     30.141
+    ]
+   },
+   "properties": {
+    "record_id": "B-2",
+    "target_id": "ZB",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0)",
+    "source_page": "zoneB_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "30",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "survey for blue-green on eroded slopes",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.37,
+     30.149
+    ]
+   },
+   "properties": {
+    "record_id": "B-3",
+    "target_id": "ZB",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0)",
+    "source_page": "zoneB_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "30",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.446,
+     30.071
+    ]
+   },
+   "properties": {
+    "record_id": "C-1",
+    "target_id": "ZC",
+    "crs": "EPSG:4326",
+    "feature_type": "mine",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_page": "La Turquesa sheet record",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "SGM inventory digitization; ~500 m accuracy from 1:50,000",
+    "confidence": "Medium",
+    "field_action": "zone type locality: survey for turquoise",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.391,
+     30.071
+    ]
+   },
+   "properties": {
+    "record_id": "C-2",
+    "target_id": "ZC",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009) + EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0)",
+    "source_page": "zoneC_pins",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500",
+    "derivation_method": "SGM alteration polygon cross-checked on S2 viewing composite",
+    "confidence": "Low",
+    "field_action": "massive argillic + Fe-oxide: gully walls",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.42,
+     30.062
+    ]
+   },
+   "properties": {
+    "record_id": "C-3",
+    "target_id": "ZC",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0)",
+    "source_page": "zoneC_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "30",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "fresh gully walls; chips",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.41,
+     30.075
+    ]
+   },
+   "properties": {
+    "record_id": "C-4",
+    "target_id": "ZC",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0)",
+    "source_page": "zoneC_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "30",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  }
+ ]
+}

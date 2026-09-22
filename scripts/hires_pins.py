@@ -5,9 +5,15 @@ Produces (maps/pins/):
   t1_pins.png, t2_pins.png, t2_mass_inset_z18.png, t3_pins.png,
   zoneA_pins.png, zoneB_pins.png, zoneC_pins.png, PIN_POINTS.csv
 
-Imagery: Esri World Imagery z17 (0.74 m/px) for T1/T2/T3/ZoneA,
-         z18 (0.37 m/px) for the T2 pale-mass inset,
-         open Sentinel-2 2020 z16 (1.47 m/px) for Zones B/C.
+NOTE: PIN_POINTS.csv is now canonically built by scripts/build_data.py
+(unique record_id v2 + provenance + GeoJSON). This script's PINS dict uses
+the same v2 IDs so rendered labels match the canonical records.
+
+Imagery: Esri World Imagery z17 (rendered ~1.03 m/px at ~30 N) for T1/T2/T3/ZoneA,
+          z18 (rendered ~0.52 m/px) for the T2 pale-mass inset,
+          open Sentinel-2 2020 z16 (rendered ~1.47 m/px) for Zones B/C.
+          "Rendered" = Web-Mercator display scale at the sheet latitude, not
+          native sensor ground sampling distance.
 Pins: numbered field objectives (outcrop / structure / sediment / works / pale).
 """
 import csv
@@ -183,7 +189,7 @@ PINS = {
  "T1": {
   "title": "T1 PIN MAP — Arroyo San Isidro (29.9036, -115.3837)",
   "center": (29.9030, -115.3840), "provider": "esri", "z": 17, "n": 5,
-  "target": ("TGT", 29.903605, -115.383656),
+   "target": ("T1-TGT", 29.903605, -115.383656),
   "pins": [
    ("T1-1", 29.906097, -115.390962, "pale", "P1 WNW pale cluster", "outcrop check + rock chips; look for alteration colour zoning"),
    ("T1-2", 29.897790, -115.381181, "pale", "P2 S pale patch", "map extent; chips; gully walls"),
@@ -195,30 +201,30 @@ PINS = {
  "T2": {
   "title": "T2 PIN MAP — Cerro la Turquesa (30.0485, -115.2362)",
   "center": (30.0455, -115.2415), "provider": "esri", "z": 17, "n": 5,
-  "target": ("TGT", 30.048522, -115.236173),
-  "pins": [
-   ("T2-1", 30.0502, -115.2466, "pale", "P1 pale mass CENTER", "map the mass; identify rock; 100m chip grid; hunt blue-green"),
-   ("T2-2", 30.0490, -115.2428, "pale", "P2 mass E edge", "alteration front — sample both sides of contact"),
-   ("T2-4", 30.0445, -115.2360, "struct", "P3 band @ arroyo", "ROAD or FAULT SCARP? measure, sample gouge"),
-   ("T2-5", 30.0405, -115.2265, "struct", "P4 band 1.5km E", "trace lineament; look for 2nd scarp"),
-   ("T2-6", 30.0440, -115.2470, "sed", "P5 arroyo below mass", "sediment pair — mass catchment"),
-   ("T2-7", 30.0440, -115.2330, "out", "P6 summit 740m", "Cerro la Turquesa: lithology + structural grain"),
+   "target": ("T2-TGT", 30.048522, -115.236173),
+   "pins": [
+    ("T2-OVERVIEW-01", 30.0502, -115.2466, "pale", "P1 pale mass CENTER", "map the mass; identify rock; 100m chip grid; hunt blue-green"),
+    ("T2-OVERVIEW-02", 30.0490, -115.2428, "pale", "P2 mass E edge", "alteration front — sample both sides of contact"),
+    ("T2-OVERVIEW-03", 30.0445, -115.2360, "struct", "P3 band @ arroyo", "ROAD or FAULT SCARP? measure, sample gouge"),
+    ("T2-OVERVIEW-04", 30.0405, -115.2265, "struct", "P4 band 1.5km E", "trace lineament; look for 2nd scarp"),
+    ("T2-OVERVIEW-05", 30.0440, -115.2470, "sed", "P5 arroyo below mass", "sediment pair — mass catchment"),
+    ("T2-OVERVIEW-06", 30.0440, -115.2330, "out", "P6 summit 740m", "Cerro la Turquesa: lithology + structural grain"),
   ],
  },
  "T2i": {
   "title": "T2 DETAIL — pale argillic mass, z18 (0.37 m/px)",
   "center": (30.0498, -115.2458), "provider": "esri", "z": 18, "n": 5,
-  "target": ("TGT", 30.048522, -115.236173),
-  "pins": [
-   ("T2-1", 30.0502, -115.2466, "pale", "P1 mass center", "outcrop + chips"),
-   ("T2-2", 30.0490, -115.2428, "pale", "P2 E edge", "alteration front"),
-   ("T2-6", 30.0455, -115.2485, "sed", "P5 gully mouth", "sediment — fresh wall sample"),
+   "target": ("T2i-TGT", 30.048522, -115.236173),
+   "pins": [
+    ("T2-DETAIL-01", 30.0502, -115.2466, "pale", "P1 mass center", "outcrop + chips"),
+    ("T2-DETAIL-02", 30.0490, -115.2428, "pale", "P2 E edge", "alteration front"),
+    ("T2-DETAIL-03", 30.0455, -115.2485, "sed", "P5 gully mouth", "sediment — fresh wall sample"),
   ],
  },
  "T3": {
   "title": "T3 PIN MAP — Cerro la Palmita (30.0257, -115.2869)",
   "center": (30.0245, -115.2815), "provider": "esri", "z": 17, "n": 5,
-  "target": ("TGT", 30.025725, -115.286885),
+   "target": ("T3-TGT", 30.025725, -115.286885),
   "pins": [
    ("T3-2", 30.017216, -115.271919, "out", "P2 ridge high 808m", "Cerro la Palmita: outcrop map + grain"),
    ("T3-3", 30.022132, -115.293371, "out", "P3 steepest 36°", "857m W — first bedrock, sample + structure"),

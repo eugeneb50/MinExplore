@@ -1,0 +1,5 @@
+# Local-only outputs. Never commit forecasts, reviewer responses, or scratch runs.
+predictive/
+*_frontier_*.json
+runs/
+__pycache__/

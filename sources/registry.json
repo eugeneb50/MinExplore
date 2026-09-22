@@ -1,0 +1,110 @@
+{
+ "sources": [
+  {
+   "ai_use_allowed": true,
+   "citation": "Copernicus Sentinel-2 2020 cloudless composite via EOX WMTS (tiles.maps.eox.at)",
+   "commercial_use_allowed": false,
+   "dataset_name": "s2cloudless-2020_3857",
+   "license": "CC BY-NC-SA 4.0 (non-commercial research)",
+   "original_crs": "EPSG:3857 (tiles)",
+   "original_resolution": "rendered RGB viewing composite; S2 bands 4x10 m / 6x20 m / 3x60 m",
+   "processing_version": "pipeline 3.0.0 viewing use",
+   "publisher": "EOX / Copernicus",
+   "redistribution_allowed": true,
+   "retrieved_at": "2026-08",
+   "source_id": "eox-s2cloudless-2020",
+   "source_version": "2020",
+   "transform_history": [],
+   "url": "https://tiles.maps.eox.at"
+  },
+  {
+   "ai_use_allowed": false,
+   "citation": "Esri World Imagery (Maxar-class) tile service",
+   "commercial_use_allowed": false,
+   "dataset_name": "World_Imagery",
+   "license": "Esri/Maxar terms, research use",
+   "original_crs": "EPSG:3857 (tiles)",
+   "original_resolution": "rendered display scale (z17 ~1.03, z18 ~0.52 m/px at ~30N)",
+   "processing_version": "pipeline 3.0.0 viewing use",
+   "publisher": "Esri",
+   "redistribution_allowed": false,
+   "retrieved_at": "2026-08",
+   "source_id": "esri-world-imagery",
+   "source_version": "2024-26 vintage",
+   "transform_history": [],
+   "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
+  },
+  {
+   "ai_use_allowed": true,
+   "citation": "USGS elevation-tiles-prod (SRTM-derived)",
+   "commercial_use_allowed": true,
+   "dataset_name": "elevation-tiles-prod v2 geotiff z14",
+   "license": "Public domain (USGS)",
+   "original_crs": "EPSG:3857 (tiles; source DEM geographic)",
+   "original_resolution": "~30 m native, 10 m working grid",
+   "processing_version": "pipeline 3.0.0 resample",
+   "publisher": "USGS",
+   "redistribution_allowed": true,
+   "retrieved_at": "2026-08",
+   "source_id": "usgs-elevation-tiles",
+   "source_version": "v2",
+   "transform_history": [
+    "native geographic -> EPSG:3857 tile pyramid (provider-side)"
+   ],
+   "url": "https://s3.amazonaws.com/elevation-tiles-prod"
+  },
+  {
+   "ai_use_allowed": true,
+   "citation": "SGM Carta Geologico-Minera El Aguajito H11-B85, 1:50,000 (2009)",
+   "commercial_use_allowed": true,
+   "dataset_name": "H11-B85 El Aguajito",
+   "license": "SGM public sheet (cite SGM)",
+   "original_crs": "Mixed (NAD27 / ITRF92 across SGM cartography — see transform_history)",
+   "original_resolution": "1:50,000 (~500 m transcription accuracy for workings)",
+   "processing_version": "transcription 2026-08 (data/sgm_saml_text.txt)",
+   "publisher": "Servicio Geologico Mexicano",
+   "redistribution_allowed": true,
+   "retrieved_at": "2026-08",
+   "source_id": "sgm-h11-b85",
+   "source_version": "2009",
+   "transform_history": [
+    "sheet CRS varies (NAD27/ITRF92 era cartography); transcribed coordinates carried in WGS84 with ~500 m budget"
+   ],
+   "url": ""
+  },
+  {
+   "ai_use_allowed": true,
+   "citation": "OpenStreetMap contributors; open-elevation API",
+   "commercial_use_allowed": true,
+   "dataset_name": "osm-toponyms + open-elevation lookup",
+   "license": "ODbL (OSM, attribution) / open-elevation terms",
+   "original_crs": "EPSG:4326",
+   "original_resolution": "toponyms n/a; elevations ~30 m",
+   "processing_version": "pipeline 3.0.0 runtime lookup",
+   "publisher": "OSM / open-elevation",
+   "redistribution_allowed": true,
+   "retrieved_at": "runtime",
+   "source_id": "osm-open-elevation",
+   "source_version": "live",
+   "transform_history": [],
+   "url": "https://www.openstreetmap.org"
+  },
+  {
+   "ai_use_allowed": true,
+   "citation": "NASA/USGS HLS via CMR (HLSS30/HLAL30)",
+   "commercial_use_allowed": true,
+   "dataset_name": "HLS L30/S30 surface reflectance",
+   "license": "Open (US public data; free Earthdata login)",
+   "original_crs": "Per-granule (UTM/Sinusoidal)",
+   "original_resolution": "30 m surface reflectance",
+   "processing_version": "bands mode indices (NDVI/ferric/clay/carbonate)",
+   "publisher": "NASA/USGS",
+   "redistribution_allowed": true,
+   "retrieved_at": "on demand",
+   "source_id": "nasa-hls-cmr",
+   "source_version": "v2.0",
+   "transform_history": [],
+   "url": "https://cmr.earthdata.nasa.gov"
+  }
+ ]
+}

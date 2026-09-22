@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bajamineral.example.org/schemas/pins.schema.json",
+  "title": "Baja Mineral Explorer field-pin record",
+  "description": "One GPS field objective. Coordinates are WGS84 (EPSG:4326). record_id is globally unique.",
+  "type": "object",
+  "required": ["record_id", "target_id", "latitude", "longitude", "crs", "feature_type", "source", "source_page", "source_date", "coordinate_accuracy_m", "derivation_method", "confidence", "field_action", "license", "created_at", "pipeline_version"],
+  "properties": {
+    "record_id": {"type": "string", "pattern": "^[A-Z0-9]+(-[A-Z0-9]+)+$"},
+    "target_id": {"type": "string"},
+    "latitude": {"type": "number", "minimum": -90, "maximum": 90},
+    "longitude": {"type": "number", "minimum": -180, "maximum": 180},
+    "crs": {"const": "EPSG:4326"},
+    "feature_type": {"enum": ["target", "pale", "struct", "sed", "out", "mine"]},
+    "source": {"type": "string", "minLength": 1},
+    "source_page": {"type": "string"},
+    "source_date": {"type": "string"},
+    "coordinate_accuracy_m": {"type": "string"},
+    "derivation_method": {"type": "string", "minLength": 1},
+    "confidence": {"enum": ["High", "Medium", "Low"]},
+    "field_action": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string"},
+    "pipeline_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "label": {"type": "string"},
+    "area": {"type": "string"}
+  }
+}

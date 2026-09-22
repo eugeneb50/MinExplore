@@ -1,0 +1,23 @@
+# Optional: reproducible local runs of the pipeline (no DB, no tileserver).
+# `api` serves site/ + the stdlib JSON API (coordinate page + fee jobs).
+services:
+  pipeline:
+    build: .
+    volumes:
+      - ./maps:/work/maps
+      - ./data:/work/data
+  api:
+    image: python:3.11-slim
+    working_dir: /work
+    volumes:
+      - ./:/work
+    command: ["python3", "api/server.py", "--port", "8080"]
+    ports: ["8080:8080"]
+  site:
+    image: python:3.11-slim
+    working_dir: /site
+    volumes:
+      - ./site:/site
+    command: ["python3", "-m", "http.server", "8081"]
+    ports: ["8081:8081"]
+    profiles: ["static-only"]

@@ -1,0 +1,161 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2466,
+     30.0502
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-01",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "map the mass; identify rock; 100 m chip grid; hunt blue-green",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2428,
+     30.049
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-02",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "pale",
+    "source": "EOX Sentinel-2 2020 cloudless viewing composite (CC BY-NC-SA 4.0) + Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2020",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "RGB visual-screening heuristic pick (unvalidated; needs field + spectral validation)",
+    "confidence": "Low",
+    "field_action": "alteration front - sample both sides of contact",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.236,
+     30.0445
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-03",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "struct",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "lineament traced on sub-meter base layer; road vs scarp unresolved",
+    "confidence": "Low",
+    "field_action": "ROAD or FAULT SCARP? measure, sample gouge",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.2265,
+     30.0405
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-04",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "struct",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "lineament traced on sub-meter base layer; requires field validation",
+    "confidence": "Low",
+    "field_action": "trace lineament; look for 2nd scarp",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.247,
+     30.044
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-05",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "sed",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "sediment pair - mass catchment",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.233,
+     30.044
+    ]
+   },
+   "properties": {
+    "record_id": "T2-OVERVIEW-06",
+    "target_id": "T2",
+    "crs": "EPSG:4326",
+    "feature_type": "out",
+    "source": "Esri World Imagery tile service (research use)",
+    "source_page": "t2_pins",
+    "source_date": "2024-26",
+    "coordinate_accuracy_m": "20",
+    "derivation_method": "desk pick on sub-meter base layer for field check",
+    "confidence": "Medium",
+    "field_action": "Cerro la Turquesa: lithology + structural grain",
+    "license": "CC BY-NC-SA 4.0 (rendering); underlying imagery per provider terms",
+    "created_at": "2026-08-25",
+    "pipeline_version": "3.0.0"
+   }
+  }
+ ]
+}

@@ -27,6 +27,12 @@ MODES:
       # -> out/map_spread_4km.png (9 non-redundant panels, same extent,
       #    500 m lat/lon grid, scale bar, N arrow) + maps/field_waypoints.csv
       #    (GPS checkpoints with bearing/distance/elevation for field test)
+  python3 mineral_pipeline.py prospect --outdir maps
+      # -> prospectivity table (v3 split, stdlib only, no network)
+  python3 mineral_pipeline.py feasibility --outdir maps
+      # -> feasibility + constraint flags (v3 split, stdlib only, no network)
+  python3 mineral_pipeline.py evidence-pack --lat 30.048522 --lon -115.236173 --outdir maps
+      # -> evidence pack JSON for a coordinate (the payload the web page consumes)
 
 DATA SOURCES & LICENSES
   * EOX s2cloudless (Sentinel-2 2020 composite, 10 m, CC BY-NC-SA 4.0)
@@ -42,10 +48,21 @@ DATA SOURCES & LICENSES
       Photorealistic 3D Tiles API - do NOT scrape tile.google.com /
       bing.com tiles (ToS violation + CAPTCHAs + rotating tile IDs).
 
-NOTE ON SWIR: RGB-only products (s2cloudless, Bing aerial) can only screen
-for BROAD tone anomalies. Diagnostic mineral mapping (clay vs carbonate vs
-sulfate) needs SWIR bands: Sentinel-2 B11/B12, Landsat B6/B7, ASTER bands
-6/7, or AVIRIS hyperspectral (USGS SFUG - free, best for mineral mapping).
+NOTE ON SWIR: RGB-only products (s2cloudless viewing tiles, Esri aerial)
+can only screen for BROAD tone anomalies. The B/R "blue-shift" computed here
+is an unvalidated RGB visual-screening heuristic - do NOT associate it with
+specific clay, carbonate, or iron mineralogy. Diagnostic mineral mapping
+(clay vs carbonate vs sulfate) needs SWIR bands: Sentinel-2 B11/B12
+(20 m native), Landsat B6/B7 (30 m), ASTER bands 6/7 (30 m), or AVIRIS
+hyperspectral (USGS SFUG - free, best for mineral mapping).
+
+NOTE ON RESOLUTION: "10 m DEM" means SRTM ~30 m native elevation resampled
+onto a 10 m working grid - resampling adds no terrain detail. Sentinel-2
+bands are natively 4x10 m / 6x20 m / 3x60 m; the EOX s2cloudless composite
+used for screen/spread is a rendered RGB viewing product that prioritizes
+visual consistency, NOT analysis-ready surface reflectance. Rendered m/px
+figures on the map sheets are Web-Mercator display scales at the sheet
+latitude, not sensor ground sampling distances.
 """
 import argparse
 import io
@@ -769,14 +786,123 @@ def mode_turquoise(*a, **k):
 
 
 # ----------------------------------------------------------------------
+# MODES: prospect / feasibility / evidence-pack  (v3 split, stdlib, offline)
+# ----------------------------------------------------------------------
+def _haversine_km(lat1, lon1, lat2, lon2):
+    r = 6371.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dp, dl = p2 - p1, math.radians(lon2 - lon1)
+    h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(h))
+
+
+def _bearing_deg(lat1, lon1, lat2, lon2):
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dl = math.radians(lon2 - lon1)
+    y = math.sin(dl) * math.cos(p2)
+    x = math.cos(p1) * math.sin(p2) - math.sin(p1) * math.cos(p2) * math.cos(dl)
+    return (math.degrees(math.atan2(y, x)) + 360) % 360
+
+
+def _load_records(path):
+    import csv
+    with open(path, newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def mode_prospect(lat, lon, outdir):
+    from src.scores import all_split
+    os.makedirs(outdir, exist_ok=True)
+    split = all_split()
+    print("prospectivity (geological, never blended with feasibility):")
+    for tid, s in split.items():
+        print(f"  {tid}: prospectivity {s['prospectivity']}")
+    with open(os.path.join(outdir, "prospectivity.json"), "w", encoding="utf-8") as f:
+        json.dump({"model": "v3-split", "prospectivity":
+                   {t: s["prospectivity"] for t, s in split.items()},
+                   "disclaimer": "Relative evidence scores, NOT probabilities of mineralization."},
+                  f, indent=1)
+    print(f"saved {outdir}/prospectivity.json")
+
+
+def mode_feasibility(lat, lon, outdir):
+    from src.scores import all_split
+    os.makedirs(outdir, exist_ok=True)
+    split = all_split()
+    print("feasibility (access/legal/environmental, shown separately):")
+    for tid, s in split.items():
+        print(f"  {tid}: feasibility {s['feasibility']}")
+    with open(os.path.join(outdir, "feasibility.json"), "w", encoding="utf-8") as f:
+        json.dump({"model": "v3-split", "feasibility":
+                   {t: s["feasibility"] for t, s in split.items()},
+                   "constraint_note": "SIAM/RAN/CONANP/CONAGUA not yet screened; "
+                                      "land_constraints is a not-yet-assessed placeholder.",
+                   "disclaimer": "A geologically interesting site can still be "
+                                 "unsuitable or inaccessible."}, f, indent=1)
+    print(f"saved {outdir}/feasibility.json")
+
+
+def mode_evidence_pack(lat, lon, outdir):
+    from src.frontier import all_frontier
+    from src.scores import EVIDENCE, PIPELINE_VERSION, all_split
+    from src.uncertainty import all_coverage
+    root = os.path.dirname(os.path.abspath(__file__))
+    pins = _load_records(os.path.join(root, "maps", "PIN_POINTS.csv"))
+
+    def nearest(rows, la_key, lo_key, id_key):
+        best, bd = None, float("inf")
+        for r in rows:
+            try:
+                d = _haversine_km(lat, lon, float(r[la_key]), float(r[lo_key]))
+            except (ValueError, TypeError):
+                continue
+            if d < bd:
+                bd, best = d, r
+        if best is None:
+            return None
+        return {"id": best[id_key], "dist_km": round(bd, 2),
+                "bearing_deg": round(_bearing_deg(
+                    lat, lon, float(best[la_key]), float(best[lo_key])))}
+    targets = {"T1": (29.903605, -115.383656), "T2": (30.048522, -115.236173),
+               "T3": (30.025725, -115.286885)}
+    pack = {
+        "coordinate": {"lat": lat, "lon": lon, "crs": "EPSG:4326"},
+        "pipeline_version": PIPELINE_VERSION,
+        "nearest_target": nearest(
+            [{"id": t, "la": la, "lo": lo} for t, (la, lo) in targets.items()],
+            "la", "lo", "id"),
+        "nearest_pin": nearest(pins, "latitude", "longitude", "record_id"),
+        "targets": {t: {"prospectivity": s["prospectivity"],
+                        "feasibility": s["feasibility"],
+                        "uncertainty": all_coverage()[t],
+                        "frontier": all_frontier()[t],
+                        "evidence": EVIDENCE[t]} for t, s in all_split().items()},
+        "provenance_trail": "target -> derived evidence -> transformation -> "
+                            "source asset -> publisher/license (sources/registry.json)",
+        "disclaimer": "Desk-study evidence pack. Relative evidence scores only; "
+                      "field validation required. Not investment advice.",
+    }
+    os.makedirs(outdir, exist_ok=True)
+    dest = os.path.join(outdir, "evidence_pack.json")
+    with open(dest, "w", encoding="utf-8") as f:
+        json.dump(pack, f, indent=1)
+    print(f"saved {dest} (nearest target: {pack['nearest_target']})")
+
+
+# ----------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="mode", required=True)
-    for m in ("screen", "dem", "bands", "tiles", "spread", "pins", "turquoise"):
+    for m in ("screen", "dem", "bands", "tiles", "spread", "pins", "turquoise",
+              "prospect", "feasibility", "evidence-pack"):
         p = sub.add_parser(m)
-        p.add_argument("--lat", type=float, required=True)
-        p.add_argument("--lon", type=float, required=True)
+        # pins/turquoise take no coordinates; keep flags accepted-but-optional
+        # so `pins --lat 0 --lon 0` and bare `pins` both work.
+        # prospect/feasibility need no coordinates either (offline split tables).
+        req = m not in ("pins", "turquoise", "prospect", "feasibility")
+        p.add_argument("--lat", type=float, required=req)
+        p.add_argument("--lon", type=float, required=req)
         p.add_argument("--outdir", default="./maps")
         if m in ("dem", "spread"):
             p.add_argument("--half-km", type=float, default=2.0)
@@ -790,6 +916,12 @@ def main():
     a = ap.parse_args()
     if a.mode in ("pins", "turquoise"):
         {"pins": mode_pins, "turquoise": mode_turquoise}[a.mode]()
+        return
+    if a.mode in ("prospect", "feasibility", "evidence-pack"):
+        # offline split modes: lat/lon default to 0,0 when not supplied
+        {"prospect": mode_prospect, "feasibility": mode_feasibility,
+         "evidence-pack": mode_evidence_pack}[a.mode](
+            getattr(a, "lat", None) or 0.0, getattr(a, "lon", None) or 0.0, a.outdir)
         return
     {"screen": mode_screen, "dem": mode_dem, "bands": mode_bands, "tiles": mode_tiles,
      "spread": mode_spread}[a.mode](

@@ -1,0 +1,12 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+This repository's code, documentation, map renderings, and pin/mine records are
+licensed under CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Why this license: the pipeline derives from the EOX Sentinel-2 cloudless composite,
+which is itself CC BY-NC-SA 4.0 — ShareAlike flows the NC-SA terms downstream.
+
+Not covered: underlying third-party imagery and data keep their own terms —
+Esri World Imagery (research use), USGS SRTM tiles (public domain),
+SGM El Aguajito sheet (SGM public release), OSM (ODbL). Each published record
+carries its own `license` field; map sheets print source credits in the footer.

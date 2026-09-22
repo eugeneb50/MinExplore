@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Baja Mineral Explorer | Satellite Prospecting Maps — Baja California, Mexico</title>
-<meta name="description" content="Run any coordinate and access sub-meter satellite prospecting maps of the La Turquesa Cu–Fe epithermal corridor, San Quintín Municipio, Baja California, Mexico: 3 surveyed targets, 36 GPS field pins, 14 documented Cu–Fe workings. Sentinel-2 10 m, Esri 0.5 m, SRTM 10 m DEM, SGM 1:50,000.">
+<meta name="description" content="Baja Mineral Explorer — a reproducible geospatial data pipeline for mineral-exploration field planning. Ingests public geology, satellite, elevation and mine-inventory data; validates coordinates; ranks candidate targets; produces GPS-ready field packages. Public demo: run any coordinate, no login.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://bajamineral.example.org/">
 <!-- hreflang -->
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Baja Mineral Explorer">
 <meta property="og:title" content="Baja Mineral Explorer | Satellite Prospecting Maps — Baja California">
-<meta property="og:description" content="Run any coordinate: sub-meter satellite maps, 36 GPS field pins and documented Cu–Fe epithermal geology of the La Turquesa corridor, San Quintín, Baja California, Mexico.">
+<meta property="og:description" content="A reproducible geospatial data pipeline for mineral-exploration field planning. Public demo: run any coordinate, no login.">
 <meta property="og:url" content="https://bajamineral.example.org/">
 <meta property="og:image" content="https://bajamineral.example.org/maps/turquoise_map.jpg">
 <meta property="og:locale" content="en_US">
@@ -26,7 +26,7 @@
 <meta property="og:locale:alternate" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Baja Mineral Explorer | Satellite Prospecting Maps — Baja California">
-<meta name="twitter:description" content="Run any coordinate: sub-meter satellite maps, 36 GPS pins, documented Cu–Fe epithermal geology — La Turquesa corridor, San Quintín, Baja California.">
+<meta name="twitter:description" content="Reproducible geospatial pipeline for field planning — public coordinate demo, ranked targets, GPS field packages.">
 <meta name="twitter:image" content="https://bajamineral.example.org/maps/turquoise_map.jpg">
 <link rel="stylesheet" href="vendor/leaflet.css">
 <!-- JSON-LD: Organization + WebSite + WebApplication -->
@@ -59,7 +59,7 @@
    "applicationCategory": "ScientificApplication",
    "operatingSystem": "Any (web browser)",
    "browserRequirements": "Requires JavaScript and internet access for map tiles",
-   "description": "Enter any latitude/longitude in the Baja California corridor to see it on sub-meter satellite imagery with the 3 surveyed targets, 36 exploration pins and 14 documented Cu–Fe workings, plus point elevation and nearest-neighbor analysis.",
+    "description": "Enter any latitude/longitude in the Baja California corridor to see it on sub-meter satellite imagery with the 3 remotely screened candidate targets, 36 exploration pins and 14 documented Cu–Fe workings, plus point elevation and nearest-neighbor analysis. Public demo, no login.",
    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
   },
   {
@@ -76,7 +76,7 @@
    "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bajamineral.example.org/"},
     {"@type": "ListItem", "position": 2, "name": "Targets", "item": "https://bajamineral.example.org/#targets"},
-    {"@type": "ListItem", "position": 3, "name": "Member tools", "item": "https://bajamineral.example.org/#members"}
+     {"@type": "ListItem", "position": 3, "name": "Demo", "item": "https://bajamineral.example.org/#demo"}
    ]
   }
  ]
@@ -88,18 +88,18 @@
  "@context": "https://schema.org",
  "@type": "FAQPage",
  "mainEntity": [
-  {"@type": "Question", "name": "What is located at 30.048522, -115.236173?",
-   "acceptedAnswer": {"@type": "Answer", "text": "The point sits on the northwestern slope of Cerro la Turquesa (740 m), San Quintín Municipio, Baja California, Mexico, at about 617 m elevation. Remote-sensing surveys identify a kilometer-scale pale argillic (clay-altered) surface about 1 km to the west, a straight NE–SW lineament about 1 km to the east, and a turquoise-mining toponym at the site itself. It is the highest-scored (6.3/10) of three surveyed targets in the La Turquesa Cu–Fe epithermal corridor."}},
-  {"@type": "Question", "name": "How are the satellite maps for a coordinate produced?",
-   "acceptedAnswer": {"@type": "Answer", "text": "A reproducible pipeline fetches open and official imagery for the coordinate: Sentinel-2 2020 cloudless composite (10 m, 13 bands) from the EOX WMTS, Esri World Imagery (0.37–1.03 m/px) for sub-meter detail, and SRTM-derived 10 m DEM tiles for slope, aspect and hillshade. Spectral indices (B/R blue-shift proxy, HSV surface classes) and terrain statistics are computed per site, then cross-referenced with the SGM Carta Geológico-Minera El Aguajito H11-B85 1:50,000 (2009). Google and Bing data is used only via official APIs, never tile scraping."}},
+   {"@type": "Question", "name": "What is located at 30.048522, -115.236173?",
+    "acceptedAnswer": {"@type": "Answer", "text": "The point sits on the northwestern slope of Cerro la Turquesa (740 m), San Quintín Municipio, Baja California, Mexico, at about 617 m elevation. This desk study identifies a kilometer-scale pale surface about 1 km to the west, a straight NE–SW lineament about 1 km to the east, and a turquoise-mining toponym at the site itself. It is the highest-ranked target under the current desk-screening model (prospectivity 7.2/10, feasibility 4.3/10 — shown separately, never blended) of three remotely screened candidate targets in the La Turquesa Cu–Fe epithermal corridor. No field survey, geochemistry, spectroscopy, or drilling has validated these targets."}},
+   {"@type": "Question", "name": "How are the satellite maps for a coordinate produced?",
+    "acceptedAnswer": {"@type": "Answer", "text": "A reproducible pipeline using documented data-access methods fetches open and official imagery for the coordinate: Sentinel-2 2020 cloudless viewing composite from the EOX WMTS (rendered RGB; visual consistency, not analysis-ready reflectance), Esri World Imagery for sub-meter viewing detail (rendered display scale, not sensor resolution), and SRTM elevation (~30 m native, resampled to a 10 m working grid) for slope, aspect and hillshade. An unvalidated RGB visual-screening heuristic (B/R) plus HSV surface classes are computed per site, then cross-referenced with the SGM Carta Geológico-Minera El Aguajito H11-B85 1:50,000 (2009). Google and Bing data is used only via official APIs, never tile scraping."}},
   {"@type": "Question", "name": "What is the La Turquesa corridor in Baja California?",
    "acceptedAnswer": {"@type": "Answer", "text": "A documented low-sulfidation epithermal Cu–Fe (±Au) mineralized zone mapped by the Servicio Geológico Mexicano (SGM) 1:50,000 sheet El Aguajito (2009) in the Alisitos terrane, San Quintín Municipio, between about 30.05° and 30.15° N. Fourteen abandoned Cu–Fe workings are documented (El Cardonal — documented turquoise, La Prieta, Esperanza, San Martín with chrysocolla/azurite/malachite, La Turquesa core, El Hormiguero, La Bonita, 5 Minas, El Sacrificio, Josefina, Santa Martha, Santa Lucía, La Víbora, El Moro), structurally controlled by NE–SW normal faults and N65–75°E vein sets."}},
   {"@type": "Question", "name": "Is this site investment or drilling advice?",
    "acceptedAnswer": {"@type": "Answer", "text": "No. This is an independent remote-sensing and geology desk study. Under Mexico's Ley Minera (2023 reform), new mining concessions are granted only by public tender, are prohibited in natural protected areas and water-stressed zones, and require prior consultation and social-impact studies. Water availability in this arid corridor is the principal regulatory risk. Nothing here constitutes investment advice."}},
   {"@type": "Question", "name": "Is using Google or Bing satellite imagery here legal?",
    "acceptedAnswer": {"@type": "Answer", "text": "Imagery is obtained through official channels: Google Earth Engine (Sentinel-2, Landsat, ASTER) and the Bing Maps Imagery API for Google/Bing data, Esri World Imagery tiles for the sub-meter base layer, and fully open sources (Copernicus Sentinel-2, USGS SRTM tiles) for the analysis layers. Tile-server scraping of Google/Bing is not used."}},
-  {"@type": "Question", "name": "How do I run my own coordinate?",
-   "acceptedAnswer": {"@type": "Answer", "text": "Members use the Coordinate Runner in the Members section: enter latitude and longitude, and the page places the point on sub-meter satellite imagery, shows point elevation (open-elevation API), computes distances and bearings to the 3 surveyed targets, 36 exploration pins and 14 documented workings, and produces a shareable link. The 36-pin CSV (PIN_POINTS.csv) is also downloadable for GPS devices."}}
+   {"@type": "Question", "name": "How do I run my own coordinate?",
+    "acceptedAnswer": {"@type": "Answer", "text": "Use the public Coordinate Runner demo (Demo section, no login): enter latitude and longitude, and the page places the point on sub-meter satellite imagery, shows point elevation (open-elevation API), computes distances and bearings to the 3 candidate targets, 36 exploration pins and 14 documented workings, and produces a shareable link plus JSON/GeoJSON output and a downloadable field package. Up to 5 analyses per visitor (browser-local quota). The 36-pin CSV/GeoJSON is also downloadable for GPS devices."}}
  ]
 }
 </script>
@@ -184,6 +184,12 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .resbox td:first-child{color:var(--muted);white-space:nowrap}
 #runnerForm input{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:16px;font-family:ui-monospace,Menlo,Consolas,monospace}
 #runnerForm .lbl{font-size:13px;color:var(--muted);margin:10px 0 4px;display:block}
+#vaultForm input,#vaultForm select{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:ui-monospace,Menlo,Consolas,monospace}
+#vaultForm .lbl{font-size:13px;color:var(--muted);margin:10px 0 4px;display:block}
+#vaultForm .pwrow{display:flex;gap:8px}
+#vaultForm .pwrow input{flex:1}
+#vaultForm .pwrow button{flex:0 0 auto}
+#vaultStatus{font-weight:700}
 .layers{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
 .layers label{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer;display:flex;gap:6px;align-items:center}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
@@ -213,42 +219,53 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
    <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 2 L27 26 H3 Z" fill="none" stroke="#e8b84b" stroke-width="2.4" stroke-linejoin="round"/><circle cx="15" cy="19" r="3.4" fill="#5bc8e8"/></svg>
    <span data-i18n="brand">Baja Mineral Explorer</span>
   </a>
-  <nav class="main" aria-label="Main">
-   <a href="#targets" data-i18n="nav_targets">Targets</a>
-   <a href="#method" data-i18n="nav_method">Method</a>
-   <a href="#data" data-i18n="nav_data">Data</a>
-   <a href="#faq" data-i18n="nav_faq">FAQ</a>
-   <a href="#members" data-i18n="nav_members">Members</a>
-  </nav>
-  <div class="langs" role="group" aria-label="Language">
-   <button data-lang="en" class="active">EN</button>
-   <button data-lang="es">ES</button>
-   <button data-lang="zh">中文</button>
-   <button data-lang="ru">РУ</button>
-  </div>
+   <nav class="main" aria-label="Main">
+    <a href="#targets" data-i18n="nav_targets">Targets</a>
+    <a href="#method" data-i18n="nav_method">Method</a>
+    <a href="#scores" data-i18n="nav_scores">Scores</a>
+    <a href="#data" data-i18n="nav_data">Data</a>
+    <a href="#build" data-i18n="nav_build">Build</a>
+    <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    <a href="#demo" data-i18n="nav_demo">Demo</a>
+    <a href="coordinate.html" data-i18n="nav_analyze">Analyze</a>
+   </nav>
+   <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-lang="en" class="active">EN</button>
+    <button type="button" data-lang="es">ES</button>
+    <button type="button" data-lang="zh">中文</button>
+    <button type="button" data-lang="ru">РУ</button>
+   </div>
  </div>
 </header>
 
 <main id="top">
  <!-- ================= HERO ================= -->
- <div class="hero">
-  <h1 data-i18n="hero_title">Satellite &amp; geology prospecting maps — <em>Baja California, Mexico</em></h1>
-  <p class="sub" data-i18n="hero_sub">Run any coordinate. Explore three surveyed mineral targets, 36 pinned field objectives, and sub-meter satellite maps of the La Turquesa Cu–Fe epithermal corridor in San Quintín Municipio, Baja California.</p>
-  <div class="stats" role="list">
-   <div class="stat" role="listitem"><b>3</b><span data-i18n="stat_targets">surveyed targets (29.90–30.05° N)</span></div>
-   <div class="stat" role="listitem"><b>36</b><span data-i18n="stat_pins">GPS field pins (CSV + map sheets)</span></div>
-   <div class="stat" role="listitem"><b>0.5 m/px</b><span data-i18n="stat_res">best sub-meter imagery (z18)</span></div>
-   <div class="stat" role="listitem"><b>14</b><span data-i18n="stat_mines">documented Cu–Fe workings (SGM 2009)</span></div>
-  </div>
-  <div class="ctas">
-   <a class="btn primary" href="#targets" data-i18n="cta_explore">Explore the targets</a>
-   <a class="btn ghost" href="#members" data-i18n="cta_members">Member coordinate runner</a>
-  </div>
+  <div class="hero">
+   <h1 data-i18n="hero_title">Baja Mineral Explorer — <em>a reproducible geospatial data pipeline</em> for mineral-exploration field planning</h1>
+   <p class="sub" data-i18n="hero_sub">Ingests public geological, satellite, elevation, and mine-inventory data; validates and normalizes coordinates; ranks candidate targets; and produces GPS-ready field packages. This desk study organizes incomplete public evidence into explicit, field-testable hypotheses — it is not a discovery claim.</p>
+   <div class="ctas" style="margin-bottom:18px">
+    <a class="btn primary" href="#demo" data-i18n="cta_demo">Run the demo — no login</a>
+    <a class="btn ghost" href="https://github.com/example/baja-mineral" data-i18n="cta_source">View source code</a>
+    <a class="btn ghost" href="#build" data-i18n="cta_arch">Architecture</a>
+    <a class="btn ghost" href="#scores" data-i18n="cta_tests">Tests and CI</a>
+    <a class="btn ghost" href="sample_data/" data-i18n="cta_data">Download sample DataKit</a>
+   </div>
+   <p class="note" data-i18n="stack_note">Stack: Python (stdlib + numpy/Pillow) · static Leaflet site · no backend, no database. Sample DataKit and validator run with the standard library alone.</p>
+   <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>3</b><span data-i18n="stat_targets">remotely screened candidate targets (29.90–30.05° N)</span></div>
+    <div class="stat" role="listitem"><b>36</b><span data-i18n="stat_pins">GPS field pins, unique IDs + GeoJSON (CSV + map sheets)</span></div>
+    <div class="stat" role="listitem"><b>z18</b><span data-i18n="stat_res">finest rendered display scale (Esri; see resolution notes)</span></div>
+    <div class="stat" role="listitem"><b>14</b><span data-i18n="stat_mines">documented Cu–Fe workings (SGM 2009)</span></div>
+   </div>
+   <div class="ctas">
+    <a class="btn primary" href="#targets" data-i18n="cta_explore">Explore the targets</a>
+    <a class="btn ghost" href="#demo" data-i18n="cta_members">Public coordinate runner</a>
+   </div>
   <div class="kf">
    <h3 data-i18n="facts_title">Key facts</h3>
    <ul>
     <li><b data-i18n="fact1_b">Area:</b> <span data-i18n="fact1">29.90–30.05° N, 115.24–115.39° W — San Quintín Municipio, Baja California, MX (Alisitos terrane)</span></li>
-    <li><b data-i18n="fact2_b">Data:</b> <span data-i18n="fact2">Sentinel-2 10 m (2020) · Esri World Imagery 0.5 m · SRTM 10 m DEM · SGM 1:50,000 (2009)</span></li>
+     <li><b data-i18n="fact2_b">Data:</b> <span data-i18n="fact2">Sentinel-2 2020 rendered viewing composite (bands natively 4×10 m / 6×20 m / 3×60 m) · Esri World Imagery viewing tiles (rendered display scale) · SRTM elevation (~30 m native, 10 m working grid) · SGM 1:50,000 (2009)</span></li>
     <li><b data-i18n="fact3_b">Geology:</b> <span data-i18n="fact3">Low-sulfidation epithermal Cu–Fe (±Au) — SGM Corbett-type model, Alisitos andesite + Cretaceous granodiorite</span></li>
     <li><b data-i18n="fact4_b">Status:</b> <span data-i18n="fact4">Independent desk study (Aug 2026). Not investment advice; MX 2023 Ley Minera applies (public tender, water, ANP gates)</span></li>
    </ul>
@@ -257,37 +274,37 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
 
  <!-- ================= TARGETS ================= -->
  <section id="targets">
-  <h2 data-i18n="targets_title">The three surveyed targets</h2>
-  <p class="sec-sub" data-i18n="targets_sub">Coordinates are clickable to copy. Each target has a 4×4 km field sheet and a sub-meter pin sheet. Desk scores combine geology, structure, remote sensing, exposure, history, water, access, social and regulatory factors.</p>
+   <h2 data-i18n="targets_title">Three remotely screened candidate targets</h2>
+   <p class="sec-sub" data-i18n="targets_sub">Coordinates are clickable to copy. Each target has a 4×4 km field sheet and a sub-meter pin sheet. Desk-screening ranks (not probabilities of mineralization): since v3 the model is split — geological prospectivity and access/legal/environmental feasibility, shown side by side and never blended — see <a href="#scores">the published scoring model</a>. No field survey, geochemistry, spectroscopy, or drilling has validated these targets.</p>
   <div class="cards">
    <article class="card" id="t1">
-    <div class="top"><h3>T1 — <span data-i18n="t1_name">Arroyo San Isidro</span></h3><span class="badge">5.4 / 10</span></div>
+     <div class="top"><h3>T1 — <span data-i18n="t1_name">Arroyo San Isidro</span></h3><span class="badge">P 5.3 · F 6.0</span></div>
     <span class="coords" data-copy="29.903605, -115.383656" title="click to copy">29.903605, -115.383656</span>
     <p data-i18n="t1_blurb">Southern anchor of the corridor: pale alteration patches along an N–S relay drainage at ~332 m. 86% bare regolith; B/R blue-shift 0.55–0.63 on the patches. 13–21 km S of the documented workings.</p>
     <div class="row">
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t1_pins.jpg" data-cap="T1 — Arroyo San Isidro — pin sheet (1.03 m/px)" data-i18n-act="btn_pins">Pin sheet</a>
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t1_spread.jpg" data-cap="T1 — 4×4 km field sheet" data-i18n-act="btn_sheet">Field sheet</a>
+     <a class="btn small ghost" href="#" data-map="maps/t1_pins.jpg" data-cap="T1 — Arroyo San Isidro — pin sheet (1.03 m/px)" data-i18n-act="btn_pins">Pin sheet</a>
+     <a class="btn small ghost" href="#" data-map="maps/t1_spread.jpg" data-cap="T1 — 4×4 km field sheet" data-i18n-act="btn_sheet">Field sheet</a>
      <a class="btn small ghost" href="https://www.openstreetmap.org/?mlat=29.903605&mlon=-115.383656#map=16/29.903605/-115.383656" target="_blank" rel="noopener">OSM ↗</a>
     </div>
    </article>
    <article class="card" id="t2">
-    <div class="top"><h3>T2 — <span data-i18n="t2_name">Cerro la Turquesa</span></h3><span class="badge" style="color:var(--good)">6.3 / 10</span></div>
+     <div class="top"><h3>T2 — <span data-i18n="t2_name">Cerro la Turquesa</span></h3><span class="badge" style="color:var(--good)">P 7.2 · F 4.3</span></div>
     <span class="coords" data-copy="30.048522, -115.236173" title="click to copy">30.048522, -115.236173</span>
-    <p data-i18n="t2_blurb">Highest-potential target (740 m hill, 617 m at pin): km-scale pale argillic mass ~1 km W, straight NE–SW lineament ~1 km E (road vs fault scarp — field check), turquoise-mining toponym at the site. MEX 2 ~2 km away.</p>
+     <p data-i18n="t2_blurb">Highest-ranked target under the current desk-screening model (740 m hill, 617 m at pin): km-scale pale surface ~1 km W, straight NE–SW lineament ~1 km E (road vs fault scarp — field check), turquoise-mining toponym at the site. MEX 2 ~2 km away.</p>
     <div class="row">
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t2_pins.jpg" data-cap="T2 — Cerro la Turquesa — pin sheet (1.03 m/px)" data-i18n-act="btn_pins">Pin sheet</a>
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t2_mass_inset_z18.jpg" data-cap="T2 — pale mass detail (0.52 m/px, z18)" data-i18n-act="btn_inset">0.5 m detail</a>
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t2_spread.jpg" data-cap="T2 — 4×4 km field sheet" data-i18n-act="btn_sheet">Field sheet</a>
+     <a class="btn small ghost" href="#" data-map="maps/t2_pins.jpg" data-cap="T2 — Cerro la Turquesa — pin sheet (1.03 m/px)" data-i18n-act="btn_pins">Pin sheet</a>
+     <a class="btn small ghost" href="#" data-map="maps/t2_mass_inset_z18.jpg" data-cap="T2 — pale mass detail (0.52 m/px, z18)" data-i18n-act="btn_inset">0.5 m detail</a>
+     <a class="btn small ghost" href="#" data-map="maps/t2_spread.jpg" data-cap="T2 — 4×4 km field sheet" data-i18n-act="btn_sheet">Field sheet</a>
      <a class="btn small ghost" href="https://www.openstreetmap.org/?mlat=30.048522&mlon=-115.236173#map=16/30.048522/-115.236173" target="_blank" rel="noopener">OSM ↗</a>
     </div>
    </article>
    <article class="card" id="t3">
-    <div class="top"><h3>T3 — <span data-i18n="t3_name">Cerro la Palmita</span></h3><span class="badge">5.5 / 10</span></div>
+     <div class="top"><h3>T3 — <span data-i18n="t3_name">Cerro la Palmita</span></h3><span class="badge">P 5.7 · F 5.7</span></div>
     <span class="coords" data-copy="30.025725, -115.286885" title="click to copy">30.025725, -115.286885</span>
     <p data-i18n="t3_blurb">The ridge between T1 and T2 (800 m): steepest terrain of the three (30% of area &gt;15°) → best bedrock exposure. 38% vegetation. Spectrally quiet — the corridor's high ground; MEX 2 cut-banks ~2 km NE.</p>
     <div class="row">
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t3_pins.jpg" data-cap="T3 — Cerro la Palmita — pin sheet (1.03 m/px)" data-i18n-act="btn_pins">Pin sheet</a>
-     <a class="btn small ghost" href="javascript:void 0" data-map="maps/t3_spread.jpg" data-cap="T3 — 4×4 km field sheet" data-i18n-act="btn_sheet">Field sheet</a>
+     <a class="btn small ghost" href="#" data-map="maps/t3_pins.jpg" data-cap="T3 — Cerro la Palmita — pin sheet (1.03 m/px)" data-i18n-act="btn_pins">Pin sheet</a>
+     <a class="btn small ghost" href="#" data-map="maps/t3_spread.jpg" data-cap="T3 — 4×4 km field sheet" data-i18n-act="btn_sheet">Field sheet</a>
      <a class="btn small ghost" href="https://www.openstreetmap.org/?mlat=30.025725&mlon=-115.286885#map=16/30.025725/-115.286885" target="_blank" rel="noopener">OSM ↗</a>
     </div>
    </article>
@@ -295,26 +312,26 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
   <div class="kf">
    <h3 data-i18n="corridor_title">The corridor view</h3>
    <p data-i18n="corridor_p" style="color:var(--muted);margin:6px 0 10px">The documented Cu–Fe belt (14 SGM workings) runs W–E at 30.05–30.15° N; your targets sit on its eastern projection and southern end.</p>
-   <a class="btn small primary" href="javascript:void 0" data-map="maps/turquoise_map.jpg" data-cap="La Turquesa Cu–Fe corridor — 14 documented workings + 4 prospect zones + T1/T2/T3">🗺 <span data-i18n="corridor_btn">Open corridor map</span></a>
+   <a class="btn small primary" href="#" data-map="maps/turquoise_map.jpg" data-cap="La Turquesa Cu–Fe corridor — 14 documented workings + 4 prospect zones + T1/T2/T3">🗺 <span data-i18n="corridor_btn">Open corridor map</span></a>
   </div>
  </section>
 
  <!-- ================= METHOD ================= -->
  <section id="method">
-  <h2 data-i18n="method_title">How the satellite data is gathered</h2>
-  <p class="sec-sub" data-i18n="method_sub">A reproducible, legal pipeline — no tile-server scraping of Google or Bing. Official APIs plus fully open data, all fetchable by script.</p>
-  <h3 data-i18n="m1_h">1 · Google &amp; Bing — official routes only</h3>
-  <p data-i18n="m1_p" style="color:var(--muted)">Google data is used via <b>Google Earth Engine</b> (Sentinel-2, Landsat, ASTER, Sentinel-1) and the Photorealistic 3D Tiles API; Bing via the <b>Bing Maps Imagery API</b> (Aerial tiles to z18). Direct tile scraping violates ToS, is CAPTCHA-gated, and yields no spectral bands. The sub-meter base layer on this site is <b>Esri World Imagery</b> (Maxar-class) tiles; the 10 m spectral layer is the open <b>Sentinel-2 2020 cloudless composite</b> (EOX, CC BY-NC-SA 4.0); terrain uses <b>SRTM-derived 10 m DEM tiles</b> (USGS, public domain).</p>
-  <h3 data-i18n="m2_h">2 · Spectral &amp; terrain screening per coordinate</h3>
-  <p data-i18n="m2_p" style="color:var(--muted)">For each coordinate the pipeline computes: B/R blue-shift proxy (Fe-oxide depletion / clay-calcite indicator in RGB mode), HSV surface classes (vegetation / soil / pale-tone / bright crust / shadow), and from the 10 m DEM: slope, aspect, hillshade and drainage transects. Full-band mode (free Earthdata login) adds NDVI, ferric-iron, clay and carbonate indices at 30 m.</p>
+   <h2 data-i18n="method_title">How the satellite data is gathered</h2>
+   <p class="sec-sub" data-i18n="method_sub">A reproducible pipeline using documented data-access methods — no tile-server scraping of Google or Bing. Official APIs plus fully open data, all fetchable by script. Resolution figures below distinguish native sensor resolution from rendered display scale.</p>
+   <h3 data-i18n="m1_h">1 · Google &amp; Bing — official routes only</h3>
+   <p data-i18n="m1_p" style="color:var(--muted)">Google data is used via <b>Google Earth Engine</b> (Sentinel-2, Landsat, ASTER, Sentinel-1) and the Photorealistic 3D Tiles API; Bing via the <b>Bing Maps Imagery API</b> (Aerial tiles to z18). Direct tile scraping violates ToS, is CAPTCHA-gated, and yields no spectral bands. The sub-meter viewing layer on this site is <b>Esri World Imagery</b> tiles (rendered display scale, not sensor resolution); the spectral viewing layer is the open <b>Sentinel-2 2020 cloudless composite</b> (EOX, CC BY-NC-SA 4.0 — a viewing product that prioritizes visual consistency, not analysis-ready reflectance); terrain uses <b>SRTM elevation (~30 m native, resampled to a 10 m working grid — resampling adds no terrain detail)</b> from USGS (public domain).</p>
+   <h3 data-i18n="m2_h">2 · Spectral &amp; terrain screening per coordinate</h3>
+   <p data-i18n="m2_p" style="color:var(--muted)">For each coordinate the pipeline computes: an <b>unvalidated RGB visual-screening heuristic</b> (B/R ratio — a visual prioritization aid, not a clay/carbonate/iron mineral identifier), HSV surface classes (vegetation / soil / pale-tone / bright crust / shadow), and from the elevation working grid: slope, aspect, hillshade and drainage transects. Full-band mode (free Earthdata login) adds NDVI, ferric-iron, clay and carbonate indices at 30 m. Anything spectral requires validation with analysis-ready data and field observation.</p>
   <h3 data-i18n="m3_h">3 · Geology cross-reference</h3>
   <p data-i18n="m3_p" style="color:var(--muted)">Every site is cross-referenced against <b>SGM Carta Geológico-Minera El Aguajito H11-B85, 1:50,000 (2009)</b>: Alisitos-terrane andesite/breccia (Kapa A-BvA), Cretaceous granodiorite–diorite intrusions, Late Cretaceous Rosario Fm, the La Turquesa Cu–Fe zona mineralizada, 14 documented workings, and the documented structure (NE–SW normals, N65–75°E veins, N–S relays, tabular brechas).</p>
   <table>
    <thead><tr><th data-i18n="th_src">Source</th><th data-i18n="th_prod">Product</th><th data-i18n="th_res">Resolution</th><th data-i18n="th_access">Access</th></tr></thead>
    <tbody>
-    <tr><td>Copernicus Sentinel-2 (EOX)</td><td data-i18n="src1_p">13-band surface reflectance, 2020 cloudless composite</td><td>10 m</td><td data-i18n="src1_a">Open (CC BY-NC-SA 4.0)</td></tr>
-    <tr><td>Esri World Imagery</td><td data-i18n="src2_p">Sub-meter true color (Maxar-class), 2024–26</td><td>0.37–1.03 m/px</td><td data-i18n="src2_a">Tile service (research use)</td></tr>
-    <tr><td>USGS SRTM tiles</td><td data-i18n="src3_p">Digital elevation model</td><td>10 m</td><td data-i18n="src3_a">Public domain</td></tr>
+     <tr><td>Copernicus Sentinel-2 (EOX)</td><td data-i18n="src1_p">Rendered RGB viewing composite 2020 (visual consistency, not analysis-ready reflectance; S2 bands natively 4×10 m / 6×20 m / 3×60 m)</td><td>rendered tiles</td><td data-i18n="src1_a">Open (CC BY-NC-SA 4.0)</td></tr>
+     <tr><td>Esri World Imagery</td><td data-i18n="src2_p">Viewing true color, 2024–26 (rendered Web-Mercator display scale at sheet latitude: z17 ≈1.03, z18 ≈0.52 m/px — not sensor GSD)</td><td>rendered ≈1.03/0.52 m/px</td><td data-i18n="src2_a">Tile service (research use)</td></tr>
+     <tr><td>USGS SRTM tiles</td><td data-i18n="src3_p">Digital elevation model, ~30 m native, resampled to 10 m working grid (no new detail)</td><td>~30 m native</td><td data-i18n="src3_a">Public domain</td></tr>
     <tr><td>SGM (2009)</td><td data-i18n="src4_p">Geologic-mineral map 1:50,000 + mine inventory</td><td>—</td><td data-i18n="src4_a">Public (PDF)</td></tr>
     <tr><td>open-elevation API</td><td data-i18n="src5_p">Point elevation (used by the coordinate runner)</td><td>~30 m</td><td data-i18n="src5_a">Free API, no key</td></tr>
    </tbody>
@@ -323,8 +340,8 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
 
  <!-- ================= DATA ================= -->
  <section id="data">
-  <h2 data-i18n="data_title">Maps &amp; data products</h2>
-  <p class="sec-sub" data-i18n="data_sub">Everything on this site is downloadable. The pin CSV loads directly into GPS apps; images are field-printable at A3.</p>
+   <h2 data-i18n="data_title">Maps &amp; data products</h2>
+   <p class="sec-sub" data-i18n="data_sub">Everything on this site is downloadable. The pin CSV/GeoJSON loads directly into GPS apps; images are field-printable at A3. Pin records carry unique IDs and full provenance (source, derivation, accuracy, license) — schema: <span class="mono">schemas/pins.schema.json</span>. “m/px” below is rendered display/export scale at the sheet latitude, not sensor ground sampling distance.</p>
   <table>
    <thead><tr><th data-i18n="th_name">File</th><th data-i18n="th_desc">Content</th><th data-i18n="th_fmt">Format</th><th></th></tr></thead>
    <tbody>
@@ -334,22 +351,68 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
     <tr><td class="mono">zoneA/B/C_pins.jpg</td><td data-i18n="d4">Turquoise prospect zones A (El Cardonal), B (San Martín), C (La Turquesa core)</td><td>1.03–1.47 m/px</td><td><a href="maps/zoneA_pins.jpg" download>⬇</a> <a href="maps/zoneB_pins.jpg" download>⬇</a> <a href="maps/zoneC_pins.jpg" download>⬇</a></td></tr>
     <tr><td class="mono">t1/t2/t3_spread.jpg</td><td data-i18n="d5">4×4 km 3×3 field sheets (color, hillshade, elevation, slope, aspect, classes, B/R, overlay, context) + 500 m grid</td><td>4 m/px</td><td><a href="maps/t1_spread.jpg" download>⬇</a> <a href="maps/t2_spread.jpg" download>⬇</a> <a href="maps/t3_spread.jpg" download>⬇</a></td></tr>
     <tr><td class="mono">turquoise_map.jpg</td><td data-i18n="d6">Corridor overview: 14 SGM workings + 4 prospect zones + T1/T2/T3</td><td>2.8 m/px</td><td><a href="maps/turquoise_map.jpg" download>⬇</a></td></tr>
-    <tr><td class="mono">PIN_POINTS.csv</td><td data-i18n="d7">All 36 field pins: lat/lon, type, action (GPS-importable)</td><td>CSV</td><td><a href="maps/PIN_POINTS.csv" download>⬇</a></td></tr>
-    <tr><td class="mono">mine_inventory_elaguajito.csv</td><td data-i18n="d8">14 documented SGM Cu–Fe workings: coordinates + mineralogy</td><td>CSV</td><td><a href="maps/mine_inventory_elaguajito.csv" download>⬇</a></td></tr>
+     <tr><td class="mono">PIN_POINTS.csv / .geojson</td><td data-i18n="d7">All 36 field pins: unique IDs, lat/lon (EPSG:4326), type, provenance, field action (GPS-importable)</td><td>CSV + GeoJSON</td><td><a href="maps/PIN_POINTS.csv" download>⬇ CSV</a> <a href="maps/PIN_POINTS.geojson" download>⬇ GeoJSON</a></td></tr>
+     <tr><td class="mono">mine_inventory_elaguajito.csv / .geojson</td><td data-i18n="d8">14 documented SGM Cu–Fe workings: coordinates + mineralogy + source/accuracy columns</td><td>CSV + GeoJSON</td><td><a href="maps/mine_inventory_elaguajito.csv" download>⬇ CSV</a> <a href="maps/mine_inventory_elaguajito.geojson" download>⬇ GeoJSON</a></td></tr>
    </tbody>
   </table>
  </section>
 
- <!-- ================= FAQ ================= -->
+  <!-- ================= SCORING MODEL ================= -->
+  <section id="scores">
+   <h2 data-i18n="scores_title">Target-scoring model (published)</h2>
+   <p class="sec-sub" data-i18n="scores_sub">Desk-screening ranks, <b>not</b> probabilities of mineralization. Since v3.0.0 the model is <b>split</b>: geological <b>prospectivity</b> and access/legal/environmental <b>feasibility</b>, shown side by side and never blended — a geologically interesting site can still be unsuitable. Deterministic — <span class="mono">src/scores.py</span> reproduces the committed ranks, and <span class="mono">tests/test_scores.py</span> enforces it in CI. Prospectivity weights: geology 30 · workings 10 (downweighted) · spectral 20 · structure 25 · exposure 15. Feasibility weights: access 35 · water/regulatory 35 · land constraints 30. Evidence tags: observed / derived / inferred / not-yet-assessed / requires-field-validation. v2 blended ranks (5.4/6.3/5.5) are frozen in the code for history.</p>
+   <table>
+    <thead><tr><th>Factor</th><th>P / F weight</th><th>T1 evidence · score · conf</th><th>T2 evidence · score · conf</th><th>T3 evidence · score · conf</th></tr></thead>
+    <tbody>
+     <tr><td>Geological setting</td><td>P 30</td><td>SGM mapped unit [observed] · 6 · Med</td><td>Andesite+granodiorite contact [observed] · 8 · Med</td><td>Ridge, Rosario Fm [observed] · 6 · Med</td></tr>
+     <tr><td>Known workings</td><td>P 10</td><td>13–21 km S, none on site [observed] · 4 · Med</td><td>Belt projection + toponym [observed] · 7 · Med</td><td>None on site [observed] · 4 · Med</td></tr>
+     <tr><td>Spectral indication</td><td>P 20</td><td>RGB heuristic B/R 0.55–0.63 [derived ⚠] · 5 · Low</td><td>RGB heuristic on pale mass [derived ⚠] · 6 · Low</td><td>Spectrally quiet [derived ⚠] · 4 · Low</td></tr>
+     <tr><td>Structural context</td><td>P 25</td><td>N–S relay [inferred ⚠] · 5 · Low</td><td>NE–SW lineament [inferred ⚠] · 7 · Low</td><td>Corridor ridge trend [inferred ⚠] · 6 · Low</td></tr>
+     <tr><td>Bedrock exposure</td><td>P 15</td><td>86% bare regolith [derived] · 6 · Med</td><td>Mass + slopes [derived] · 8 · Med</td><td>30% area &gt;15° [derived] · 8 · Med</td></tr>
+     <tr><td>Access</td><td>F 35</td><td>Tracks nearby [derived] · 9 · Med</td><td>MEX 2 ~2 km [derived] · 6 · Med</td><td>MEX 2 cuts ~2 km [derived] · 8 · Med</td></tr>
+     <tr><td>Water / regulatory</td><td>F 35</td><td>Prelim desk screen [not-yet-assessed] · 4 · Low</td><td>Principal risk [not-yet-assessed] · 2 · Low</td><td>Prelim desk screen [not-yet-assessed] · 4 · Low</td></tr>
+     <tr><td>Land constraints</td><td>F 30</td><td>SIAM/RAN/CONANP/CONAGUA pending [not-yet-assessed] · 5 · Low</td><td>SIAM/RAN/CONANP/CONAGUA pending [not-yet-assessed] · 5 · Low</td><td>SIAM/RAN/CONANP/CONAGUA pending [not-yet-assessed] · 5 · Low</td></tr>
+     <tr><td><b>Prospectivity</b></td><td></td><td><b>5.3 / 10</b></td><td><b>7.2 / 10</b></td><td><b>5.7 / 10</b></td></tr>
+     <tr><td><b>Feasibility</b></td><td></td><td><b>6.0 / 10</b></td><td><b>4.3 / 10</b></td><td><b>5.7 / 10</b></td></tr>
+    </tbody>
+   </table>
+   <p class="note">⚠ = requires field validation. Full per-factor notes in <span class="mono">src/scores.py</span> and <span class="mono">sample_data/scoring_example.json</span>.</p>
+  </section>
+
+  <!-- ================= ENGINEERING TRADEOFFS ================= -->
+  <section id="build">
+   <h2 data-i18n="build_title">Engineering decisions and tradeoffs</h2>
+   <p class="sec-sub" data-i18n="build_sub">Why the system looks the way it does. Each point traces to code or docs in this repo.</p>
+   <h3>Static field sheets, not a web app</h3>
+   <p style="color:var(--muted)">Field areas have no connectivity, so the primary product is printable JPG sheets + CSV/GeoJSON for GPS apps (<span class="mono">mode_spread</span>). The website is a thin static mirror of the same artifacts — no backend to operate or secure.</p>
+   <h3>Source selection: openness + license + scriptability</h3>
+   <p style="color:var(--muted)">Every input must be fetchable by script under documented terms: EOX WMTS (CC BY-NC-SA 4.0), USGS S3 tiles (public domain), Esri tiles (research use), SGM PDFs. Google/Bing only via official APIs — see <span class="mono">mode_tiles</span> notes. Full table in <span class="mono">DATA_PROVENANCE.md</span>.</p>
+   <h3>Coordinate normalization</h3>
+   <p style="color:var(--muted)">WGS84 (EPSG:4326) in and out; Web-Mercator (EPSG:3857) only as an internal working grid for mosaics, UTM 11N for field bearings. Published records declare <span class="mono">crs: EPSG:4326</span> and are validated by <span class="mono">src/validate.py</span>.</p>
+   <h3>API failures and rate limits</h3>
+   <p style="color:var(--muted)">Tile/elevation fetches use timeouts with graceful degradation (the demo shows “unavailable (offline?)” instead of failing). The public demo quota (5/visitor, browser-local) is honest rate-limit theater for a static host — real abuse protection would need a backend, which we deliberately do not have.</p>
+   <h3>Caching and idempotency</h3>
+   <p style="color:var(--muted)">DEM tiles are cached on disk and reused across runs; re-running <span class="mono">scripts/build_data.py</span> regenerates byte-comparable CSV/GeoJSON from the canonical record list. Stable v2 record IDs make repeated imports upsert-safe.</p>
+   <h3>License preservation</h3>
+   <p style="color:var(--muted)">Every record carries its own <span class="mono">license</span> field; map sheets print source credits in the footer; EOX non-commercial terms flow down to the site license (CC BY-NC-SA 4.0, see <span class="mono">LICENSE</span>).</p>
+   <h3>Degradation when services are unavailable</h3>
+   <p style="color:var(--muted)">No elevation API → distances still compute (pure haversine client-side); no imagery → CSV/GeoJSON packages still work offline. The low-bandwidth toggle drops Esri z18 layers entirely.</p>
+   <h3>Version tracking</h3>
+   <p style="color:var(--muted)"><span class="mono">pipeline_version</span> (currently 2.0.0) and <span class="mono">created_at</span> ride on every record; ID history v1→v2 is documented in <span class="mono">schemas/datadictionary.md</span>.</p>
+   <h3>What would change at production scale</h3>
+   <p style="color:var(--muted)">Server-side tile cache + COGs instead of hot-linking third-party WMTS; a real quota/backend for the runner; PostGIS only if spatial queries outgrow file-based GeoJSON. None of that is warranted for 36 pins and 14 workings — files are the database here.</p>
+  </section>
+
+  <!-- ================= FAQ ================= -->
  <section id="faq" class="faq">
   <h2 data-i18n="faq_title">Frequently asked questions</h2>
   <details open>
    <summary data-i18n="q1">What is located at 30.048522, -115.236173?</summary>
-   <p data-i18n="a1">The point sits on the NW slope of Cerro la Turquesa (740 m), San Quintín Municipio, Baja California, at ~617 m. Surveys identify a km-scale pale argillic (clay-altered) surface ~1 km west, a straight NE–SW lineament ~1 km east (road vs fault scarp — to be checked in the field), and a turquoise-mining toponym at the site. It is the highest-scored target (6.3/10) in the La Turquesa Cu–Fe epithermal corridor.</p>
+    <p data-i18n="a1">The point sits on the NW slope of Cerro la Turquesa (740 m), San Quintín Municipio, Baja California, at ~617 m. This desk study identifies a km-scale pale surface ~1 km west, a straight NE–SW lineament ~1 km east (road vs fault scarp — to be checked in the field), and a turquoise-mining toponym at the site. It is the highest-ranked target under the current desk-screening model (prospectivity 7.2/10, feasibility 4.3/10) in the La Turquesa Cu–Fe epithermal corridor. No field survey, geochemistry, spectroscopy, or drilling has validated these targets.</p>
   </details>
   <details>
    <summary data-i18n="q2">How are the satellite maps for a coordinate produced?</summary>
-   <p data-i18n="a2">A reproducible pipeline fetches, per coordinate: Sentinel-2 2020 cloudless composite (10 m) from EOX, Esri World Imagery (0.37–1.03 m/px) for sub-meter detail, and SRTM 10 m DEM tiles for slope/aspect/hillshade. Spectral indices (B/R blue-shift, HSV surface classes) and terrain statistics are computed per site, then cross-referenced with the SGM El Aguajito 1:50,000 (2009) geologic-mineral map.</p>
+    <p data-i18n="a2">A reproducible pipeline using documented data-access methods fetches, per coordinate: Sentinel-2 2020 cloudless viewing composite from EOX (rendered RGB, not analysis-ready reflectance), Esri World Imagery for viewing detail (rendered display scale), and SRTM elevation (~30 m native, 10 m working grid) for slope/aspect/hillshade. An unvalidated RGB visual-screening heuristic plus HSV surface classes and terrain statistics are computed per site, then cross-referenced with the SGM El Aguajito 1:50,000 (2009) geologic-mineral map. Anything spectral needs validation with analysis-ready data and field observation.</p>
   </details>
   <details>
    <summary data-i18n="q3">What is the La Turquesa corridor?</summary>
@@ -364,68 +427,99 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
    <p data-i18n="a5">Yes. Google/Bing data is accessed only through official channels (Google Earth Engine, Bing Maps Imagery API); the sub-meter base layer is Esri World Imagery; the analysis layers are fully open (Copernicus Sentinel-2, USGS SRTM). Tile-server scraping of Google or Bing is not used anywhere in the pipeline.</p>
   </details>
   <details>
-   <summary data-i18n="q6">How do I run my own coordinate?</summary>
-   <p data-i18n="a6">Members unlock the Coordinate Runner (Members section): enter lat/lon and the page places the point on sub-meter imagery, shows point elevation, computes distances and bearings to the 3 targets, 36 pins and 14 documented workings, and produces a shareable link. The 36-pin CSV is also downloadable for GPS devices.</p>
+    <summary data-i18n="q6">How do I run my own coordinate?</summary>
+    <p data-i18n="a6">Use the public Demo section below — no login, up to 5 analyses per visitor. Enter lat/lon and the page places the point on satellite imagery, shows point elevation, computes distances and bearings to the 3 candidate targets, 36 pins and 14 documented workings, and produces a shareable link plus JSON/GeoJSON output and a downloadable field package. The 36-pin CSV/GeoJSON is also downloadable for GPS devices.</p>
   </details>
  </section>
 
- <!-- ================= MEMBERS ================= -->
- <section id="members">
-  <h2 data-i18n="mem_title">Members — coordinate runner &amp; full map set</h2>
-  <p class="sec-sub" data-i18n="mem_sub">The coordinate runner and the full downloadable map set are available to members. Enter your access key to unlock (stored only in your browser).</p>
-  <div class="gate" id="gate">
-   <form id="gateForm">
-    <label for="gkey" data-i18n="mem_key">Access key</label>
-    <input id="gkey" type="password" autocomplete="off" placeholder="••••-••••-••••" required>
-    <label for="gname" data-i18n="mem_name">Name (optional)</label>
-    <input id="gname" type="text" autocomplete="name">
-    <div style="margin-top:16px"><button class="btn primary" type="submit" data-i18n="mem_unlock">Unlock member tools</button></div>
-    <div class="err" id="gateErr" role="alert"></div>
-   </form>
-  </div>
-
-  <div id="memberTools">
-   <p id="welcomeLine" class="note" style="color:var(--good);font-size:15px"></p>
-   <div class="rpanel" id="runner">
-    <h3 style="margin-top:0" data-i18n="run_title">Coordinate runner</h3>
-    <p class="note" data-i18n="run_sub">Enter any latitude/longitude (WGS84 decimal). Example: 30.048522, -115.236173 (T2).</p>
-    <div class="runner-grid">
-     <form id="runnerForm">
-      <span class="lbl" data-i18n="run_lat">Latitude</span>
-      <input id="rlat" inputmode="decimal" placeholder="30.048522" required>
-      <span class="lbl" data-i18n="run_lon">Longitude</span>
-      <input id="rlon" inputmode="decimal" placeholder="-115.236173" required>
-      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
-       <button class="btn primary" type="submit" data-i18n="run_btn">Run coordinate</button>
-       <button class="btn ghost" type="button" id="shareBtn" data-i18n="run_share">Copy share link</button>
-      </div>
-      <div class="layers" id="layerBox">
-       <label><input type="radio" name="lyr" value="esri" checked> <span data-i18n="lyr_sat">Satellite</span></label>
-       <label><input type="radio" name="lyr" value="topo"> <span data-i18n="lyr_topo">Terrain</span></label>
-       <label><input type="radio" name="lyr" value="s2"> <span data-i18n="lyr_s2">S2 2020 (10 m)</span></label>
-      </div>
-      <div class="resbox" id="resBox" hidden>
-       <h4 data-i18n="res_title">Analysis</h4>
-       <table>
-        <tr><td data-i18n="res_elev">Elevation</td><td id="r_elev">—</td></tr>
-        <tr><td data-i18n="res_t">Nearest target</td><td id="r_t">—</td></tr>
-        <tr><td data-i18n="res_p">Nearest field pin</td><td id="r_p">—</td></tr>
-        <tr><td data-i18n="res_m">Nearest documented work</td><td id="r_m">—</td></tr>
-        <tr><td data-i18n="res_ctx">Corridor distance</td><td id="r_c">—</td></tr>
-       </table>
-      </div>
-     </form>
-     <div id="map" aria-label="Interactive map"></div>
+  <!-- ================= PUBLIC DEMO ================= -->
+  <section id="demo">
+   <h2 data-i18n="demo_title">Demo — coordinate runner &amp; full map set</h2>
+   <p class="sec-sub" data-i18n="demo_sub">Public demo, no login. Enter any latitude/longitude (WGS84 decimal) — the page places the point on satellite imagery, shows point elevation, computes distances and bearings to the 3 candidate targets, 36 pins and 14 documented workings, and emits JSON/GeoJSON plus a downloadable field package. Up to 5 analyses per visitor (browser-local quota, resets when storage is cleared).</p>
+   <div id="memberTools" class="unlocked">
+    <div class="rpanel" id="runner">
+     <h3 style="margin-top:0" data-i18n="run_title">Coordinate runner</h3>
+     <p class="note" data-i18n="run_sub">Enter any latitude/longitude (WGS84 decimal). Example: 30.048522, -115.236173 (T2).</p>
+     <div class="runner-grid">
+      <form id="runnerForm">
+       <span class="lbl" data-i18n="run_lat">Latitude</span>
+       <input id="rlat" inputmode="decimal" placeholder="30.048522" required>
+       <span class="lbl" data-i18n="run_lon">Longitude</span>
+       <input id="rlon" inputmode="decimal" placeholder="-115.236173" required>
+       <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+        <button class="btn primary" type="submit" data-i18n="run_btn">Run coordinate</button>
+        <button class="btn ghost" type="button" id="exampleBtn" data-i18n="run_example">Load example coordinate</button>
+        <button class="btn ghost" type="button" id="shareBtn" data-i18n="run_share">Copy share link</button>
+       </div>
+       <p class="note" id="quotaNote"></p>
+       <p class="note" id="runStatus" role="status"></p>
+       <div class="layers" id="layerBox">
+        <label><input type="radio" name="lyr" value="esri" checked> <span data-i18n="lyr_sat">Satellite</span></label>
+        <label><input type="radio" name="lyr" value="topo"> <span data-i18n="lyr_topo">Terrain</span></label>
+        <label><input type="radio" name="lyr" value="s2"> <span data-i18n="lyr_s2">S2 2020 (rendered)</span></label>
+       </div>
+       <div class="layers">
+        <label title="Skip sub-meter layers; faster on slow links"><input type="checkbox" id="bwToggle"> <span data-i18n="lyr_bw">Low-bandwidth field mode</span></label>
+       </div>
+       <div class="resbox" id="resBox" hidden>
+        <h4 data-i18n="res_title">Analysis</h4>
+        <table>
+         <tr><td data-i18n="res_elev">Elevation</td><td id="r_elev">—</td></tr>
+         <tr><td data-i18n="res_t">Nearest target</td><td id="r_t">—</td></tr>
+         <tr><td data-i18n="res_p">Nearest field pin</td><td id="r_p">—</td></tr>
+         <tr><td data-i18n="res_m">Nearest documented work</td><td id="r_m">—</td></tr>
+         <tr><td data-i18n="res_ctx">Corridor distance</td><td id="r_c">—</td></tr>
+        </table>
+        <details style="margin-top:10px"><summary class="mono">JSON</summary><pre class="mono" id="jsonOut" style="white-space:pre-wrap;font-size:12.5px"></pre></details>
+        <details style="margin-top:6px"><summary class="mono">GeoJSON</summary><pre class="mono" id="geojsonOut" style="white-space:pre-wrap;font-size:12.5px"></pre></details>
+        <div style="margin-top:10px"><button class="btn small primary" type="button" id="pkgBtn" data-i18n="run_pkg">Download field package (GeoJSON+CSV+README)</button></div>
+       </div>
+      </form>
+      <div id="map" aria-label="Interactive map"></div>
+     </div>
     </div>
-   </div>
-   <h3 data-i18n="gal_title" style="margin-top:26px">Full map gallery</h3>
-   <div class="gallery" id="gallery"></div>
-   <div style="margin-top:16px">
-    <a class="btn small ghost" href="maps/PIN_POINTS.csv" download>⬇ PIN_POINTS.csv (36 pins)</a>
-    <a class="btn small ghost" href="maps/mine_inventory_elaguajito.csv" download>⬇ mine_inventory_elaguajito.csv</a>
-   </div>
-  </div>
- </section>
+    <h3 data-i18n="gal_title" style="margin-top:26px">Full map gallery</h3>
+    <div class="gallery" id="gallery"></div>
+     <div style="margin-top:16px">
+      <a class="btn small ghost" href="maps/PIN_POINTS.csv" download>⬇ PIN_POINTS.csv (36 pins, v2 IDs)</a>
+      <a class="btn small ghost" href="maps/PIN_POINTS.geojson" download>⬇ PIN_POINTS.geojson</a>
+      <a class="btn small ghost" href="maps/mine_inventory_elaguajito.csv" download>⬇ mine_inventory_elaguajito.csv</a>
+      <a class="btn small ghost" href="maps/mine_inventory_elaguajito.geojson" download>⬇ mine_inventory_elaguajito.geojson</a>
+     </div>
+    </div>
+    <div class="rpanel" id="keyvault" style="margin-top:26px">
+     <h3 style="margin-top:0" data-i18n="vault_title">API keys — bring your own (optional)</h3>
+     <p class="note" data-i18n="vault_sub">Optional. Paste an OpenRouter or OpenAI-compatible key to enable future key-gated features. Keys stay in this browser only — plaintext is never stored. With a passphrase the stored blob is AES-256-GCM encrypted; without one it is only obfuscated (honest label below). Nothing here transmits your key except a Test call straight to the provider.</p>
+     <form id="vaultForm" autocomplete="off">
+      <span class="lbl" data-i18n="vault_provider">Provider</span>
+      <select id="vaultProvider">
+       <option value="openrouter">OpenRouter</option>
+       <option value="openai">OpenAI</option>
+       <option value="custom" data-i18n="vault_custom">Custom OpenAI-compatible…</option>
+      </select>
+      <span class="lbl" data-i18n="vault_endpoint">API base URL</span>
+      <input id="vaultEndpoint" inputmode="url" value="https://openrouter.ai/api/v1">
+      <span class="lbl" data-i18n="vault_key">API key</span>
+      <div class="pwrow">
+       <input id="vaultKey" type="password" autocomplete="off" placeholder="sk-…" data-i18n-placeholder="vault_key_ph">
+       <button class="btn ghost" type="button" id="vaultShow" aria-label="show">👁</button>
+      </div>
+      <span class="lbl" data-i18n="vault_pass">Passphrase (optional, enables real encryption)</span>
+      <div class="pwrow">
+       <input id="vaultPass" type="password" autocomplete="off" placeholder="••••••••" data-i18n-placeholder="vault_pass_ph">
+       <button class="btn ghost" type="button" id="vaultShowPass" aria-label="show">👁</button>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+       <button class="btn primary" type="submit" data-i18n="vault_save">Save key</button>
+       <button class="btn ghost" type="button" id="vaultTest" data-i18n="vault_test">Test key</button>
+       <button class="btn ghost" type="button" id="vaultLock" data-i18n="vault_lock">Lock</button>
+       <button class="btn ghost" type="button" id="vaultForget" data-i18n="vault_forget">Forget</button>
+      </div>
+      <p class="note" id="vaultStatus" role="status"></p>
+      <p class="note" data-i18n="vault_warn">Bearer credentials: prefer a scoped/limited key (OpenRouter lets you cap spend per key), never reuse a key you care about on a shared machine, and revoke keys you paste anywhere. The site has no backend — nobody but the provider you call can see this key.</p>
+     </form>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -447,7 +541,7 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
 
 <dialog class="lb" id="lb">
  <img id="lbImg" alt="">
- <div class="bar"><span id="lbCap"></span><button class="btn small ghost" id="lbClose" data-i18n="lb_close">Close</button></div>
+  <div class="bar"><span id="lbCap"></span><button type="button" class="btn small ghost" id="lbClose" data-i18n="lb_close">Close</button></div>
 </dialog>
 
 <script src="vendor/leaflet.js"></script>
@@ -457,16 +551,16 @@ dialog.lb::backdrop{background:rgba(0,0,0,.75)}
    CONFIG — change these when deploying
    ============================================================ */
 const SITE_URL   = "https://bajamineral.example.org/"; // TODO: your real domain (also in <link canonical>/hreflang/JSON-LD)
-const MEMBER_KEY = "BAJA-PROSPECT-2026";               // TODO: your member access key
 const ELEV_API   = "https://api.open-elevation.com/api/v1/lookup?locations=";
+const DEMO_QUOTA = 5; // analyses per visitor, browser-local (see build notes: not abuse-proof)
 
 /* ============================================================
    SITE DATA (embedded; also served as CSVs)
    ============================================================ */
 const TARGETS = [
- {id:"T1", name:"Arroyo San Isidro", lat:29.903605, lon:-115.383656, elev:326, score:5.4},
- {id:"T2", name:"Cerro la Turquesa", lat:30.048522, lon:-115.236173, elev:617, score:6.3},
- {id:"T3", name:"Cerro la Palmita",  lat:30.025725, lon:-115.286885, elev:756, score:5.5}
+ {id:"T1", name:"Arroyo San Isidro", lat:29.903605, lon:-115.383656, elev:326, pro:5.3, fea:6.0},
+ {id:"T2", name:"Cerro la Turquesa", lat:30.048522, lon:-115.236173, elev:617, pro:7.2, fea:4.3},
+ {id:"T3", name:"Cerro la Palmita",  lat:30.025725, lon:-115.286885, elev:756, pro:5.7, fea:5.7}
 ];
 const MINES = [
  {n:"Josefina",la:30.122,lo:-115.360},{n:"Santa Martha",la:30.147,lo:-115.357},
@@ -483,13 +577,13 @@ const PINS = [
  ["T1-3",29.904306,-115.379883,"pale","P3 E pale patch (T1)"],
  ["T1-5",29.905147,-115.384249,"sed","P4 arroyo N — sediment (T1)"],
  ["T1-6",29.902032,-115.385183,"sed","P5 arroyo S — sediment (T1)"],
- ["T2-1",30.050200,-115.246600,"pale","P1 pale mass CENTER (T2)"],
- ["T2-2",30.049000,-115.242800,"pale","P2 mass E edge — alteration front (T2)"],
- ["T2-4",30.044500,-115.236000,"struct","P3 band @ arroyo — road vs fault (T2)"],
- ["T2-5",30.040500,-115.226500,"struct","P4 band 1.5 km E (T2)"],
- ["T2-6",30.044000,-115.247000,"sed","P5 arroyo below mass — sediment (T2)"],
- ["T2-6b",30.045500,-115.248500,"sed","P5b gully mouth — sediment (T2)"],
- ["T2-7",30.044000,-115.233000,"out","P6 summit 740 m — lithology (T2)"],
+ ["T2-OVERVIEW-01",30.050200,-115.246600,"pale","P1 pale mass CENTER (T2)"],
+ ["T2-OVERVIEW-02",30.049000,-115.242800,"pale","P2 mass E edge — alteration front (T2)"],
+ ["T2-OVERVIEW-03",30.044500,-115.236000,"struct","P3 band @ arroyo — road vs fault (T2)"],
+ ["T2-OVERVIEW-04",30.040500,-115.226500,"struct","P4 band 1.5 km E (T2)"],
+ ["T2-OVERVIEW-05",30.044000,-115.247000,"sed","P5 arroyo below mass — sediment (T2)"],
+ ["T2-DETAIL-03",30.045500,-115.248500,"sed","P5b gully mouth — sediment (T2 detail)"],
+ ["T2-OVERVIEW-06",30.044000,-115.233000,"out","P6 summit 740 m — lithology (T2)"],
  ["T3-2",30.017216,-115.271919,"out","P2 ridge high 808 m (T3)"],
  ["T3-3",30.022132,-115.293371,"out","P3 steepest 36° — first bedrock (T3)"],
  ["T3-4",30.017932,-115.285430,"sed","P4 arroyo S — sediment (T3)"],
@@ -511,20 +605,20 @@ const PINS = [
 ];
 const PIN_COLORS = {pale:"#c78ae8", struct:"#ff3ca0", sed:"#3cc96d", out:"#ff9f2e", mine:"#ff4646"};
 const GALLERY = [
- ["maps/t2_pins.jpg","T2 pin sheet (1.03 m/px)","T2 — Cerro la Turquesa"],
- ["maps/t2_mass_inset_z18.jpg","Pale mass detail (0.52 m/px)","T2 — argillic mass, z18"],
- ["maps/t1_pins.jpg","T1 pin sheet (1.03 m/px)","T1 — Arroyo San Isidro"],
- ["maps/t3_pins.jpg","T3 pin sheet (1.03 m/px)","T3 — Cerro la Palmita"],
- ["maps/zoneA_pins.jpg","Zone A (1.03 m/px)","El Cardonal / La Prieta / Esperanza"],
- ["maps/zoneB_pins.jpg","Zone B (1.47 m/px)","San Martín (Cu oxidation)"],
- ["maps/zoneC_pins.jpg","Zone C (1.47 m/px)","La Turquesa core / El Hormiguero"],
- ["maps/turquoise_map.jpg","Corridor overview","14 SGM workings + 4 zones + T1/T2/T3"],
- ["maps/t1_spread.jpg","4×4 km field sheet","T1 — 9 panels"],
- ["maps/t2_spread.jpg","4×4 km field sheet","T2 — 9 panels"],
- ["maps/t3_spread.jpg","4×4 km field sheet","T3 — 9 panels"],
- ["maps/class_map.png","Surface classes (S2)","T1 — soil/veg/pale-tone"],
- ["maps/br_map.png","B/R blue-shift","T1 — Fe-depletion proxy"],
- ["maps/hillshade.png","Hillshade (10 m DEM)","T1 — terrain shading"]
+ ["maps/t2_pins.jpg","maps/t2_pins-preview.webp","T2 pin sheet (rendered ~1.03 m/px)","T2 — Cerro la Turquesa"],
+ ["maps/t2_mass_inset_z18.jpg","maps/t2_mass_inset_z18-preview.webp","Pale mass detail (rendered ~0.52 m/px)","T2 — argillic mass, z18"],
+ ["maps/t1_pins.jpg","maps/t1_pins-preview.webp","T1 pin sheet (rendered ~1.03 m/px)","T1 — Arroyo San Isidro"],
+ ["maps/t3_pins.jpg","maps/t3_pins-preview.webp","T3 pin sheet (rendered ~1.03 m/px)","T3 — Cerro la Palmita"],
+ ["maps/zoneA_pins.jpg","maps/zoneA_pins-preview.webp","Zone A (rendered ~1.03 m/px)","El Cardonal / La Prieta / Esperanza"],
+ ["maps/zoneB_pins.jpg","maps/zoneB_pins-preview.webp","Zone B (rendered ~1.47 m/px)","San Martín (Cu oxidation)"],
+ ["maps/zoneC_pins.jpg","maps/zoneC_pins-preview.webp","Zone C (rendered ~1.47 m/px)","La Turquesa core / El Hormiguero"],
+ ["maps/turquoise_map.jpg","maps/turquoise_map-preview.webp","Corridor overview (export scale)","14 SGM workings + 4 zones + T1/T2/T3"],
+ ["maps/t1_spread.jpg","maps/t1_spread-preview.webp","4×4 km field sheet (export scale)","T1 — 9 panels"],
+ ["maps/t2_spread.jpg","maps/t2_spread-preview.webp","4×4 km field sheet (export scale)","T2 — 9 panels"],
+ ["maps/t3_spread.jpg","maps/t3_spread-preview.webp","4×4 km field sheet (export scale)","T3 — 9 panels"],
+ ["maps/class_map.png",null,"Surface classes (S2 viewing composite)","T1 — soil/veg/pale-tone"],
+ ["maps/br_map.png",null,"B/R visual heuristic (unvalidated)","T1 — tone prioritization"],
+ ["maps/hillshade.png",null,"Hillshade (10 m working grid)","T1 — terrain shading"]
 ];
 
 /* ============================================================
@@ -532,23 +626,25 @@ const GALLERY = [
    ============================================================ */
 const I18N = {
 en: {
- brand:"Baja Mineral Explorer",
- nav_targets:"Targets", nav_method:"Method", nav_data:"Data", nav_faq:"FAQ", nav_members:"Members",
- hero_title:'Satellite & geology prospecting maps — <em>Baja California, Mexico</em>',
- hero_sub:"Run any coordinate. Explore three surveyed mineral targets, 36 pinned field objectives, and sub-meter satellite maps of the La Turquesa Cu–Fe epithermal corridor in San Quintín Municipio, Baja California.",
- stat_targets:"surveyed targets (29.90–30.05° N)", stat_pins:"GPS field pins (CSV + map sheets)", stat_res:"best sub-meter imagery (z18)", stat_mines:"documented Cu–Fe workings (SGM 2009)",
- cta_explore:"Explore the targets", cta_members:"Member coordinate runner",
+  brand:"Baja Mineral Explorer",
+  nav_targets:"Targets", nav_method:"Method", nav_scores:"Scores", nav_data:"Data", nav_build:"Build", nav_faq:"FAQ", nav_demo:"Demo", nav_members:"Demo", nav_analyze:"Analyze",
+  hero_title:'Baja Mineral Explorer — <em>a reproducible geospatial data pipeline</em> for mineral-exploration field planning',
+  hero_sub:"Ingests public geological, satellite, elevation, and mine-inventory data; validates and normalizes coordinates; ranks candidate targets; and produces GPS-ready field packages. This desk study organizes incomplete public evidence into explicit, field-testable hypotheses — it is not a discovery claim.",
+  cta_demo:"Run the demo — no login", cta_source:"View source code", cta_arch:"Architecture", cta_tests:"Tests and CI", cta_data:"Download sample DataKit",
+  stack_note:"Stack: Python (stdlib + numpy/Pillow) · static Leaflet site · no backend, no database. Sample DataKit and validator run with the standard library alone.",
+  stat_targets:"remotely screened candidate targets (29.90–30.05° N)", stat_pins:"GPS field pins, unique IDs + GeoJSON (CSV + map sheets)", stat_res:"finest rendered display scale (Esri; see resolution notes)", stat_mines:"documented Cu–Fe workings (SGM 2009)",
+  cta_explore:"Explore the targets", cta_members:"Public coordinate runner",
  facts_title:"Key facts",
  fact1_b:"Area:", fact1:"29.90–30.05° N, 115.24–115.39° W — San Quintín Municipio, Baja California, MX (Alisitos terrane)",
- fact2_b:"Data:", fact2:"Sentinel-2 10 m (2020) · Esri World Imagery 0.5 m · SRTM 10 m DEM · SGM 1:50,000 (2009)",
+  fact2_b:"Data:", fact2:"Sentinel-2 2020 rendered viewing composite (bands natively 4×10 m / 6×20 m / 3×60 m) · Esri World Imagery viewing tiles (rendered display scale) · SRTM elevation (~30 m native, 10 m working grid) · SGM 1:50,000 (2009)",
  fact3_b:"Geology:", fact3:"Low-sulfidation epithermal Cu–Fe (±Au) — SGM Corbett-type model, Alisitos andesite + Cretaceous granodiorite",
  fact4_b:"Status:", fact4:"Independent desk study (Aug 2026). Not investment advice; MX 2023 Ley Minera applies (public tender, water, ANP gates)",
- targets_title:"The three surveyed targets",
- targets_sub:"Coordinates are clickable to copy. Each target has a 4×4 km field sheet and a sub-meter pin sheet. Desk scores combine geology, structure, remote sensing, exposure, history, water, access, social and regulatory factors.",
+  targets_title:"Three remotely screened candidate targets",
+  targets_sub:'Coordinates are clickable to copy. Each target has a 4×4 km field sheet and a sub-meter pin sheet. Desk-screening ranks (not probabilities of mineralization): since v3 the model is split — geological prospectivity and access/legal/environmental feasibility, shown side by side and never blended — see <a href="#scores">the published scoring model</a>. No field survey, geochemistry, spectroscopy, or drilling has validated these targets.',
  t1_name:"Arroyo San Isidro",
  t1_blurb:"Southern anchor of the corridor: pale alteration patches along an N–S relay drainage at ~332 m. 86% bare regolith; B/R blue-shift 0.55–0.63 on the patches. 13–21 km S of the documented workings.",
  t2_name:"Cerro la Turquesa",
- t2_blurb:"Highest-potential target (740 m hill, 617 m at pin): km-scale pale argillic mass ~1 km W, straight NE–SW lineament ~1 km E (road vs fault scarp — field check), turquoise-mining toponym at the site. MEX 2 ~2 km away.",
+  t2_blurb:"Highest-ranked target under the current desk-screening model (740 m hill, 617 m at pin): km-scale pale surface ~1 km W, straight NE–SW lineament ~1 km E (road vs fault scarp — field check), turquoise-mining toponym at the site. MEX 2 ~2 km away.",
  t3_name:"Cerro la Palmita",
  t3_blurb:"The ridge between T1 and T2 (800 m): steepest terrain of the three (30% of area >15°) → best bedrock exposure. 38% vegetation. Spectrally quiet — the corridor's high ground; MEX 2 cut-banks ~2 km NE.",
  btn_pins:"Pin sheet", btn_sheet:"Field sheet", btn_inset:"0.5 m detail",
@@ -556,34 +652,34 @@ en: {
  corridor_p:"The documented Cu–Fe belt (14 SGM workings) runs W–E at 30.05–30.15° N; your targets sit on its eastern projection and southern end.",
  corridor_btn:"Open corridor map",
  method_title:"How the satellite data is gathered",
- method_sub:"A reproducible, legal pipeline — no tile-server scraping of Google or Bing. Official APIs plus fully open data, all fetchable by script.",
+  method_sub:"A reproducible pipeline using documented data-access methods — no tile-server scraping of Google or Bing. Official APIs plus fully open data, all fetchable by script. Resolution figures below distinguish native sensor resolution from rendered display scale.",
  m1_h:"1 · Google & Bing — official routes only",
- m1_p:"Google data is used via Google Earth Engine (Sentinel-2, Landsat, ASTER, Sentinel-1) and the Photorealistic 3D Tiles API; Bing via the Bing Maps Imagery API (Aerial tiles to z18). Direct tile scraping violates ToS, is CAPTCHA-gated, and yields no spectral bands. The sub-meter base layer on this site is Esri World Imagery (Maxar-class) tiles; the 10 m spectral layer is the open Sentinel-2 2020 cloudless composite (EOX, CC BY-NC-SA 4.0); terrain uses SRTM-derived 10 m DEM tiles (USGS, public domain).",
+  m1_p:"Google data is used via Google Earth Engine (Sentinel-2, Landsat, ASTER, Sentinel-1) and the Photorealistic 3D Tiles API; Bing via the Bing Maps Imagery API (Aerial tiles to z18). Direct tile scraping violates ToS, is CAPTCHA-gated, and yields no spectral bands. The sub-meter viewing layer on this site is Esri World Imagery tiles (rendered display scale, not sensor resolution); the spectral viewing layer is the open Sentinel-2 2020 cloudless composite (EOX, CC BY-NC-SA 4.0 — a viewing product that prioritizes visual consistency, not analysis-ready reflectance); terrain uses SRTM elevation (~30 m native, resampled to a 10 m working grid — resampling adds no terrain detail) from USGS (public domain).",
  m2_h:"2 · Spectral & terrain screening per coordinate",
- m2_p:"For each coordinate the pipeline computes: B/R blue-shift proxy (Fe-oxide depletion / clay-calcite indicator in RGB mode), HSV surface classes (vegetation / soil / pale-tone / bright crust / shadow), and from the 10 m DEM: slope, aspect, hillshade and drainage transects. Full-band mode (free Earthdata login) adds NDVI, ferric-iron, clay and carbonate indices at 30 m.",
+  m2_p:"For each coordinate the pipeline computes: an unvalidated RGB visual-screening heuristic (B/R ratio — a visual prioritization aid, not a clay/carbonate/iron mineral identifier), HSV surface classes (vegetation / soil / pale-tone / bright crust / shadow), and from the elevation working grid: slope, aspect, hillshade and drainage transects. Full-band mode (free Earthdata login) adds NDVI, ferric-iron, clay and carbonate indices at 30 m. Anything spectral requires validation with analysis-ready data and field observation.",
  m3_h:"3 · Geology cross-reference",
  m3_p:"Every site is cross-referenced against SGM Carta Geológico-Minera El Aguajito H11-B85, 1:50,000 (2009): Alisitos-terrane andesite/breccia (Kapa A-BvA), Cretaceous granodiorite–diorite intrusions, Late Cretaceous Rosario Fm, the La Turquesa Cu–Fe zona mineralizada, 14 documented workings, and the documented structure (NE–SW normals, N65–75°E veins, N–S relays, tabular brechas).",
  th_src:"Source", th_prod:"Product", th_res:"Resolution", th_access:"Access",
- src1_p:"13-band surface reflectance, 2020 cloudless composite", src1_a:"Open (CC BY-NC-SA 4.0)",
- src2_p:"Sub-meter true color (Maxar-class), 2024–26", src2_a:"Tile service (research use)",
- src3_p:"Digital elevation model", src3_a:"Public domain",
+  src1_p:"Rendered RGB viewing composite 2020 (visual consistency, not analysis-ready reflectance; S2 bands natively 4×10 m / 6×20 m / 3×60 m)", src1_a:"Open (CC BY-NC-SA 4.0)",
+  src2_p:"Viewing true color, 2024–26 (rendered Web-Mercator display scale at sheet latitude: z17 ≈1.03, z18 ≈0.52 m/px — not sensor GSD)", src2_a:"Tile service (research use)",
+  src3_p:"Digital elevation model, ~30 m native, resampled to 10 m working grid (no new detail)", src3_a:"Public domain",
  src4_p:"Geologic-mineral map 1:50,000 + mine inventory", src4_a:"Public (PDF)",
  src5_p:"Point elevation (used by the coordinate runner)", src5_a:"Free API, no key",
  data_title:"Maps & data products",
- data_sub:"Everything on this site is downloadable. The pin CSV loads directly into GPS apps; images are field-printable at A3.",
+  data_sub:"Everything on this site is downloadable. The pin CSV/GeoJSON loads directly into GPS apps; images are field-printable at A3. Pin records carry unique IDs and full provenance — schema: schemas/pins.schema.json. “m/px” below is rendered display/export scale at the sheet latitude, not sensor ground sampling distance.",
  th_name:"File", th_desc:"Content", th_fmt:"Format",
  d1:"T2 Cerro la Turquesa — 6 pins + target, 2.9 km", d2:"T2 pale argillic mass detail",
  d3:"T1 Arroyo San Isidro / T3 Cerro la Palmita pin sheets",
  d4:"Turquoise prospect zones A (El Cardonal), B (San Martín), C (La Turquesa core)",
  d5:"4×4 km 3×3 field sheets (color, hillshade, elevation, slope, aspect, classes, B/R, overlay, context) + 500 m grid",
  d6:"Corridor overview: 14 SGM workings + 4 prospect zones + T1/T2/T3",
- d7:"All 36 field pins: lat/lon, type, action (GPS-importable)",
- d8:"14 documented SGM Cu–Fe workings: coordinates + mineralogy",
+  d7:"All 36 field pins: unique IDs, lat/lon (EPSG:4326), type, provenance, field action (GPS-importable)",
+  d8:"14 documented SGM Cu–Fe workings: coordinates + mineralogy + source/accuracy columns",
  faq_title:"Frequently asked questions",
  q1:"What is located at 30.048522, -115.236173?",
- a1:"The point sits on the NW slope of Cerro la Turquesa (740 m), San Quintín Municipio, Baja California, at ~617 m. Surveys identify a km-scale pale argillic (clay-altered) surface ~1 km west, a straight NE–SW lineament ~1 km east (road vs fault scarp — to be checked in the field), and a turquoise-mining toponym at the site. It is the highest-scored target (6.3/10) in the La Turquesa Cu–Fe epithermal corridor.",
+  a1:"The point sits on the NW slope of Cerro la Turquesa (740 m), San Quintín Municipio, Baja California, at ~617 m. This desk study identifies a km-scale pale surface ~1 km west, a straight NE–SW lineament ~1 km east (road vs fault scarp — to be checked in the field), and a turquoise-mining toponym at the site. It is the highest-ranked target under the current desk-screening model (prospectivity 7.2/10, feasibility 4.3/10) in the La Turquesa Cu–Fe epithermal corridor. No field survey, geochemistry, spectroscopy, or drilling has validated these targets.",
  q2:"How are the satellite maps for a coordinate produced?",
- a2:"A reproducible pipeline fetches, per coordinate: Sentinel-2 2020 cloudless composite (10 m) from EOX, Esri World Imagery (0.37–1.03 m/px) for sub-meter detail, and SRTM 10 m DEM tiles for slope/aspect/hillshade. Spectral indices (B/R blue-shift, HSV surface classes) and terrain statistics are computed per site, then cross-referenced with the SGM El Aguajito 1:50,000 (2009) geologic-mineral map.",
+  a2:"A reproducible pipeline using documented data-access methods fetches, per coordinate: Sentinel-2 2020 cloudless viewing composite from EOX (rendered RGB, not analysis-ready reflectance), Esri World Imagery for viewing detail (rendered display scale), and SRTM elevation (~30 m native, 10 m working grid) for slope/aspect/hillshade. An unvalidated RGB visual-screening heuristic plus HSV surface classes and terrain statistics are computed per site, then cross-referenced with the SGM El Aguajito 1:50,000 (2009) geologic-mineral map.",
  q3:"What is the La Turquesa corridor?",
  a3:"A documented low-sulfidation epithermal Cu–Fe (±Au) zona mineralizada mapped by SGM (1:50,000, 2009) in the Alisitos terrane, ~30.05–30.15° N, with 14 abandoned Cu–Fe workings (El Cardonal with documented turquoise; San Martín with chrysocolla, azurite and malachite; La Turquesa core; El Hormiguero; La Bonita; 5 Minas; El Sacrificio; Josefina; Santa Martha; Santa Lucía; La Víbora; El Moro), controlled by NE–SW normal faults and N65–75°E vein sets.",
  q4:"Is this investment or drilling advice?",
@@ -591,15 +687,49 @@ en: {
  q5:"Is using Google or Bing imagery here legal?",
  a5:"Yes. Google/Bing data is accessed only through official channels (Google Earth Engine, Bing Maps Imagery API); the sub-meter base layer is Esri World Imagery; the analysis layers are fully open (Copernicus Sentinel-2, USGS SRTM). Tile-server scraping of Google or Bing is not used anywhere in the pipeline.",
  q6:"How do I run my own coordinate?",
- a6:"Members unlock the Coordinate Runner (Members section): enter lat/lon and the page places the point on sub-meter imagery, shows point elevation, computes distances and bearings to the 3 targets, 36 pins and 14 documented workings, and produces a shareable link. The 36-pin CSV is also downloadable for GPS devices.",
- mem_title:"Members — coordinate runner & full map set",
+  a6:"Use the public Demo section below — no login, up to 5 analyses per visitor. Enter lat/lon and the page places the point on satellite imagery, shows point elevation, computes distances and bearings to the 3 candidate targets, 36 pins and 14 documented workings, and produces a shareable link plus JSON/GeoJSON output and a downloadable field package. The 36-pin CSV/GeoJSON is also downloadable for GPS devices.",
+  demo_title:"Demo — coordinate runner & full map set",
+  demo_sub:"Public demo, no login. Up to 5 analyses per visitor (browser-local quota).",
+  scores_title:"Target-scoring model (published)",
+  scores_sub:"Desk-screening ranks, not probabilities of mineralization. Split since v3: prospectivity vs feasibility, never blended.",
+  build_title:"Engineering decisions and tradeoffs",
+  build_sub:"Why the system looks the way it does.",
+  run_example:"Load example coordinate", run_pkg:"Download field package (GeoJSON+CSV+README)",
+  lyr_bw:"Low-bandwidth field mode",
+  quota_note:"{n} of 5 demo analyses left (browser-local quota).",
+  quota_done:"Demo quota used (5 analyses, stored in this browser). Reload with cleared storage or use the downloadable CSV/GeoJSON directly.",
+  run_working:"Working…", run_elev_fail:"Elevation failed (offline?) — distances still computed.",
+  vault_title:"API keys — bring your own (optional)",
+  vault_sub:"Optional. Paste an OpenRouter or OpenAI-compatible key to enable future key-gated features. Keys stay in this browser only — plaintext is never stored. With a passphrase the stored blob is AES-256-GCM encrypted; without one it is only obfuscated (honest label below). Nothing here transmits your key except a Test call straight to the provider.",
+  vault_provider:"Provider", vault_custom:"Custom OpenAI-compatible…",
+  vault_endpoint:"API base URL", vault_key:"API key", vault_key_ph:"sk-…",
+  vault_pass:"Passphrase (optional, enables real encryption)", vault_pass_ph:"••••••••",
+  vault_save:"Save key", vault_test:"Test key", vault_lock:"Lock", vault_forget:"Forget",
+  vault_warn:"Bearer credentials: prefer a scoped/limited key (OpenRouter lets you cap spend per key), never reuse a key you care about on a shared machine, and revoke keys you paste anywhere. The site has no backend — nobody but the provider you call can see this key.",
+  vault_status_none:"No key stored for {p}.",
+  vault_status_obfuscated:"Key stored for {p} — OBFUSCATED, not encrypted (no passphrase). Anyone with DevTools access can recover it.",
+  vault_status_locked:"Key stored for {p} — AES-256-GCM encrypted. Enter the passphrase and press Save to unlock, or Test (you will be asked via the passphrase field).",
+  vault_status_unlocked:"Key for {p} unlocked in memory this session. Lock or close the page to re-lock.",
+  vault_empty:"Paste a key first.",
+  vault_saving:"Saving…", vault_store_fail:"Browser storage unavailable — key not saved.",
+  vault_saved_obf:"Saved for {p} — OBFUSCATED only (no passphrase given).",
+  vault_saved_obf_nocrypto:"Saved for {p} — OBFUSCATED only (this browser/context has no WebCrypto, so passphrases cannot encrypt here).",
+  vault_saved_enc:"Saved for {p} — AES-256-GCM encrypted. Key fields cleared.",
+  vault_testing:"Testing…",
+  vault_test_valid:"Key for {p} is VALID (provider confirmed).",
+  vault_test_invalid:"Provider rejected the key for {p} — check it and try again.",
+  vault_test_locked:"Locked: enter the passphrase above, press Save, then Test again.",
+  vault_test_error:"Test failed (network/offline?) — key was not sent anywhere except the provider attempt.",
+  vault_locked_now:"Locked — in-memory key cleared.",
+  vault_forgotten:"Forgotten — stored blob and endpoint for {p} deleted from this browser.",
+  mem_title:"Demo — coordinate runner & full map set",
  mem_sub:"The coordinate runner and the full downloadable map set are available to members. Enter your access key to unlock (stored only in your browser).",
  mem_key:"Access key", mem_name:"Name (optional)", mem_unlock:"Unlock member tools",
  mem_err_key:"Invalid access key.", welcome:"Welcome, {name} — member tools unlocked.",
  run_title:"Coordinate runner", run_sub:"Enter any latitude/longitude (WGS84 decimal). Example: 30.048522, -115.236173 (T2).",
  run_lat:"Latitude", run_lon:"Longitude", run_btn:"Run coordinate", run_share:"Copy share link",
  run_share_copied:"Link copied", run_err:"Invalid coordinate (lat -90…90, lon -180…180).",
- lyr_sat:"Satellite", lyr_topo:"Terrain", lyr_s2:"S2 2020 (10 m)",
+  lyr_sat:"Satellite", lyr_topo:"Terrain", lyr_s2:"S2 2020 (rendered)",
  res_title:"Analysis", res_elev:"Elevation", res_t:"Nearest target", res_p:"Nearest field pin", res_m:"Nearest documented work", res_ctx:"Corridor distance",
  res_elev_na:"unavailable (offline?)",
  dist_km:"{d} km — {nm} (bearing {b}°)",
@@ -610,24 +740,24 @@ en: {
  f_src_h:"Primary sources",
  f_disc_h:"Disclaimer",
  f_disc:"Desk study only. Not investment, drilling, or legal advice. Mexican mining activity is governed by the Ley Minera (2023 reform): public-tender concessions, ANP and water-availability prohibitions, prior consultation. Verify all data in the field and with official registers (minalia.sener.gob.mx, CONANP, CONAGUA) before acting.",
- copy_done:"Copied",
- title:"Baja Mineral Explorer | Satellite Prospecting Maps — Baja California, Mexico",
- desc:"Run any coordinate and access sub-meter satellite prospecting maps of the La Turquesa Cu–Fe epithermal corridor, San Quintín Municipio, Baja California, Mexico: 3 surveyed targets, 36 GPS field pins, 14 documented Cu–Fe workings."
+  copy_done:"Copied",
+  title:"Baja Mineral Explorer — reproducible geospatial pipeline for field planning (Baja California, MX)",
+  desc:"Baja Mineral Explorer — a reproducible geospatial data pipeline for mineral-exploration field planning. Public demo: run any coordinate, no login. Validated coordinates, ranked candidate targets, GPS-ready field packages."
 },
 es: {
  brand:"Explorador Minero de Baja",
  nav_targets:"Objetivos", nav_method:"Método", nav_data:"Datos", nav_faq:"Preguntas", nav_members:"Miembros",
  hero_title:'Mapas de prospección por satélite y geología — <em>Baja California, México</em>',
  hero_sub:"Ejecute cualquier coordenada. Explora tres objetivos minerales levantados, 36 puntos de campo georreferenciados y mapas satelitales sub-métricos del corredor epitermal Cu–Fe La Turquesa, Municipio de San Quintín, Baja California.",
- stat_targets:"objetivos levantados (29.90–30.05° N)", stat_pins:"puntos GPS de campo (CSV + láminas)", stat_res:"mejor imagen sub-métrica (z18)", stat_mines:"obrales Cu–Fe documentados (SGM 2009)",
+  stat_targets:"objetivos levantados (29.90–30.05° N)", stat_pins:"puntos GPS de campo (CSV + láminas)", stat_res:"mejor escala de visualización renderizada (Esri; ver notas de resolución)", stat_mines:"obrales Cu–Fe documentados (SGM 2009)",
  cta_explore:"Explorar objetivos", cta_members:"Ejecutor de coordenadas (miembros)",
  facts_title:"Hechos clave",
  fact1_b:"Zona:", fact1:"29.90–30.05° N, 115.24–115.39° O — Municipio de San Quintín, Baja California, MX (terreno Alisitos)",
- fact2_b:"Datos:", fact2:"Sentinel-2 10 m (2020) · Esri World Imagery 0.5 m · DEM SRTM 10 m · SGM 1:50,000 (2009)",
+  fact2_b:"Datos:", fact2:"Compuesto visual Sentinel-2 2020 (bandas nativas 4×10 m / 6×20 m / 3×60 m) · Mosaicos de visualización Esri World Imagery (escala de visualización renderizada) · Elevación SRTM (~30 m nativa, rejilla de trabajo de 10 m) · SGM 1:50,000 (2009)",
  fact3_b:"Geología:", fact3:"Epitermal de baja sulfuración Cu–Fe (±Au) — modelo tipo Corbett (SGM), andesita Alisitos + granodiorita cretácica",
  fact4_b:"Estatus:", fact4:"Estudio de escritorio independiente (ago 2026). No es asesoría de inversión; aplica la Ley Minera MX 2023 (concurso público, agua, ANP)",
  targets_title:"Los tres objetivos levantados",
- targets_sub:"Las coordenadas son copiables con un clic. Cada objetivo tiene lámina de campo 4×4 km y lámina de puntos sub-métrica. La puntuación combina geología, estructura, teledetección, afloramiento, historia, agua, acceso, factores sociales y regulatorios.",
+  targets_sub:"Las coordenadas son copiables con un clic. Cada objetivo tiene lámina de campo 4×4 km y lámina de puntos sub-métrica. Rangos de cribado de escritorio (no probabilidades de mineralización): desde v3 el modelo está dividido — prospectividad geológica y factibilidad de acceso/legal/ambiental, lado a lado y nunca combinadas — ver <a href=\"#scores\">el modelo de puntuación publicado</a>. Ningún levantamiento de campo, geoquímica, espectroscopía ni perforación ha validado estos objetivos.",
  t1_name:"Arroyo San Isidro",
  t1_blurb:"Ancla sur del corredor: manchas de alteración pálida a lo largo de un drenaje en relevo N–S a ~332 m. 86% regolito desnudo; blue-shift B/R 0.55–0.63 en las manchas. 13–21 km al sur de los obrales documentados.",
  t2_name:"Cerro la Turquesa",
@@ -641,32 +771,32 @@ es: {
  method_title:"Cómo se recaban los datos satelitales",
  method_sub:"Un pipeline reproducible y legal — sin scraping de servidores de mosaicos de Google o Bing. API oficiales más datos abiertos, todo descargable por script.",
  m1_h:"1 · Google y Bing — solo rutas oficiales",
- m1_p:"Los datos de Google se usan vía Google Earth Engine (Sentinel-2, Landsat, ASTER, Sentinel-1) y la API Photorealistic 3D Tiles; Bing vía la API de Imágenes de Bing Maps (mosaicos Aerial hasta z18). El scraping directo de mosaicos viola los términos, tiene CAPTCHA y no da bandas espectrales. La capa sub-métrica de este sitio son mosaicos de Esri World Imagery (clase Maxar); la capa espectral de 10 m es el compuesto sin nubes Sentinel-2 2020 (EOX, CC BY-NC-SA 4.0); el terreno usa DEM SRTM de 10 m (USGS, dominio público).",
- m2_h:"2 · Pantallado espectral y de terreno por coordenada",
- m2_p:"Por cada coordenada el pipeline calcula: proxy blue-shift B/R (depleción de óxidos de Fe / indicador arcilla-calcita en modo RGB), clases de superficie HSV (vegetación / suelo / tono pálido / costra brillante / sombra) y, desde el DEM de 10 m: pendiente, exposición, sombreado y perfiles de drenaje. El modo multibanda (registro gratuito Earthdata) añade índices NDVI, hierro férrico, arcilla y carbonato a 30 m.",
+  m1_p:"Los datos de Google se usan vía Google Earth Engine (Sentinel-2, Landsat, ASTER, Sentinel-1) y la API Photorealistic 3D Tiles; Bing vía la API de Imágenes de Bing Maps (mosaicos Aerial hasta z18). El scraping directo de mosaicos viola los términos, tiene CAPTCHA y no da bandas espectrales. La capa sub-métrica de visualización de este sitio son mosaicos de Esri World Imagery (escala de visualización renderizada, no resolución de sensor); la capa espectral de visualización es el compuesto sin nubes Sentinel-2 2020 (EOX, CC BY-NC-SA 4.0 — un producto de visualización que prioriza la consistencia visual, no la reflectancia lista para análisis); el terreno usa elevación SRTM (~30 m nativa, remuestreada a una rejilla de trabajo de 10 m — el remuestreo no añade detalle) del USGS (dominio público).",
+  m2_h:"2 · Pantallado espectral y de terreno por coordenada",
+  m2_p:"Por cada coordenada el pipeline calcula: una heurística visual de cribado RGB no validada (cociente B/R — ayuda visual de priorización, no identificador mineral de arcilla/carbonato/hierro), clases de superficie HSV (vegetación / suelo / tono pálido / costra brillante / sombra) y, desde la rejilla de trabajo de elevación: pendiente, exposición, sombreado y perfiles de drenaje. El modo multibanda (registro gratuito Earthdata) añade índices NDVI, hierro férrico, arcilla y carbonato a 30 m. Todo lo espectral requiere validación con datos listos para análisis y observación de campo.",
  m3_h:"3 · Contrarreferencia geológica",
  m3_p:"Cada sitio se contrarreferencia contra la Carta Geológico-Minera SGM El Aguajito H11-B85, 1:50,000 (2009): andesita/brecha del terreno Alisitos (Kapa A-BvA), intrusiones granodiorita–diorita cretácicas, Fm. Rosario cretácico tardío, la zona mineralizada Cu–Fe La Turquesa, 14 obrales documentados y la estructura documentada (normales NE–SO, vetas N65–75°E, relevos N–S, brechas tabulares).",
  th_src:"Fuente", th_prod:"Producto", th_res:"Resolución", th_access:"Acceso",
- src1_p:"Reflectancia de superficie 13 bandas, compuesto sin nubes 2020", src1_a:"Abierto (CC BY-NC-SA 4.0)",
- src2_p:"Color real sub-métrico (clase Maxar), 2024–26", src2_a:"Servicio de mosaicos (uso de investigación)",
- src3_p:"Modelo digital de elevación", src3_a:"Dominio público",
+  src1_p:"Compuesto visual RGB 2020 (consistencia visual, no reflectancia lista para análisis; bandas S2 nativas 4×10 m / 6×20 m / 3×60 m)", src1_a:"Abierto (CC BY-NC-SA 4.0)",
+  src2_p:"Color real para visualización, 2024–26 (escala de visualización Web-Mercator renderizada a la latitud de la lámina: z17 ≈1.03, z18 ≈0.52 m/px — no resolución de sensor)", src2_a:"Servicio de mosaicos (uso de investigación)",
+  src3_p:"Modelo digital de elevación, ~30 m nativo, remuestreado a rejilla de trabajo de 10 m (sin detalle nuevo)", src3_a:"Dominio público",
  src4_p:"Mapa geológico-minero 1:50,000 + inventario minero", src4_a:"Público (PDF)",
  src5_p:"Elevación puntual (usada por el ejecutor de coordenadas)", src5_a:"API gratuita, sin clave",
  data_title:"Mapas y productos de datos",
- data_sub:"Todo en este sitio es descargable. El CSV de puntos carga directo en apps GPS; las imágenes son imprimibles a A3 para campo.",
+  data_sub:"Todo en este sitio es descargable. El CSV de puntos carga directo en apps GPS; las imágenes son imprimibles a A3 para campo. Los registros de puntos llevan IDs únicos y procedencia completa — esquema: schemas/pins.schema.json. «m/px» abajo es escala de visualización/exportación renderizada a la latitud de la lámina, no distancia de muestreo del sensor.",
  th_name:"Archivo", th_desc:"Contenido", th_fmt:"Formato",
  d1:"T2 Cerro la Turquesa — 6 puntos + objetivo, 2.9 km", d2:"Detalle de la masa argílica pálida T2",
  d3:"Láminas de puntos T1 Arroyo San Isidro / T3 Cerro la Palmita",
  d4:"Zonas de prospección de turquesa A (El Cardonal), B (San Martín), C (núcleo La Turquesa)",
  d5:"Láminas de campo 4×4 km 3×3 (color, sombreado, elevación, pendiente, exposición, clases, B/R, superposición, contexto) + rejilla 500 m",
  d6:"Vista del corredor: 14 obrales SGM + 4 zonas + T1/T2/T3",
- d7:"Los 36 puntos de campo: lat/lon, tipo, acción (importable a GPS)",
- d8:"14 obrales Cu–Fe SGM documentados: coordenadas + mineralogía",
+  d7:"Los 36 puntos de campo: IDs únicos, lat/lon (EPSG:4326), tipo, procedencia, acción (importable a GPS)",
+  d8:"14 obrales Cu–Fe SGM documentados: coordenadas + mineralogía + columnas de fuente/exactitud",
  faq_title:"Preguntas frecuentes",
  q1:"¿Qué hay en 30.048522, -115.236173?",
- a1:"El punto está en la ladera NO del Cerro la Turquesa (740 m), Municipio de San Quintín, Baja California, a ~617 m. Los levantamientos identifican una superficie argílica pálida a escala de km ~1 km al oeste, un lineamiento recto NE–SO ~1 km al este (carretera vs falla — verificar en campo) y un topónimo minero de turquesa en el sitio. Es el objetivo de mayor puntuación (6.3/10) del corredor epitermal Cu–Fe La Turquesa.",
- q2:"¿Cómo se producen los mapas satelitales de una coordenada?",
- a2:"Un pipeline reproducible descarga por coordenada: compuesto sin nubes Sentinel-2 2020 (10 m) de EOX, Esri World Imagery (0.37–1.03 m/px) para detalle sub-métrico y mosaicos DEM SRTM 10 m para pendiente/exposición/sombreado. Se calculan índices espectrales (blue-shift B/R, clases HSV de superficie) y estadísticas de terreno por sitio, y se contrarreferencian con la carta geológico-minera SGM El Aguajito 1:50,000 (2009).",
+  a1:"El punto está en la ladera NO del Cerro la Turquesa (740 m), Municipio de San Quintín, Baja California, a ~617 m. Los levantamientos identifican una superficie argílica pálida a escala de km ~1 km al oeste, un lineamiento recto NE–SO ~1 km al este (carretera vs falla — verificar en campo) y un topónimo minero de turquesa en el sitio. Es el objetivo de mayor puntuación bajo el modelo actual de escritorio (prospectividad 7.2/10, factibilidad 4.3/10 — se muestran por separado, nunca combinadas) del corredor epitermal Cu–Fe La Turquesa.",
+  q2:"¿Cómo se producen los mapas satelitales de una coordenada?",
+  a2:"Un pipeline reproducible descarga por coordenada: compuesto de visualización sin nubes Sentinel-2 2020 de EOX (RGB renderizado, no reflectancia lista para análisis), Esri World Imagery para detalle de visualización (escala de visualización renderizada) y elevación SRTM (~30 m nativa, rejilla de trabajo de 10 m) para pendiente/exposición/sombreado. Se calculan una heurística visual de cribado RGB no validada más clases de superficie HSV y estadísticas de terreno por sitio, y se contrarreferencian con la carta geológico-minera SGM El Aguajito 1:50,000 (2009).",
  q3:"¿Qué es el corredor La Turquesa?",
  a3:"Una zona mineralizada de epitermal de baja sulfuración Cu–Fe (±Au) documentada por el SGM (1:50,000, 2009) en el terreno Alisitos, ~30.05–30.15° N, con 14 obrales Cu–Fe abandonados (El Cardonal con turquesa documentada; San Martín con crisocola, azurita y malaquita; núcleo La Turquesa; El Hormiguero; La Bonita; 5 Minas; El Sacrificio; Josefina; Santa Martha; Santa Lucía; La Víbora; El Moro), controlados por fallas normales NE–SO y vetas N65–75°E.",
  q4:"¿Es asesoría de inversión o perforación?",
@@ -675,14 +805,15 @@ es: {
  a5:"Sí. Los datos de Google/Bing se acceden solo por canales oficiales (Google Earth Engine, API de Imágenes de Bing Maps); la capa sub-métrica es Esri World Imagery; las capas de análisis son totalmente abiertas (Copernicus Sentinel-2, SRTM de USGS). En ningún punto del pipeline se hace scraping de mosaicos de Google o Bing.",
  q6:"¿Cómo ejecuto mi propia coordenada?",
  a6:"Los miembros desbloquean el Ejecutor de Coordenadas (sección Miembros): ingresa lat/lon y la página ubica el punto en imagen sub-métrica, muestra la elevación, calcula distancias y rumbos a los 3 objetivos, 36 puntos y 14 obrales documentados, y genera un enlace compartible. El CSV de 36 puntos también es descargable para equipos GPS.",
- mem_title:"Miembros — ejecutor de coordenadas y mapa completo",
+  scores_sub:"Rangos de cribado de escritorio, no probabilidades de mineralización. Dividido desde v3: prospectividad vs factibilidad, nunca combinadas.",
+  mem_title:"Miembros — ejecutor de coordenadas y mapa completo",
  mem_sub:"El ejecutor de coordenadas y el conjunto completo de mapas descargables están disponibles para miembros. Ingresa tu clave de acceso (se guarda solo en tu navegador).",
  mem_key:"Clave de acceso", mem_name:"Nombre (opcional)", mem_unlock:"Desbloquear herramientas de miembro",
  mem_err_key:"Clave de acceso inválida.", welcome:"Bienvenido, {name} — herramientas de miembro desbloqueadas.",
  run_title:"Ejecutor de coordenadas", run_sub:"Ingresa cualquier latitud/longitud (decimal WGS84). Ejemplo: 30.048522, -115.236173 (T2).",
  run_lat:"Latitud", run_lon:"Longitud", run_btn:"Ejecutar coordenada", run_share:"Copiar enlace",
  run_share_copied:"Enlace copiado", run_err:"Coordenada inválida (lat -90…90, lon -180…180).",
- lyr_sat:"Satelital", lyr_topo:"Terreno", lyr_s2:"S2 2020 (10 m)",
+  lyr_sat:"Satelital", lyr_topo:"Terreno", lyr_s2:"S2 2020 (renderizado)",
  res_title:"Análisis", res_elev:"Elevación", res_t:"Objetivo más cercano", res_p:"Punto de campo más cercano", res_m:"Obra documentado más cercano", res_ctx:"Distancia al corredor",
  res_elev_na:"no disponible (¿sin línea?)",
  dist_km:"{d} km — {nm} (rumb {b}°)",
@@ -702,15 +833,15 @@ zh: {
  nav_targets:"目标", nav_method:"方法", nav_data:"数据", nav_faq:"常见问题", nav_members:"会员",
  hero_title:'卫星与地质勘探地图 — <em>墨西哥下加利福尼亚州</em>',
  hero_sub:"输入任意坐标。探索三个已勘测矿物目标、36 个 GPS 实地点位，以及圣昆廷市（San Quintín）拉图尔克斯（La Turquesa）Cu–Fe 低温热液矿集区的高分辨率卫星地图。",
- stat_targets:"已勘测目标（29.90–30.05° N）", stat_pins:"GPS 实地点位（CSV + 图件）", stat_res:"最佳亚米影像（z18）", stat_mines:"已记录的 Cu–Fe 矿点（SGM 2009）",
+  stat_targets:"已勘测目标（29.90–30.05° N）", stat_pins:"GPS 实地点位（CSV + 图件）", stat_res:"最佳渲染显示比例尺（Esri；见分辨率说明）", stat_mines:"已记录的 Cu–Fe 矿点（SGM 2009）",
  cta_explore:"查看目标", cta_members:"会员坐标运行器",
  facts_title:"关键事实",
  fact1_b:"区域：", fact1:"29.90–30.05° N，115.24–115.39° W — 墨西哥下加利福尼亚州圣昆廷市（Alisitos 构造岩片）",
- fact2_b:"数据：", fact2:"Sentinel-2 10 m（2020）· Esri World Imagery 0.5 m · SRTM 10 m 数字高程 · SGM 1:50,000（2009）",
+  fact2_b:"数据：", fact2:"Sentinel-2 2020 渲染可视化合成（波段原生 4×10 m / 6×20 m / 3×60 m）· Esri World Imagery 可视化瓦片（渲染显示比例尺）· SRTM 高程（原生约 30 m，10 m 工作格网）· SGM 1:50,000（2009）",
  fact3_b:"地质：", fact3:"低硫化型低温热液 Cu–Fe（±Au）— SGM Corbett 型模型，Alisitos 安山岩 + 白垩纪花岗闪长岩",
  fact4_b:"状态：", fact4:"独立桌面研究（2026 年 8 月）。非投资建议；适用墨西哥 2023 年《矿业法》（公开投标、水资源、自然保护区限制）",
  targets_title:"三个已勘测目标",
- targets_sub:"坐标可点击复制。每个目标均有 4×4 公里野外工作图和亚米级点位图。评分综合地质、构造、遥感、露头、历史、水、交通、社会与监管因素。",
+  targets_sub:"坐标可点击复制。每个目标均有 4×4 公里野外工作图和亚米级点位图。桌面筛选排名（非矿化概率）：自 v3 起模型已拆分——地质成矿远景与交通/法律/环境可行性并列展示、永不混合，详见<a href=\"#scores\">已发布的评分模型</a>。任何野外调查、地球化学、光谱或钻探均未验证这些目标。",
  t1_name:"阿罗约桑伊西德罗（Arroyo San Isidro）",
  t1_blurb:"廊道南端锚点：南北向断层排水沟沿线约 332 m 处有浅色蚀变斑。86% 裸地表土；色斑 B/R 蓝移 0.55–0.63。位于已记录矿点以南 13–21 公里。",
  t2_name:"拉图尔克斯山（Cerro la Turquesa）",
@@ -724,32 +855,32 @@ zh: {
  method_title:"卫星数据如何获取",
  method_sub:"可复现、合法的管线——不对 Google 或 Bing 瓦片服务器抓取。官方 API + 完全开放数据，均可脚本化下载。",
  m1_h:"1 · Google 与 Bing — 仅官方渠道",
- m1_p:"Google 数据通过 Google Earth Engine（Sentinel-2、Landsat、ASTER、Sentinel-1）和 Photorealistic 3D Tiles API 获取；Bing 通过 Bing Maps Imagery API（Aerial 瓦片至 z18）。直接抓取瓦片违反服务条款、有 CAPTCHA 防护，且不含光谱波段。本站亚米级底图为 Esri World Imagery（Maxar 级）瓦片；10 m 光谱层为开放的 Sentinel-2 2020 无云合成（EOX，CC BY-NC-SA 4.0）；地形使用 SRTM 10 m DEM 瓦片（USGS，公有领域）。",
- m2_h:"2 · 逐坐标光谱与地形筛选",
- m2_p:"对每个坐标计算：B/R 蓝移代理指标（RGB 模式下的铁氧化物贫化 / 粘土-方解石指示）、HSV 地表分类（植被 / 土壤 / 浅色调 / 亮结壳 / 阴影），以及来自 10 m DEM 的坡度、坡向、阴影浮雕和排水剖面。全波段模式（免费 Earthdata 账号）增加 30 m NDVI、铁离子、粘土和碳酸盐指数。",
+  m1_p:"Google 数据通过 Google Earth Engine（Sentinel-2、Landsat、ASTER、Sentinel-1）和 Photorealistic 3D Tiles API 获取；Bing 通过 Bing Maps Imagery API（Aerial 瓦片至 z18）。直接抓取瓦片违反服务条款、有 CAPTCHA 防护，且不含光谱波段。本站亚米级可视化底图为 Esri World Imagery 瓦片（渲染显示比例尺，非传感器分辨率）；光谱可视化层为开放的 Sentinel-2 2020 无云合成（EOX，CC BY-NC-SA 4.0——以视觉一致性为先的可视化产品，非分析就绪反射率）；地形使用 USGS 的 SRTM 高程（原生约 30 m，重采样至 10 m 工作格网——重采样不增加地形细节，公有领域）。",
+  m2_h:"2 · 逐坐标光谱与地形筛选",
+  m2_p:"对每个坐标计算：未经验证的 RGB 目视筛选启发式指标（B/R 比值——目视优先级辅助，非粘土/碳酸盐/铁矿物识别器）、HSV 地表分类（植被 / 土壤 / 浅色调 / 亮结壳 / 阴影），以及来自高程工作格网的坡度、坡向、阴影浮雕和排水剖面。全波段模式（免费 Earthdata 账号）增加 30 m NDVI、铁离子、粘土和碳酸盐指数。任何光谱结论均需经分析就绪数据与野外观察验证。",
  m3_h:"3 · 地质交叉比对",
  m3_p:"每个点位均与 SGM《El Aguajito H11-B85 地质矿产图》1:50,000（2009）交叉比对：Alisitos 构造岩片安山岩/角砾岩（Kapa A-BvA）、白垩纪花岗闪长岩–闪长岩侵入体、晚白垩世 Rosario 组、La Turquesa Cu–Fe 矿化带、14 个已记录矿点，以及已记录构造（NE–SW 正断层、N65–75°E 脉组、N–S 接力断层、板状角砾岩）。",
  th_src:"来源", th_prod:"产品", th_res:"分辨率", th_access:"获取方式",
- src1_p:"13 波段地表反射率，2020 无云合成", src1_a:"开放（CC BY-NC-SA 4.0）",
- src2_p:"亚米真彩色（Maxar 级），2024–26", src2_a:"瓦片服务（研究用途）",
- src3_p:"数字高程模型", src3_a:"公有领域",
+  src1_p:"2020 渲染 RGB 可视化合成（视觉一致性，非分析就绪反射率；S2 波段原生 4×10 m / 6×20 m / 3×60 m）", src1_a:"开放（CC BY-NC-SA 4.0）",
+  src2_p:"可视化真彩色，2024–26（图幅纬度处渲染 Web-Mercator 显示比例尺：z17 ≈1.03，z18 ≈0.52 m/px——非传感器分辨率）", src2_a:"瓦片服务（研究用途）",
+  src3_p:"数字高程模型，原生约 30 m，重采样至 10 m 工作格网（不新增细节）", src3_a:"公有领域",
  src4_p:"1:50,000 地质矿产图 + 矿点清单", src4_a:"公开（PDF）",
  src5_p:"点高程（坐标运行器使用）", src5_a:"免费 API，无需密钥",
  data_title:"地图与数据产品",
- data_sub:"本站所有内容均可下载。点位 CSV 可直接导入 GPS 应用；图像可 A3 幅面野外打印。",
+  data_sub:"本站所有内容均可下载。点位 CSV 可直接导入 GPS 应用；图像可 A3 幅面野外打印。点位记录含唯一 ID 与完整来源——schema：schemas/pins.schema.json。下面“m/px”为图幅纬度处渲染显示/导出比例尺，非传感器地面采样距离。",
  th_name:"文件", th_desc:"内容", th_fmt:"格式",
  d1:"T2 拉图尔克斯山 — 6 点位 + 目标，2.9 km", d2:"T2 浅色粘土化岩体细节",
  d3:"T1 阿罗约桑伊西德罗 / T3 帕尔米塔山点位图",
  d4:"绿松石找矿区 A（El Cardonal）、B（San Martín）、C（La Turquesa 核部）",
  d5:"4×4 km 3×3 野外工作图（真色、阴影、高程、坡度、坡向、分类、B/R、叠加、区域背景）+ 500 m 网格",
  d6:"廊道概览：14 个 SGM 矿点 + 4 个找矿区 + T1/T2/T3",
- d7:"全部 36 个实地点位：经纬度、类型、作业内容（可导入 GPS）",
- d8:"14 个已记录 SGM Cu–Fe 矿点：坐标 + 矿床学",
+  d7:"全部 36 个实地点位：唯一 ID、经纬度（EPSG:4326）、类型、来源、作业内容（可导入 GPS）",
+  d8:"14 个已记录 SGM Cu–Fe 矿点：坐标 + 矿床学 + 来源/精度字段",
  faq_title:"常见问题",
  q1:"30.048522, -115.236173 是什么位置？",
- a1:"该点位于下加利福尼亚州圣昆廷市拉图尔克斯山（740 m）西北坡，高程约 617 m。勘测识别出西约 1 公里处公里级浅色粘土化（蚀变）地表、东约 1 公里笔直 NE–SW 线性带（道路或断层崖——需实地核实），以及点位本身的绿松石采矿地名。它是 La Turquesa Cu–Fe 低温热液廊道中评分最高的目标（6.3/10）。",
- q2:"坐标的卫星地图是如何制作的？",
- a2:"可复现管线按坐标获取：EOX 的 Sentinel-2 2020 无云合成（10 m）、Esri World Imagery（0.37–1.03 m/px）亚米细节、SRTM 10 m DEM 瓦片（坡度/坡向/阴影）。按点位计算光谱指数（B/R 蓝移、HSV 地表分类）和地形统计，再与 SGM El Aguajito 1:50,000（2009）地质矿产图交叉比对。",
+  a1:"该点位于下加利福尼亚州圣昆廷市拉图尔克斯山（740 m）西北坡，高程约 617 m。勘测识别出西约 1 公里处公里级浅色粘土化（蚀变）地表、东约 1 公里笔直 NE–SW 线性带（道路或断层崖——需实地核实），以及点位本身的绿松石采矿地名。它是当前桌面筛选模型下评分最高的目标（成矿远景 7.2/10，可行性 4.3/10——分别列示，永不混合），位于 La Turquesa Cu–Fe 低温热液廊道。",
+  q2:"坐标的卫星地图是如何制作的？",
+  a2:"可复现管线按坐标获取：EOX 的 Sentinel-2 2020 无云可视化合成（渲染 RGB，非分析就绪反射率）、Esri World Imagery 可视化细节（渲染显示比例尺）、SRTM 高程（原生约 30 m，10 m 工作格网）用于坡度/坡向/阴影。按点位计算未经验证的 RGB 目视筛选启发式指标、HSV 地表分类和地形统计，再与 SGM El Aguajito 1:50,000（2009）地质矿产图交叉比对。",
  q3:"什么是拉图尔克斯廊道？",
  a3:"SGM（1:50,000，2009）在 Alisitos 构造岩片（约 30.05–30.15° N）记录的低硫化型低温热液 Cu–Fe（±Au）矿化带，含 14 个废弃 Cu–Fe 矿点（El Cardonal 有已记录绿松石；San Martín 有硅孔雀石、蓝铜矿和孔雀石；La Turquesa 核部；El Hormiguero；La Bonita；5 Minas；El Sacrificio；Josefina；Santa Martha；Santa Lucía；La Víbora；El Moro），受 NE–SW 正断层和 N65–75°E 脉组控制。",
  q4:"这是投资还是钻探建议吗？",
@@ -758,14 +889,15 @@ zh: {
  a5:"合法。Google/Bing 数据仅通过官方渠道获取（Google Earth Engine、Bing Maps Imagery API）；亚米底图为 Esri World Imagery；分析层完全开放（Copernicus Sentinel-2、USGS SRTM）。管线任何环节都不抓取 Google 或 Bing 瓦片。",
  q6:"如何运行我自己的坐标？",
  a6:"会员解锁坐标运行器（会员区）：输入经纬度后，页面将点位标在亚米影像上，显示点高程，计算到 3 个目标、36 个点位和 14 个已记录矿点的距离与方位角，并生成可分享链接。36 点位 CSV 亦可下载用于 GPS 设备。",
- mem_title:"会员 — 坐标运行器与全套图件",
+  scores_sub:"桌面筛选排名，非矿化概率。自 v3 起拆分：成矿远景 vs 可行性，永不混合。",
+  mem_title:"会员 — 坐标运行器与全套图件",
  mem_sub:"坐标运行器和全套可下载图件面向会员开放。输入访问密钥解锁（仅保存在您的浏览器中）。",
  mem_key:"访问密钥", mem_name:"姓名（可选）", mem_unlock:"解锁会员工具",
  mem_err_key:"访问密钥无效。", welcome:"欢迎，{name} — 会员工具已解锁。",
  run_title:"坐标运行器", run_sub:"输入任意经纬度（WGS84 十进制）。示例：30.048522, -115.236173（T2）。",
  run_lat:"纬度", run_lon:"经度", run_btn:"运行坐标", run_share:"复制分享链接",
  run_share_copied:"链接已复制", run_err:"坐标无效（纬度 -90…90，经度 -180…180）。",
- lyr_sat:"卫星", lyr_topo:"地形", lyr_s2:"S2 2020（10 m）",
+  lyr_sat:"卫星", lyr_topo:"地形", lyr_s2:"S2 2020（渲染）",
  res_title:"分析", res_elev:"高程", res_t:"最近目标", res_p:"最近实地点位", res_m:"最近已记录矿点", res_ctx:"至廊道距离",
  res_elev_na:"不可用（离线？）",
  dist_km:"{d} km — {nm}（方位 {b}°）",
@@ -784,16 +916,16 @@ ru: {
  brand:"Baja Mineral Explorer",
  nav_targets:"Объекты", nav_method:"Метод", nav_data:"Данные", nav_faq:"Вопросы", nav_members:"Участники",
  hero_title:'Спутниковые карты геологоразведки — <em>Нижняя Калифорния, Мексика</em>',
- hero_sub:"Введите любые координаты. Изучите три разведанных минеральных объекта, 36 GPS-точек полевого выхода и субметровые спутниковые карты Cu–Fe эпithermal-коридора La Turquesa в муниципалитете Сан-Кинтин, Нижняя Калифорния.",
- stat_targets:"разведанных объекта (29.90–30.05° с.ш.)", stat_pins:"GPS-точек на карте (CSV + листы)", stat_res:"лучшая субметровая съёмка (z18)", stat_mines:"задокументированных Cu–Fe выработок (SGM 2009)",
+  hero_sub:"Введите любые координаты. Изучите три разведанных минеральных объекта, 36 GPS-точек полевого выхода и субметровые спутниковые карты Cu–Fe эпитермального коридора La Turquesa в муниципалитете Сан-Кинтин, Нижняя Калифорния.",
+  stat_targets:"разведанных объекта (29.90–30.05° с.ш.)", stat_pins:"GPS-точек на карте (CSV + листы)", stat_res:"лучший рендерный масштаб отображения (Esri; см. примечания о разрешении)", stat_mines:"задокументированных Cu–Fe выработок (SGM 2009)",
  cta_explore:"Смотреть объекты", cta_members:"Координатный запуск для участников",
  facts_title:"Ключевые факты",
  fact1_b:"Район:", fact1:"29.90–30.05° с.ш., 115.24–115.39° з.д. — муниципалитет Сан-Кинтин, Нижняя Калифорния, Мексика (терреин Alisitos)",
- fact2_b:"Данные:", fact2:"Sentinel-2 10 м (2020) · Esri World Imagery 0.5 м · DEM SRTM 10 м · SGM 1:50 000 (2009)",
- fact3_b:"Геология:", fact3:"Низкосернистые эпithermal Cu–Fe (±Au) — модель типа Corbett (SGM), андезит Alisitos + меловой гранодиорит",
+  fact2_b:"Данные:", fact2:"Рендерный визуальный композит Sentinel-2 2020 (полосы изначально 4×10 м / 6×20 м / 3×60 м) · Визуализационные тайлы Esri World Imagery (рендерный масштаб отображения) · Высотка SRTM (~30 м изначально, рабочая сетка 10 м) · SGM 1:50 000 (2009)",
+  fact3_b:"Геология:", fact3:"Низкосернистые эпитермальные Cu–Fe (±Au) — модель типа Corbett (SGM), андезит Alisitos + меловой гранодиорит",
  fact4_b:"Статус:", fact4:"Независимый аналитический обзор (авг. 2026). Не является инвестиционной рекомендацией; действует Zакон о недрах Мексики 2023 г. (конкурс, вода, ООПТ)",
  targets_title:"Три разведанных объекта",
- targets_sub:"Координаты копируются по клику. У каждого объекта есть полевой лист 4×4 км и субметровый лист точек. Оценка объединяет геологию, структуру, дистанционное зондирование, обнажения, историю, воду, доступ, социальные и регуляторные факторы.",
+  targets_sub:"Координаты копируются по клику. У каждого объекта есть полевой лист 4×4 км и субметровый лист точек. Рейтинги камерального скрининга (не вероятности оруденения): с v3 модель разделена — геологическая перспективность и транспортно-правовая/экологическая осуществимость показываются рядом и никогда не смешиваются. См. <a href=\"#scores\">опубликованную скориновую модель</a>. Полевая съёмка, геохимия, спектроскопия или бурение эти объекты не валидировали.",
  t1_name:"Arroyo San Isidro",
  t1_blurb:"Южная опора коридора: бледные зоны аргиллизации вдоль N–S разломного водосборного канала на высоте ~332 м. 86% голого регoлита; сдвиг B/R 0.55–0.63 на пятнах. В 13–21 км к югу от задокументированных выработок.",
  t2_name:"Cerro la Turquesa",
@@ -807,48 +939,49 @@ ru: {
  method_title:"Как получаются спутниковые данные",
  method_sub:"Воспроизводимый и легальный конвейер — без скрапинга тайл-серверов Google и Bing. Официальные API плюс полностью открытые данные, всё скачивается скриптами.",
  m1_h:"1 · Google и Bing — только официальные каналы",
- m1_p:"Данные Google используются через Google Earth Engine (Sentinel-2, Landsat, ASTER, Sentinel-1) и Photorealistic 3D Tiles API; Bing — через Bing Maps Imagery API (аэротайлы до z18). Прямой скрапинг тайлов нарушает условия, защищён CAPTCHA и не даёт спектральных полос. Субметровый базовый слой сайта — тайлы Esri World Imagery (класс Maxar); спектральный слой 10 м — открытый облачный композит Sentinel-2 2020 (EOX, CC BY-NC-SA 4.0); рельеф — тайлы DEM SRTM 10 м (USGS, общественное достояние).",
- m2_h:"2 · Спектральный и рельефный скрининг по координате",
- m2_p:"Для каждой координаты конвейер считает: суррогат сдвига B/R (дефицит оксидов Fe / индикатор глина-кальцит в RGB-режиме), HSV-классы поверхности (вегетация / почва / бледный тон / яркая корка / тень) и из DEM 10 м: уклон, экспозицию, рельефное затенение и продольные профили водосборных каналов. Многополосный режим (бесплатный Earthdata) добавляет NDVI, трёхвалентное железо, глину и карбонат на 30 м.",
+  m1_p:"Данные Google используются через Google Earth Engine (Sentinel-2, Landsat, ASTER, Sentinel-1) и Photorealistic 3D Tiles API; Bing — через Bing Maps Imagery API (аэротайлы до z18). Прямой скрапинг тайлов нарушает условия, защищён CAPTCHA и не даёт спектральных полос. Субметровый визуализационный базовый слой сайта — тайлы Esri World Imagery (рендерный масштаб отображения, а не разрешение сенсора); спектральный визуализационный слой — открытый облачный композит Sentinel-2 2020 (EOX, CC BY-NC-SA 4.0 — визуализационный продукт с приоритетом визуальной согласованности, а не готовой к анализу отражательности); рельеф — высотка SRTM (~30 м изначально, передискретизирована в рабочую сетку 10 м — передискретизация не добавляет деталей) от USGS (общественное достояние).",
+  m2_h:"2 · Спектральный и рельефный скрининг по координате",
+  m2_p:"Для каждой координаты конвейер считает: невалидированную RGB-эвристику визуального скрининга (отношение B/R — визуальное средство приоритизации, а не идентификатор минералов глины/карбоната/железа), HSV-классы поверхности (вегетация / почва / бледный тон / яркая корка / тень) и из рабочей сетки высот: уклон, экспозицию, рельефное затенение и продольные профили водосборных каналов. Многополосный режим (бесплатный Earthdata) добавляет NDVI, трёхвалентное железо, глину и карбонат на 30 м. Всё спектральное требует валидации данными, готовыми к анализу, и полевыми наблюдениями.",
  m3_h:"3 · Геологическая сверка",
  m3_p:"Каждый объект сверяется с SGM Carta Geológico-Minera El Aguajito H11-B85, 1:50 000 (2009): андезит/брекчия террейна Alisitos (Kapa A-BvA), меловые гранодиоритовые-диоритовые интрузии, формация Rosario поздней мелы, минерализованная зона Cu–Fe La Turquesa, 14 задокументированных выработок и задокументированная структура (нормальные разломы NE–SW, жилы N65–75°E, N–S релейные разломы, табличные брекчии).",
  th_src:"Источник", th_prod:"Продукт", th_res:"Разрешение", th_access:"Доступ",
- src1_p:"13-полосная поверхностная отражательность, облачный композит 2020", src1_a:"Открытые (CC BY-NC-SA 4.0)",
- src2_p:"Субметровый истинный цвет (класс Maxar), 2024–26", src2_a:"Тайл-сервис (научное использование)",
- src3_p:"Цифровая модель рельефа", src3_a:"Общественное достояние",
+  src1_p:"Рендерный RGB-визуальный композит 2020 (визуальная согласованность, не готовая к анализу отражательность; полосы S2 изначально 4×10 м / 6×20 м / 3×60 м)", src1_a:"Открытые (CC BY-NC-SA 4.0)",
+  src2_p:"Истинный цвет для визуализации, 2024–26 (рендерный масштаб отображения Web-Mercator на широте листа: z17 ≈1.03, z18 ≈0.52 м/пикс — не разрешение сенсора)", src2_a:"Тайл-сервис (научное использование)",
+  src3_p:"Цифровая модель рельефа, ~30 м изначально, передискретизирована в рабочую сетку 10 м (без новых деталей)", src3_a:"Общественное достояние",
  src4_p:"Геолого-минеральная карта 1:50 000 + инвентарь выработок", src4_a:"Открытая (PDF)",
  src5_p:"Высотка точки (используется координатным запуском)", src5_a:"Бесплатный API, без ключа",
  data_title:"Карты и продуктовые данные",
- data_sub:"Всё на сайте скачивается. CSV точек загружается напрямую в GPS-приложения; изображения распечатываются в A3 для полевых работ.",
+  data_sub:"Всё на сайте скачивается. CSV точек загружается напрямую в GPS-приложения; изображения распечатываются в A3 для полевых работ. Записи точек несут уникальные ID и полное происхождение — схема: schemas/pins.schema.json. «м/пикс» ниже — рендерный масштаб отображения/экспорта на широте листа, а не наземное разрешение сенсора.",
  th_name:"Файл", th_desc:"Содержание", th_fmt:"Формат",
  d1:"T2 Cerro la Turquesa — 6 точек + объект, 2.9 км", d2:"Деталь бледной аргиллизованной массы T2",
  d3:"Листы точек T1 Arroyo San Isidro / T3 Cerro la Palmita",
  d4:"Перспективные зоны бирюзы A (El Cardonal), B (San Martín), C (ядро La Turquesa)",
  d5:"Полевые листы 4×4 км 3×3 (цвет, рельеф, высотка, уклон, экспозиция, классы, B/R, оверлей, контекст) + сетка 500 м",
  d6:"Обзор коридора: 14 выработок SGM + 4 зоны + T1/T2/T3",
- d7:"Все 36 полевых точек: шир/долг, тип, действие (импорт в GPS)",
- d8:"14 задокументированных Cu–Fe выработок SGM: координаты + минералогия",
+  d7:"Все 36 полевых точек: уникальные ID, шир/долг (EPSG:4326), тип, происхождение, действие (импорт в GPS)",
+  d8:"14 задокументированных Cu–Fe выработок SGM: координаты + минералогия + колонки источника/точности",
  faq_title:"Часто задаваемые вопросы",
  q1:"Что находится в точке 30.048522, -115.236173?",
- a1:"Точка лежит на северо-западном склоне Cerro la Turquesa (740 м), муниципалитет Сан-Кинтин, Нижняя Калифорния, на высоте ~617 м. Разведка выявила километровую бледную аргиллизованную (глинистую) поверхность ~1 км к западу, прямой NE–SW линеймент ~1 км к востоку (дорога или разлом — проверить на месте) и топоним по бирюзовой добыче на самом объекте. Это объект с наивысшей оценкой (6.3/10) в Cu–Fe эпithermal-коридоре La Turquesa.",
- q2:"Как делаются спутниковые карты по координате?",
- a2:"Воспроизводимый конвейер по каждой координате скачивает: облачный композит Sentinel-2 2020 (10 м) с EOX, Esri World Imagery (0.37–1.03 м/пикс) для субметровой детали и тайлы DEM SRTM 10 м для уклона/экспозиции/затенения. По объекту считаются спектральные индексы (сдвиг B/R, HSV-классы поверхности) и статистика рельефа, затем сверкаются с геолого-минеральной картой SGM El Aguajito 1:50 000 (2009).",
+  a1:"Точка лежит на северо-западном склоне Cerro la Turquesa (740 м), муниципалитет Сан-Кинтин, Нижняя Калифорния, на высоте ~617 м. Разведка выявила километровую бледную аргиллизованную (глинистую) поверхность ~1 км к западу, прямой NE–SW линеймент ~1 км к востоку (дорога или разлом — проверить на месте) и топоним по бирюзовой добыче на самом объекте. Это объект с наивысшей оценкой по текущей камеральной скрининговой модели (перспективность 7.2/10, осуществимость 4.3/10 — показываются раздельно, никогда не смешиваются) в Cu–Fe эпитермальном коридоре La Turquesa.",
+  q2:"Как делаются спутниковые карты по координате?",
+  a2:"Воспроизводимый конвейер по каждой координате скачивает: облачный визуализационный композит Sentinel-2 2020 с EOX (рендерный RGB, не готовая к анализу отражательность), Esri World Imagery для визуализационной детали (рендерный масштаб отображения) и высотку SRTM (~30 м изначально, рабочая сетка 10 м) для уклона/экспозиции/затенения. По объекту считаются невалидированная RGB-эвристика визуального скрининга, HSV-классы поверхности и статистика рельефа, затем сверкаются с геолого-минеральной картой SGM El Aguajito 1:50 000 (2009).",
  q3:"Что такое коридор La Turquesa?",
- a3:"Задокументированная SGM (1:50 000, 2009) зона низкосернистых эпithermal Cu–Fe (±Au) в терреине Alisitos, ~30.05–30.15° с.ш., с 14 заброшенными Cu–Fe выработками (El Cardonal с задокументированной бирюзой; San Martín с кризocola, азуритом и малахитом; ядро La Turquesa; El Hormiguero; La Bonita; 5 Minas; El Sacrificio; Josefina; Santa Martha; Santa Lucía; La Víbora; El Moro), контролируемая нормальными разломами NE–SW и жилами N65–75°E.",
+   a3:"Задокументированная SGM (1:50 000, 2009) зона низкосернистых эпитермальных Cu–Fe (±Au) в терреине Alisitos, ~30.05–30.15° с.ш., с 14 заброшенными Cu–Fe выработками (El Cardonal с задокументированной бирюзой; San Martín с кризocola, азуритом и малахитом; ядро La Turquesa; El Hormiguero; La Bonita; 5 Minas; El Sacrificio; Josefina; Santa Martha; Santa Lucía; La Víbora; El Moro), контролируемая нормальными разломами NE–SW и жилами N65–75°E.",
  q4:"Это инвестиционная или буровая рекомендация?",
  a4:"Нет — это независимый аналитический обзор по дистанционному зондированию и геологии. По Закону о недрах Мексики (реформа 2023) новые лицензии выдаются только через публичный конкурс, запрещены в ООПТ и зонах с дефицитом воды и требуют предварительного согласования и оценки социальных последствий. Доступность воды в этом аридном коридоре — главный регуляторный риск.",
  q5:"Законно ли здесь использовать съёмку Google или Bing?",
  a5:"Да. Данные Google/Bing получаются только официальными каналами (Google Earth Engine, Bing Maps Imagery API); субметровый базовый слой — Esri World Imagery; аналитические слои полностью открыты (Copernicus Sentinel-2, SRTM от USGS). Скрапинг тайлов Google или Bing в конвейере не используется.",
  q6:"Как запустить свои координаты?",
  a6:"Участники открывают координатный запуск (раздел Участники): вводите шир/долг — страница ставит точку на субметровом изображении, показывает высотку, считает расстояния и азимуты до 3 объектов, 36 точек и 14 задокументированных выработок и формирует ссылку для раздачи. CSV из 36 точек также скачивается для GPS-устройств.",
- mem_title:"Участники — координатный запуск и полный набор карт",
+  scores_sub:"Рейтинги камерального скрининга, а не вероятности оруденения. Разделены с v3: перспективность vs осуществимость, никогда не смешиваются.",
+  mem_title:"Участники — координатный запуск и полный набор карт",
  mem_sub:"Координатный запуск и полный набор скачиваемых карт доступны участникам. Введите ключ доступа (хранится только в вашем браузере).",
  mem_key:"Ключ доступа", mem_name:"Имя (необязательно)", mem_unlock:"Открыть инструменты участника",
  mem_err_key:"Неверный ключ доступа.", welcome:"Добро пожаловать, {name} — инструменты участника открыты.",
  run_title:"Координатный запуск", run_sub:"Введите любые широту/долготу (WGS84, десятичные). Пример: 30.048522, -115.236173 (T2).",
  run_lat:"Широта", run_lon:"Долгота", run_btn:"Запустить координату", run_share:"Копировать ссылку",
  run_share_copied:"Ссылка скопирована", run_err:"Неверная координата (шир −90…90, долг −180…180).",
- lyr_sat:"Спутник", lyr_topo:"Рельеф", lyr_s2:"S2 2020 (10 м)",
+  lyr_sat:"Спутник", lyr_topo:"Рельеф", lyr_s2:"S2 2020 (рендер)",
  res_title:"Анализ", res_elev:"Высота", res_t:"Ближайший объект", res_p:"Ближайшая полевая точка", res_m:"Ближайшая задокументированная выработка", res_ctx:"До коридора",
  res_elev_na:"недоступно (офлайн?)",
  dist_km:"{d} км — {nm} (азимут {b}°)",
@@ -861,7 +994,7 @@ ru: {
  f_disc:"Только аналитический обзор. Не является инвестиционной, буровой или правовой рекомендацией. Добыча в Мексике регулируется Законом о недрах (реформа 2023): лицензии через публичный конкурс, запрет в ООПТ и безводных зонах, предварительное согласование. Перед действиями сверьте все данные на месте и в официальных реестрах (minalia.sener.gob.mx, CONANP, CONAGUA).",
  copy_done:"Скопировано",
  title:"Baja Mineral Explorer | Спутниковые карты разведки — Нижняя Калифорния, Мексика",
- desc:"Запустите любую координату и получите доступ к субметровым спутниковым картам разведки Cu–Fe эпithermal-коридора La Turquesa, муниципалитет Сан-Кинтин, Нижняя Калифорния, Мексика: 3 разведанных объекта, 36 GPS-точек, 14 задокументированных Cu–Fe выработок."
+  desc:"Запустите любую координату и получите доступ к субметровым спутниковым картам разведки Cu–Fe эпитермального коридора La Turquesa, муниципалитет Сан-Кинтин, Нижняя Калифорния, Мексика: 3 разведанных объекта, 36 GPS-точек, 14 задокументированных Cu–Fe выработок."
 }
 };
 
@@ -898,10 +1031,11 @@ function applyLang(lang){
  const md = document.querySelector('meta[name="description"]');
  if (md) md.setAttribute("content", dict.desc);
  document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("active", b.dataset.lang===lang));
- // rebuild dynamic bits
- buildGallery();
- if (mapReady) renderResult(currentPoint);
- if (unlocked) document.getElementById("welcomeLine").textContent = t("welcome",{name: memberName || ""}).replace(/ —+$/,"");
+  // rebuild dynamic bits
+  buildGallery();
+  updateQuota();
+  if (typeof vaultRender === "function") vaultRender();
+  if (mapReady) renderResult(currentPoint);
  const q = new URLSearchParams(location.search);
  if (q.get("lang") !== lang){ q.set("lang", lang); history.replaceState(null,"", "?"+q.toString()); }
 }
@@ -933,40 +1067,217 @@ document.getElementById("lbClose").addEventListener("click", ()=>lb.close());
 function buildGallery(){
  const g = document.getElementById("gallery");
  g.innerHTML = "";
- GALLERY.forEach(([src, cap, title])=>{
-   const d = document.createElement("div");
-   d.className = "gitem";
-   d.innerHTML = `<img class="thumb" loading="lazy" src="${src}" alt="${title} — ${cap}"><div class="cap"><b>${title}</b>${cap}</div>`;
-   d.addEventListener("click", ()=>openMap(src, title + " — " + cap));
-   g.appendChild(d);
+ GALLERY.forEach(([src, preview, cap, title])=>{
+  const thumb = preview || src; // PNG layer products have no WebP preview
+  const d = document.createElement("div");
+  d.className = "gitem";
+  d.innerHTML = `<img class="thumb" loading="lazy" src="${thumb}" alt="${title} — ${cap}"><div class="cap"><b>${title}</b>${cap} · <a href="${src}" download style="font-size:12px">full-res ⬇</a></div>`;
+  d.addEventListener("click", (e)=>{ if (e.target.tagName !== "A") openMap(src, title + " — " + cap); });
+  g.appendChild(d);
  });
 }
 buildGallery();
 
 /* ============================================================
-   MEMBERS GATE
+   PUBLIC DEMO (no login) + quota
    ============================================================ */
-let unlocked = false, memberName = "";
-function unlock(name){
- unlocked = true; memberName = name || "member";
- localStorage.setItem("bme_member", JSON.stringify({name: memberName, t: Date.now()}));
- document.getElementById("gate").style.display = "none";
- const mt = document.getElementById("memberTools");
- mt.classList.add("unlocked");
- document.getElementById("welcomeLine").textContent = t("welcome",{name: memberName});
- if (!mapReady) initMap();
- document.getElementById("runner").scrollIntoView({behavior:"smooth", block:"center"});
+function demoCount(){
+ try { return parseInt(localStorage.getItem("bme_demo_count") || "0", 10) || 0; }
+ catch(e){ return 0; }
 }
-document.getElementById("gateForm").addEventListener("submit", e=>{
- e.preventDefault();
- const k = document.getElementById("gkey").value.trim();
- if (k === MEMBER_KEY) unlock(document.getElementById("gname").value.trim());
- else document.getElementById("gateErr").textContent = t("mem_err_key");
+function bumpDemo(){
+ try { localStorage.setItem("bme_demo_count", String(demoCount() + 1)); } catch(e){}
+ updateQuota();
+}
+function updateQuota(){
+ const el = document.getElementById("quotaNote");
+ if (el) el.textContent = t("quota_note", {n: DEMO_QUOTA - demoCount()});
+}
+function quotaLeft(){ return DEMO_QUOTA - demoCount(); }
+
+/* ============================================================
+   API KEY VAULT (bring-your-own-key, local-only, no backend)
+   - Plaintext keys live ONLY in the in-memory `unlocked` map, never in
+     localStorage, the DOM, or the console. pagehide/close re-locks.
+   - With a passphrase: AES-256-GCM via WebCrypto, key from PBKDF2-SHA-256
+     (100k iterations, per-record salt). Without one: XOR-pad obfuscation,
+     honestly labeled as NOT encryption.
+   - Future key consumers MUST go through Vault.withKey(), never storage.
+   ============================================================ */
+const VAULT_DEFAULTS = {openrouter:"https://openrouter.ai/api/v1", openai:"https://api.openai.com/v1", custom:""};
+const SUBTLE = (window.crypto && window.crypto.subtle) ? window.crypto.subtle : null;
+function vaultB64e(bytes){
+ let s = "";
+ bytes.forEach(b=>{ s += String.fromCharCode(b); });
+ return btoa(s);
+}
+function vaultB64d(b64){
+ const s = atob(b64);
+ const out = new Uint8Array(s.length);
+ for (let i=0;i<s.length;i++) out[i] = s.charCodeAt(i);
+ return out;
+}
+async function vaultDerive(pass, salt){
+ const base = await SUBTLE.importKey("raw", new TextEncoder().encode(pass), "PBKDF2", false, ["deriveKey"]);
+ return SUBTLE.deriveKey({name:"PBKDF2", salt:salt, iterations:100000, hash:"SHA-256"},
+  base, {name:"AES-GCM", length:256}, false, ["encrypt","decrypt"]);
+}
+const Vault = {
+ unlocked: {}, // provider -> {key, endpoint}; memory only, never persisted
+ storeKey(p){ return "bme_key_" + p; },
+ epKey(p){ return "bme_endpoint_" + p; },
+ read(p){
+  try {
+   const raw = localStorage.getItem(this.storeKey(p));
+   return raw ? JSON.parse(raw) : null;
+  } catch(e){ return null; }
+ },
+ status(p){ // 'none' | 'obfuscated' | 'locked' | 'unlocked'
+  if (this.unlocked[p]) return "unlocked";
+  const r = this.read(p);
+  if (!r) return "none";
+  return r.enc === "aes-gcm" ? "locked" : "obfuscated";
+ },
+ async save(p, key, endpoint, pass){
+  const cleanEp = (endpoint || "").replace(/\/+$/,"");
+  try { localStorage.setItem(this.epKey(p), cleanEp); } catch(e){}
+  let rec;
+  if (pass && SUBTLE){
+   const salt = window.crypto.getRandomValues(new Uint8Array(16));
+   const iv = window.crypto.getRandomValues(new Uint8Array(12));
+   const aes = await vaultDerive(pass, salt);
+   const ct = await SUBTLE.encrypt({name:"AES-GCM", iv:iv}, aes, new TextEncoder().encode(key));
+   rec = {enc:"aes-gcm", salt:vaultB64e(salt), iv:vaultB64e(iv), data:vaultB64e(new Uint8Array(ct)), updated_at:new Date().toISOString()};
+  } else {
+   const pad = window.crypto.getRandomValues(new Uint8Array(32));
+   const raw = new TextEncoder().encode(key);
+   const x = new Uint8Array(raw.length);
+   for (let i=0;i<raw.length;i++) x[i] = raw[i] ^ pad[i % pad.length];
+   rec = {enc:"obf", pad:vaultB64e(pad), data:vaultB64e(x), updated_at:new Date().toISOString()};
+  }
+  try { localStorage.setItem(this.storeKey(p), JSON.stringify(rec)); }
+  catch(e){ return {ok:false, error:"storage"}; }
+  this.unlocked[p] = {key:key, endpoint:cleanEp};
+  return {ok:true, enc:rec.enc};
+ },
+ async unlock(p, pass){
+  const r = this.read(p);
+  if (!r || r.enc !== "aes-gcm" || !pass || !SUBTLE) return null;
+  try {
+   const aes = await vaultDerive(pass, vaultB64d(r.salt));
+   const pt = await SUBTLE.decrypt({name:"AES-GCM", iv:vaultB64d(r.iv)}, aes, vaultB64d(r.data));
+   const key = new TextDecoder().decode(pt);
+   const ep = localStorage.getItem(this.epKey(p)) || VAULT_DEFAULTS[p] || "";
+   this.unlocked[p] = {key:key, endpoint:ep};
+   return key;
+  } catch(e){ return null; } // wrong passphrase (or tampered record)
+ },
+ unlockObf(p){
+  const r = this.read(p);
+  if (!r || r.enc !== "obf") return null;
+  const pad = vaultB64d(r.pad), x = vaultB64d(r.data);
+  const raw = new Uint8Array(x.length);
+  for (let i=0;i<x.length;i++) raw[i] = x[i] ^ pad[i % pad.length];
+  const ep = localStorage.getItem(this.epKey(p)) || VAULT_DEFAULTS[p] || "";
+  const key = new TextDecoder().decode(raw);
+  this.unlocked[p] = {key:key, endpoint:ep};
+  return key;
+ },
+ lock(p){
+  if (p) delete this.unlocked[p];
+  else this.unlocked = {};
+ },
+ forget(p){
+  try { localStorage.removeItem(this.storeKey(p)); localStorage.removeItem(this.epKey(p)); } catch(e){}
+  this.lock(p);
+ },
+ // Decrypt-on-use for future callers: fn receives (key, endpoint), key is
+ // never returned to persistent scope. Returns fn's result, or null.
+ async withKey(p, fn){
+  if (this.unlocked[p]) return fn(this.unlocked[p].key, this.unlocked[p].endpoint);
+  const r = this.read(p);
+  if (!r) return null;
+  if (r.enc === "obf"){
+   const k = this.unlockObf(p);
+   return k ? fn(k, this.unlocked[p].endpoint) : null;
+  }
+  const passEl = document.getElementById("vaultPass");
+  const k = await this.unlock(p, passEl && passEl.value);
+  return k ? fn(k, this.unlocked[p].endpoint) : null;
+ },
+ async test(p){
+  const ctrl = new AbortController();
+  const timer = setTimeout(()=>ctrl.abort(), 15000);
+  try {
+   const got = await this.withKey(p, async (key, endpoint)=>{
+    const url = p === "openrouter" ? endpoint + "/auth/key" : endpoint + "/models";
+    const res = await fetch(url, {headers:{Authorization:"Bearer " + key}, signal:ctrl.signal});
+    return res.ok ? "valid" : "invalid";
+   });
+   return got || "locked";
+  } catch(e){ return "error"; }
+  finally { clearTimeout(timer); }
+ }
+};
+function vaultRender(){
+ const p = document.getElementById("vaultProvider").value;
+ const st = Vault.status(p);
+ const el = document.getElementById("vaultStatus");
+ if (el) el.textContent = t("vault_status_" + st, {p:p});
+}
+document.getElementById("vaultProvider").addEventListener("change", e=>{
+ const p = e.target.value;
+ const savedEp = localStorage.getItem(Vault.epKey(p));
+ document.getElementById("vaultEndpoint").value = savedEp || VAULT_DEFAULTS[p] || "";
+ vaultRender();
 });
-try {
- const saved = JSON.parse(localStorage.getItem("bme_member") || "null");
- if (saved && saved.name) unlock(saved.name);
-} catch(e){}
+document.getElementById("vaultShow").addEventListener("click", ()=>{
+ const k = document.getElementById("vaultKey");
+ k.type = k.type === "password" ? "text" : "password";
+});
+document.getElementById("vaultShowPass").addEventListener("click", ()=>{
+ const k = document.getElementById("vaultPass");
+ k.type = k.type === "password" ? "text" : "password";
+});
+document.getElementById("vaultForm").addEventListener("submit", async e=>{
+ e.preventDefault();
+ const p = document.getElementById("vaultProvider").value;
+ const key = document.getElementById("vaultKey").value.trim();
+ const pass = document.getElementById("vaultPass").value;
+ const ep = document.getElementById("vaultEndpoint").value.trim();
+ const st = document.getElementById("vaultStatus");
+ if (!key){ st.textContent = t("vault_empty"); return; }
+ st.textContent = t("vault_saving");
+ const r = await Vault.save(p, key, ep, pass);
+ document.getElementById("vaultKey").value = "";
+ document.getElementById("vaultPass").value = "";
+ if (!r.ok){ st.textContent = t("vault_store_fail"); return; }
+ if (r.enc === "obf" && !SUBTLE) st.textContent = t("vault_saved_obf_nocrypto", {p:p});
+ else if (r.enc === "obf") st.textContent = t("vault_saved_obf", {p:p});
+ else st.textContent = t("vault_saved_enc", {p:p});
+ vaultRender();
+});
+document.getElementById("vaultTest").addEventListener("click", async ()=>{
+ const p = document.getElementById("vaultProvider").value;
+ const st = document.getElementById("vaultStatus");
+ st.textContent = t("vault_testing");
+ const r = await Vault.test(p);
+ st.textContent = t("vault_test_" + r, {p:p});
+});
+document.getElementById("vaultLock").addEventListener("click", ()=>{
+ Vault.lock(document.getElementById("vaultProvider").value);
+ vaultRender();
+ document.getElementById("vaultStatus").textContent = t("vault_locked_now");
+});
+document.getElementById("vaultForget").addEventListener("click", ()=>{
+ const p = document.getElementById("vaultProvider").value;
+ Vault.forget(p);
+ document.getElementById("vaultKey").value = "";
+ document.getElementById("vaultPass").value = "";
+ vaultRender();
+ document.getElementById("vaultStatus").textContent = t("vault_forgotten", {p:p});
+});
+window.addEventListener("pagehide", ()=>Vault.lock());
 
 /* ============================================================
    LEAFLET MAP + COORDINATE RUNNER
@@ -979,14 +1290,19 @@ function initMap(){
  baseLayers.s2   = L.tileLayer("https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/GoogleMapsCompatible/{z}/{y}/{x}.jpg", {maxZoom:17, attribution:"S2 2020 © EOX / Copernicus (CC BY-NC-SA)"});
  baseLayers.esri.addTo(map);
  document.querySelectorAll("#layerBox input").forEach(r=>{
-   r.addEventListener("change", ()=>{
-     Object.values(baseLayers).forEach(l=>map.removeLayer(l));
-     baseLayers[r.value].addTo(map);
-   });
+  r.addEventListener("change", ()=>{
+   Object.values(baseLayers).forEach(l=>map.removeLayer(l));
+   baseLayers[r.value].addTo(map);
+  });
+ });
+ document.getElementById("bwToggle").addEventListener("change", e=>{
+  // Low-bandwidth field mode: S2 viewing composite only, no sub-meter tiles.
+  Object.values(baseLayers).forEach(l=>map.removeLayer(l));
+  (e.target.checked ? baseLayers.s2 : baseLayers.esri).addTo(map);
  });
  // site data layers
  const tg = L.layerGroup(TARGETS.map(tg=>
-   L.marker([tg.lat,tg.lon]).bindPopup(`<b>${tg.id} — ${tg.name}</b><br>${tg.lat}, ${tg.lon}<br>${t("res_elev")}: ${tg.elev} m · ${tg.score}/10`)
+   L.marker([tg.lat,tg.lon]).bindPopup(`<b>${tg.id} — ${tg.name}</b><br>${tg.lat}, ${tg.lon}<br>${t("res_elev")}: ${tg.elev} m · P ${tg.pro} / F ${tg.fea}`)
      .setIcon(L.divIcon({className:"", html:`<div style="width:16px;height:16px;background:#ff2d2d;border:3px solid #fff;border-radius:3px;box-shadow:0 0 6px #000"></div>`, iconSize:[16,16], iconAnchor:[8,8]}))));
  const mn = L.layerGroup(MINES.map(m=>
    L.marker([m.la,m.lo]).bindPopup(`<b>${m.n}</b><br>${m.la}, ${m.lo}<br><span style="color:#999">SGM 2009</span>`)
@@ -1009,30 +1325,47 @@ function bearing(a, b, c, d){
  const x=Math.cos(a*toR)*Math.sin(b*toR)-Math.sin(a*toR)*Math.cos(b*toR)*Math.cos((d-c)*toR);
  return (Math.atan2(y,x)*180/Math.PI+360)%360;
 }
-function nearest(list, lat, lon){
+function nearestRaw(list, lat, lon){
  let best=null, bd=1e9;
  for (const o of list){
-   const d=haversine(lat,lon,o[0],o[1]);
-   if (d<bd){bd=d; best=o;}
+  const d=haversine(lat,lon,o[0],o[1]);
+  if (d<bd){bd=d; best=o;}
  }
- if (!best) return "—";
- const b=bearing(lat,lon,best[0],best[1]);
- return t("dist_km",{d:bd.toFixed(1), nm:best[2], b:Math.round(b)});
+ if (!best) return null;
+ return {name: best[2], dist_km: +bd.toFixed(2), bearing_deg: Math.round(bearing(lat,lon,best[0],best[1]))};
+}
+function nearest(list, lat, lon){
+ const r = nearestRaw(list, lat, lon);
+ if (!r) return "—";
+ return t("dist_km",{d:r.dist_km.toFixed(1), nm:r.name, b:r.bearing_deg});
 }
 function renderResult(pt){
  if (!pt) return;
  document.getElementById("resBox").hidden = false;
+ document.getElementById("runStatus").textContent = t("run_working");
+ const nt = nearestRaw(TARGETS.map(o=>[o.lat,o.lon,`${o.id} — ${o.name}`]), pt.lat, pt.lon);
+ const np = nearestRaw(PINS.map(p=>[p[1],p[2],`${p[0]} · ${p[3]}`]), pt.lat, pt.lon);
+ const nm = nearestRaw(MINES.map(m=>[m.la,m.lo,m.n]), pt.lat, pt.lon);
  document.getElementById("r_t").textContent = nearest(TARGETS.map(o=>[o.lat,o.lon,`${o.id} — ${o.name}`]), pt.lat, pt.lon);
  document.getElementById("r_p").textContent = nearest(PINS.map(p=>[p[1],p[2],`${p[0]} · ${p[3]}`]), pt.lat, pt.lon);
  document.getElementById("r_m").textContent = nearest(MINES.map(m=>[m.la,m.lo,m.n]), pt.lat, pt.lon);
  const dBelt = Math.abs(pt.lat - 30.10);
  document.getElementById("r_c").textContent = t("corridor_km",{d:(dBelt*110.9).toFixed(1)});
+ const out = {input: {latitude: pt.lat, longitude: pt.lon, crs: "EPSG:4326"},
+  nearest_target: nt, nearest_pin: np, nearest_working: nm,
+  corridor_belt_lat: "30.05–30.15N", pipeline: "desk-screening demo (unvalidated heuristic)"};
+ document.getElementById("jsonOut").textContent = JSON.stringify(out, null, 1);
+ document.getElementById("geojsonOut").textContent = JSON.stringify(
+  {type: "Feature", geometry: {type: "Point", coordinates: [pt.lon, pt.lat]},
+   properties: {nearest_target: nt && nt.name, nearest_pin: np && np.name,
+    nearest_working: nm && nm.name, crs: "EPSG:4326"}}, null, 1);
  document.getElementById("r_elev").textContent = "…";
  fetch(ELEV_API + pt.lat + "," + pt.lon)
   .then(r=>r.json()).then(j=>{
-    const e = j.results && j.results[0] && j.results[0].elevation;
-    document.getElementById("r_elev").textContent = (e!=null) ? Math.round(e)+" m" : t("res_elev_na");
-  }).catch(()=>{ document.getElementById("r_elev").textContent = t("res_elev_na"); });
+   const e = j.results && j.results[0] && j.results[0].elevation;
+   document.getElementById("r_elev").textContent = (e!=null) ? Math.round(e)+" m" : t("res_elev_na");
+   document.getElementById("runStatus").textContent = "";
+  }).catch(()=>{ document.getElementById("r_elev").textContent = t("res_elev_na"); document.getElementById("runStatus").textContent = t("run_elev_fail"); });
 }
 function runPoint(lat, lon, doFly){
  currentPoint = {lat, lon};
@@ -1049,12 +1382,32 @@ function runPoint(lat, lon, doFly){
 }
 document.getElementById("runnerForm").addEventListener("submit", e=>{
  e.preventDefault();
+ if (quotaLeft() <= 0){ alert(t("quota_done")); return; }
  const lat = parseFloat(document.getElementById("rlat").value);
  const lon = parseFloat(document.getElementById("rlon").value);
  if (!(lat>=-90 && lat<=90 && lon>=-180 && lon<=180)){
-   alert(t("run_err")); return;
+  alert(t("run_err")); return;
  }
+ bumpDemo();
  runPoint(lat, lon, true);
+});
+document.getElementById("exampleBtn").addEventListener("click", ()=>{
+ document.getElementById("rlat").value = "30.048522";
+ document.getElementById("rlon").value = "-115.236173";
+ document.getElementById("runnerForm").requestSubmit();
+});
+document.getElementById("pkgBtn").addEventListener("click", ()=>{
+ if (!currentPoint) return;
+ const gj = document.getElementById("geojsonOut").textContent;
+ const csv = "id,lat,lon,type,label\n" + PINS.map(p=>[p[0],p[1],p[2],p[3],`"${p[4]}"`].join(",")).join("\n");
+ const readme = `Field package for ${currentPoint.lat},${currentPoint.lon} (Baja Mineral Explorer, desk study only)\nCRS: EPSG:4326. Imagery/DEM error: +/-10-20 m horizontal.\nDesk study only — not investment/drilling advice. Verify in field + official registers.\n`;
+ const parts = [`--- ${"README.txt"} ---\n${readme}\n`, `--- point.geojson ---\n${gj}\n`, `--- PIN_POINTS.csv ---\n${csv}\n`];
+ const blob = new Blob(parts, {type: "text/plain"});
+ const a = document.createElement("a");
+ a.href = URL.createObjectURL(blob);
+ a.download = `field_package_${currentPoint.lat}_${currentPoint.lon}.txt`;
+ a.click();
+ setTimeout(()=>URL.revokeObjectURL(a.href), 5000);
 });
 document.getElementById("shareBtn").addEventListener("click", ()=>{
  if (!currentPoint) return;
@@ -1064,19 +1417,17 @@ document.getElementById("shareBtn").addEventListener("click", ()=>{
  const o = b.textContent; b.textContent = t("run_share_copied");
  setTimeout(()=>b.textContent = o, 1500);
 });
-// deep link: #m=lat,lon or ?lat&lon
+// deep link: #m=lat,lon or ?lat&lon (public demo: map inits immediately)
+if (!mapReady) initMap();
+updateQuota();
 (function(){
  const h = (location.hash.match(/m=(-?[\d.]+),(-?[\d.]+)/) || []);
  let la = h[1] ? parseFloat(h[1]) : parseFloat(new URLSearchParams(location.search).get("lat"));
  let lo = h[2] ? parseFloat(h[2]) : parseFloat(new URLSearchParams(location.search).get("lon"));
  if (la>=-90 && la<=90 && lo>=-180 && lo<=180){
-   const prefill = ()=>{
-     document.getElementById("rlat").value = la;
-     document.getElementById("rlon").value = lo;
-     if (unlocked || mapReady) runPoint(la, lo, true);
-     else document.getElementById("gateForm").addEventListener("submit", ()=>setTimeout(()=>{ if(mapReady) runPoint(la,lo,true); },400), {once:true});
-   };
-   prefill();
+  document.getElementById("rlat").value = la;
+  document.getElementById("rlon").value = lo;
+  runPoint(la, lo, true);
  }
 })();
 

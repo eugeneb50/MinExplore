@@ -1,0 +1,313 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.36,
+     30.122
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-JOSEFINA",
+    "name": "Josefina",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "Cu-Fe epithermal in brecciated white granodiorite; E-W adit 5 m + catas",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.357,
+     30.147
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-SANTA-MARTHA",
+    "name": "Santa Martha",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "epithermal fissure-fills; NW-SE + NE-SW lineament system",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.375,
+     30.146
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-SAN-MARTIN",
+    "name": "San Martin",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "specularite, malachite, azurite, chalcopyrite, chrysocolla?, jarosite, pyrite, quartz",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.454,
+     30.158
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-SANTA-LUCIA",
+    "name": "Santa Lucia",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "3 catas + 40 m drift (4 x 3 m)",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.524,
+     30.171
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-LA-VIBORA",
+    "name": "La Vibora",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "vein-fault strike N35E; 2 x 2 x 5 m cut",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.344,
+     30.124
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-5MINAS",
+    "name": "5 Minas",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "Fe-Cu in tabular brecha zone",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.352,
+     30.124
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-EL-SACRIFICIO",
+    "name": "El Sacrificio",
+    "crs": "EPSG:4326",
+    "type": "mineral occurrence",
+    "notes": "Fe-Cu hydrothermal veinlets in tabular brecha",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.396,
+     30.22
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-EL-MORO",
+    "name": "El Moro",
+    "crs": "EPSG:4326",
+    "type": "mineral occurrence",
+    "notes": "occurrence; SGM sheet record",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.446,
+     30.071
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-LA-TURQUESA",
+    "name": "La Turquesa",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "argillic + Fe-oxide + calcite alteration; massive highly eroded; Cu-Fe-turquoise",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.391,
+     30.071
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-EL-HORMIGUERO",
+    "name": "El Hormiguero",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "intense secondary alteration: clays, Fe oxides, calcite",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.392,
+     30.07
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-LA-PRIETA",
+    "name": "La Prieta",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "open pit; NE trend on pit face",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.38,
+     30.067
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-ESPERANZA",
+    "name": "Esperanza",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "veins N65-75E converging at rancheria La Prieta",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.376,
+     30.067
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-EL-CARDONAL",
+    "name": "El Cardonal",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "normal fault N82E/32NW; turquoise; main mine of region",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -115.412,
+     30.048
+    ]
+   },
+   "properties": {
+    "record_id": "SGM-LA-BONITA",
+    "name": "La Bonita",
+    "crs": "EPSG:4326",
+    "type": "abandoned mine",
+    "notes": "brecha N53E/69NW 0.7 m mineralized; exploration holes around",
+    "source": "SGM Carta Geologico-Minera El Aguajito H11-B85 1:50,000 (2009)",
+    "source_date": "2009",
+    "coordinate_accuracy_m": "500 (digitized from 1:50,000)",
+    "license": "SGM public sheet; coordinates as transcribed",
+    "pipeline_version": "3.0.0"
+   }
+  }
+ ]
+}

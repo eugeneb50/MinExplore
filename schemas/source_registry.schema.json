@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/minxplore/schemas/source_registry.schema.json",
+  "title": "Immutable source registry record",
+  "type": "object",
+  "required": ["source_id", "publisher", "dataset_name", "source_version",
+               "retrieved_at", "license", "commercial_use_allowed",
+               "ai_use_allowed", "redistribution_allowed", "original_crs",
+               "citation"],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "publisher": {"type": "string", "minLength": 1},
+    "dataset_name": {"type": "string", "minLength": 1},
+    "source_version": {"type": "string", "minLength": 1},
+    "retrieved_at": {"type": "string", "minLength": 1},
+    "checksum": {"type": "string"},
+    "license": {"type": "string", "minLength": 1},
+    "allowed_uses": {"type": "string"},
+    "commercial_use_allowed": {"type": "boolean"},
+    "ai_use_allowed": {"type": "boolean"},
+    "redistribution_allowed": {"type": "boolean"},
+    "original_crs": {"type": "string", "minLength": 1},
+    "original_resolution": {"type": "string"},
+    "processing_version": {"type": "string"},
+    "transform_history": {"type": "array", "items": {"type": "string"}},
+    "citation": {"type": "string", "minLength": 1},
+    "url": {"type": "string"}
+  },
+  "additionalProperties": false
+}
